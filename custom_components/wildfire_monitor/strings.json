@@ -1,0 +1,102 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Monitor a location",
+        "description": "Uses official NIFC wildfire and NWS alert data.",
+        "data": {
+          "name": "Location name",
+          "latitude": "Latitude",
+          "longitude": "Longitude",
+          "radius": "Wildfire radius"
+        },
+        "data_description": {
+          "radius": "Distance in miles (5–250) used for NIFC wildfire searches."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This location is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Edit monitored location",
+        "data": {
+          "name": "Location name",
+          "latitude": "Latitude",
+          "longitude": "Longitude",
+          "radius": "Wildfire radius"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "This location is already configured."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {"name": "Wildfire nearby"},
+      "wildfire_inside_perimeter": {"name": "Wildfire inside perimeter"},
+      "fire_weather_alert": {"name": "Fire weather alert"},
+      "fire_warning": {"name": "Fire warning"},
+      "evacuation_alert": {"name": "Evacuation alert"},
+      "nifc_source_available": {"name": "NIFC source available"},
+      "nws_source_available": {"name": "NWS source available"}
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Wildfire threat level",
+        "state": {
+          "none": "None",
+          "low": "Low",
+          "moderate": "Moderate",
+          "high": "High",
+          "extreme": "Extreme"
+        }
+      },
+      "evacuation_level": {
+        "name": "Evacuation level",
+        "state": {
+          "none": "None",
+          "unclassified": "Unclassified",
+          "level_1_ready": "Level 1 — Ready",
+          "level_2_set": "Level 2 — Set",
+          "level_3_go": "Level 3 — Go"
+        }
+      },
+      "evacuation_status": {
+        "name": "Evacuation status",
+        "state": {
+          "none": "None",
+          "advisory": "Advisory",
+          "warning": "Warning",
+          "order": "Order",
+          "immediate": "Immediate",
+          "unknown": "Unknown"
+        }
+      },
+      "nearby_wildfire_count": {"name": "Nearby wildfire count"},
+      "nearest_wildfire_name": {"name": "Nearest wildfire name"},
+      "nearest_wildfire_distance": {"name": "Nearest wildfire distance"},
+      "nearest_wildfire_size": {"name": "Nearest wildfire size"},
+      "nearest_wildfire_containment": {"name": "Nearest wildfire containment"},
+      "active_fire_alert_count": {"name": "Active fire alert count"},
+      "highest_fire_alert_severity": {
+        "name": "Highest fire alert severity",
+        "state": {
+          "none": "None",
+          "unknown": "Unknown",
+          "minor": "Minor",
+          "moderate": "Moderate",
+          "severe": "Severe",
+          "extreme": "Extreme"
+        }
+      },
+      "nifc_last_success": {"name": "NIFC last success"},
+      "nws_last_success": {"name": "NWS last success"}
+    }
+  }
+}

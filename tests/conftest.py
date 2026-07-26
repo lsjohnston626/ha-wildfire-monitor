@@ -1,0 +1,18 @@
+"""Test setup that lets pure modules run without installing Home Assistant."""
+
+from __future__ import annotations
+
+import importlib.util
+import sys
+import types
+from pathlib import Path
+
+ROOT = Path(__file__).parents[1]
+
+if importlib.util.find_spec("homeassistant") is None:
+    custom_components = types.ModuleType("custom_components")
+    custom_components.__path__ = [str(ROOT / "custom_components")]
+    package = types.ModuleType("custom_components.wildfire_monitor")
+    package.__path__ = [str(ROOT / "custom_components" / "wildfire_monitor")]
+    sys.modules["custom_components"] = custom_components
+    sys.modules["custom_components.wildfire_monitor"] = package
