@@ -60,6 +60,9 @@
         "name": "NWS forrás elérhető"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Futótűz események"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Vadtüzek fenyegetettségi szintje",

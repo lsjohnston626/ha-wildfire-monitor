@@ -60,6 +60,9 @@
         "name": "Nguồn NWS có sẵn"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "sự kiện cháy rừng"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Mức độ đe dọa cháy rừng",

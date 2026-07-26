@@ -60,6 +60,9 @@
         "name": "NWS ソースが利用可能"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "山火事イベント"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "山火事の脅威レベル",

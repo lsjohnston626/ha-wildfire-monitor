@@ -60,6 +60,9 @@
         "name": "มีแหล่งที่มา NWS"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "เหตุการณ์ไฟป่า"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "ระดับภัยคุกคามไฟป่า",

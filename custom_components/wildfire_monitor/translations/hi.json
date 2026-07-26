@@ -60,6 +60,9 @@
         "name": "NWS स्रोत उपलब्ध है"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "जंगल की आग की घटनाएँ"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "जंगल की आग के खतरे का स्तर",

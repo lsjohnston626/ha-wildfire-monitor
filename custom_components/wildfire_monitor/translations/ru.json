@@ -46,6 +46,9 @@
       "nifc_source_available": {"name": "Источник NIFC доступен"},
       "nws_source_available": {"name": "Источник NWS доступен"}
     },
+    "event": {
+      "wildfire_events": {"name": "События лесных пожаров"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Уровень угрозы лесного пожара",

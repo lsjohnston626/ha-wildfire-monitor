@@ -60,6 +60,9 @@
         "name": "NWS Quell verfügbar"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Wildfire Evenementer"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Wildfire Bedrohungsniveau",

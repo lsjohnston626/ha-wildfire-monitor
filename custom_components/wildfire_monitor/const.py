@@ -5,7 +5,7 @@ from typing import Final
 
 DOMAIN: Final = "wildfire_monitor"
 DOCUMENTATION_URL: Final = "https://github.com/lsjohnston626/ha-wildfire-monitor#readme"
-PLATFORMS: Final = ["binary_sensor", "sensor"]
+PLATFORMS: Final = ["binary_sensor", "event", "sensor"]
 
 CONF_RADIUS: Final = "radius"
 DEFAULT_NAME: Final = "Wildfire Monitor"
@@ -28,7 +28,32 @@ NIFC_PERIMETER_URL: Final = (
     "WFIGS_Interagency_Perimeters_Current/FeatureServer/0/query"
 )
 NWS_ALERTS_URL: Final = "https://api.weather.gov/alerts/active"
-USER_AGENT: Final = "WildfireMonitor/0.1.2 (Home Assistant custom integration)"
+USER_AGENT: Final = "WildfireMonitor/0.2.0 (Home Assistant custom integration)"
+
+EVENT_WILDFIRE_DISCOVERED: Final = "wildfire_discovered"
+EVENT_WILDFIRE_NO_LONGER_NEARBY: Final = "wildfire_no_longer_nearby"
+EVENT_FIRE_ENTERED_PERIMETER: Final = "fire_entered_perimeter"
+EVENT_OFFICIAL_ALERT_STARTED: Final = "official_alert_started"
+EVENT_OFFICIAL_ALERT_ENDED: Final = "official_alert_ended"
+EVENT_THREAT_LEVEL_INCREASED: Final = "threat_level_increased"
+EVENT_THREAT_LEVEL_DECREASED: Final = "threat_level_decreased"
+EVENT_EVACUATION_LEVEL_INCREASED: Final = "evacuation_level_increased"
+EVENT_EVACUATION_LEVEL_DECREASED: Final = "evacuation_level_decreased"
+EVENT_SOURCE_STALE: Final = "source_stale"
+EVENT_SOURCE_RECOVERED: Final = "source_recovered"
+EVENT_TYPES: Final = (
+    EVENT_WILDFIRE_DISCOVERED,
+    EVENT_WILDFIRE_NO_LONGER_NEARBY,
+    EVENT_FIRE_ENTERED_PERIMETER,
+    EVENT_OFFICIAL_ALERT_STARTED,
+    EVENT_OFFICIAL_ALERT_ENDED,
+    EVENT_THREAT_LEVEL_INCREASED,
+    EVENT_THREAT_LEVEL_DECREASED,
+    EVENT_EVACUATION_LEVEL_INCREASED,
+    EVENT_EVACUATION_LEVEL_DECREASED,
+    EVENT_SOURCE_STALE,
+    EVENT_SOURCE_RECOVERED,
+)
 
 EVACUATION_LEVELS: Final = [
     "none",

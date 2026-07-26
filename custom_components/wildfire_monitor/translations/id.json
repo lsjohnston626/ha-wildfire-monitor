@@ -60,6 +60,9 @@
         "name": "Sumber NWS tersedia"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Peristiwa kebakaran hutan"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Tingkat ancaman kebakaran hutan",

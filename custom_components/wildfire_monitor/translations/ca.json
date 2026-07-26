@@ -60,6 +60,9 @@
         "name": "Font NWS disponible"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Esdeveniments d'incendi forestal"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Nivell d'amenaça d'incendi forestal",

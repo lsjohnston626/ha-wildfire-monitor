@@ -60,6 +60,9 @@
         "name": "Fonte NWS disponível"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Eventos de incêndio florestal"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Nível de ameaça de incêndio florestal",

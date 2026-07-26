@@ -10,6 +10,17 @@ from .const import DOCUMENTATION_URL, DOMAIN
 from .coordinator import NifcCoordinator, NwsCoordinator, WildfireConfigEntry
 
 
+def wildfire_device_info(entry: WildfireConfigEntry) -> DeviceInfo:
+    """Return device information for a monitored location."""
+    return DeviceInfo(
+        identifiers={(DOMAIN, entry.entry_id)},
+        name=entry.title,
+        manufacturer="Wildfire Monitor",
+        model="Official NIFC and NWS data",
+        configuration_url=DOCUMENTATION_URL,
+    )
+
+
 class WildfireEntity(CoordinatorEntity[NifcCoordinator]):
     """Entity that listens to both independent source coordinators."""
 
@@ -27,13 +38,7 @@ class WildfireEntity(CoordinatorEntity[NifcCoordinator]):
         self.nifc = nifc
         self.nws = nws
         self._attr_unique_id = f"{entry.entry_id}_{key}"
-        self._attr_device_info = DeviceInfo(
-            identifiers={(DOMAIN, entry.entry_id)},
-            name=entry.title,
-            manufacturer="Wildfire Monitor",
-            model="Official NIFC and NWS data",
-            configuration_url=DOCUMENTATION_URL,
-        )
+        self._attr_device_info = wildfire_device_info(entry)
 
     async def async_added_to_hass(self) -> None:
         """Subscribe to both coordinators."""

@@ -60,6 +60,9 @@
         "name": "Достапен е NWS извор"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Настани од шумски пожари"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Ниво на закана од шумски пожар",

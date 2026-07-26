@@ -60,6 +60,9 @@
         "name": "NWS allikas on saadaval"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Põlenguüritused"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Metsatulekahju ohu tase",

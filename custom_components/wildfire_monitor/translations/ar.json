@@ -60,6 +60,9 @@
         "name": "مصدر NWS متاح"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "أحداث الهشيم"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "مستوى التهديد بالحرائق الهائلة",

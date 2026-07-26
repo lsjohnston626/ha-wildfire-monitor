@@ -60,6 +60,9 @@
         "name": "NWS izvor dostupan"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Događaji šumskih požara"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Razina prijetnje šumskim požarom",

@@ -60,6 +60,9 @@
         "name": "Διαθέσιμη πηγή NWS"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Εκδηλώσεις πυρκαγιών"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Επίπεδο απειλής πυρκαγιάς",

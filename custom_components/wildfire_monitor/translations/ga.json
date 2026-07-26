@@ -60,6 +60,9 @@
         "name": "NWS foinse ar fáil"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Imeachtaí tine fiáin"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Leibhéal bagairt tine fiáin",

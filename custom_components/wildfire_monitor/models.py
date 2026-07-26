@@ -24,11 +24,13 @@ class Fire:
     def as_attribute(self) -> dict[str, Any]:
         """Return a safe entity-attribute representation."""
         return {
+            "irwin_id": self.irwin_id,
             "name": self.name,
             "distance_miles": round(self.distance_miles, 2),
             "inside_perimeter": self.inside_perimeter,
             "acres": self.acres,
             "containment": self.containment,
+            "incident_type": self.incident_type,
             "discovered": self.discovered,
             "source_url": self.source_url,
         }
@@ -62,6 +64,7 @@ class Alert:
     def as_attribute(self) -> dict[str, Any]:
         """Return the official alert fields for entity attributes."""
         return {
+            "alert_id": self.alert_id,
             "event": self.event,
             "headline": self.headline,
             "description": self.description,

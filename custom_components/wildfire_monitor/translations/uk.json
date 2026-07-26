@@ -60,6 +60,9 @@
         "name": "Доступне джерело NWS"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Лісові пожежі"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Рівень лісової пожежі",

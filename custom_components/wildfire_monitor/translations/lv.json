@@ -60,6 +60,9 @@
         "name": "Pieejams NWS avots"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Savvaļas ugunsgrēku notikumi"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Savvaļas ugunsgrēku draudu līmenis",

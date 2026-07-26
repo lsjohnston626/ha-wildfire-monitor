@@ -60,6 +60,9 @@
         "name": "Vir NWS je na voljo"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Požarni dogodki"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Stopnja nevarnosti gozdnih požarov",

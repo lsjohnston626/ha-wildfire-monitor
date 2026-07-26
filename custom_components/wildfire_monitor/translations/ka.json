@@ -60,6 +60,9 @@
         "name": "NWS წყარო ხელმისაწვდომია"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "ტყის ხანძრის მოვლენები"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "ტყის ხანძრის საფრთხის დონე",

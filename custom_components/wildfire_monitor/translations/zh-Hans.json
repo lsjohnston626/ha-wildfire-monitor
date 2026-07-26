@@ -46,6 +46,9 @@
       "nifc_source_available": {"name": "NIFC 数据源可用"},
       "nws_source_available": {"name": "NWS 数据源可用"}
     },
+    "event": {
+      "wildfire_events": {"name": "野火事件"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "山火威胁等级",

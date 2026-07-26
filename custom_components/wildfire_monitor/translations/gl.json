@@ -60,6 +60,9 @@
         "name": "NWS fonte dispoñible"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Eventos de incendio forestal"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Nivel de ameaza de incendio forestal",
