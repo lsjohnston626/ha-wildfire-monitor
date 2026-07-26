@@ -1,0 +1,102 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Monitorar uma localização",
+        "description": "Utiliza dados oficiais de incêndios florestais do NIFC e alertas do NWS.",
+        "data": {
+          "name": "Nome da localização",
+          "latitude": "Latitude",
+          "longitude": "Longitude",
+          "radius": "Raio de incêndios florestais"
+        },
+        "data_description": {
+          "radius": "Distância em milhas (5–250) utilizada para pesquisar incêndios florestais no NIFC."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Esta localização já está configurada."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Editar localização monitorada",
+        "data": {
+          "name": "Nome da localização",
+          "latitude": "Latitude",
+          "longitude": "Longitude",
+          "radius": "Raio de incêndios florestais"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Esta localização já está configurada."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {"name": "Incêndio florestal próximo"},
+      "wildfire_inside_perimeter": {"name": "Localização dentro do perímetro de um incêndio"},
+      "fire_weather_alert": {"name": "Alerta meteorológico de incêndio"},
+      "fire_warning": {"name": "Aviso de incêndio"},
+      "evacuation_alert": {"name": "Alerta de evacuação"},
+      "nifc_source_available": {"name": "Fonte NIFC disponível"},
+      "nws_source_available": {"name": "Fonte NWS disponível"}
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Nível de ameaça de incêndio",
+        "state": {
+          "none": "Nenhum",
+          "low": "Baixo",
+          "moderate": "Moderado",
+          "high": "Alto",
+          "extreme": "Extremo"
+        }
+      },
+      "evacuation_level": {
+        "name": "Nível de evacuação",
+        "state": {
+          "none": "Nenhum",
+          "unclassified": "Não classificado",
+          "level_1_ready": "Nível 1 — Prepare-se",
+          "level_2_set": "Nível 2 — Fique pronto",
+          "level_3_go": "Nível 3 — Evacue"
+        }
+      },
+      "evacuation_status": {
+        "name": "Estado da evacuação",
+        "state": {
+          "none": "Nenhum",
+          "advisory": "Recomendação",
+          "warning": "Aviso",
+          "order": "Ordem",
+          "immediate": "Imediato",
+          "unknown": "Desconhecido"
+        }
+      },
+      "nearby_wildfire_count": {"name": "Quantidade de incêndios florestais próximos"},
+      "nearest_wildfire_name": {"name": "Nome do incêndio florestal mais próximo"},
+      "nearest_wildfire_distance": {"name": "Distância até o incêndio florestal mais próximo"},
+      "nearest_wildfire_size": {"name": "Área do incêndio florestal mais próximo"},
+      "nearest_wildfire_containment": {"name": "Contenção do incêndio florestal mais próximo"},
+      "active_fire_alert_count": {"name": "Quantidade de alertas de incêndio ativos"},
+      "highest_fire_alert_severity": {
+        "name": "Maior gravidade dos alertas de incêndio",
+        "state": {
+          "none": "Nenhuma",
+          "unknown": "Desconhecida",
+          "minor": "Leve",
+          "moderate": "Moderada",
+          "severe": "Grave",
+          "extreme": "Extrema"
+        }
+      },
+      "nifc_last_success": {"name": "Última atualização bem-sucedida do NIFC"},
+      "nws_last_success": {"name": "Última atualização bem-sucedida do NWS"}
+    }
+  }
+}

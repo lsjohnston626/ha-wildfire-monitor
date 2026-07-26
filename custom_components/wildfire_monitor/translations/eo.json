@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Monitoru lokon",
+        "description": "Uzas oficialajn NIFC sovaĝajn fajrojn kaj NWS-avertajn datumojn.",
+        "data": {
+          "name": "Loknomo",
+          "latitude": "Latitudo",
+          "longitude": "Longitudo",
+          "radius": "Sovaĝfajra serĉradiuso"
+        },
+        "data_description": {
+          "radius": "Distanco en mejloj (5–250) uzata por NIFC sovaĝfajraj serĉoj."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Ĉi tiu loko jam estas agordita."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Redaktu monitoritan lokon",
+        "data": {
+          "name": "Loknomo",
+          "latitude": "Latitudo",
+          "longitude": "Longitudo",
+          "radius": "Sovaĝfajra radiuso"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Ĉi tiu loko jam estas agordita."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Arbarfajro proksime"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Sovaĝa fajro ene de perimetro"
+      },
+      "fire_weather_alert": {
+        "name": "Fajro vetera alarmo"
+      },
+      "fire_warning": {
+        "name": "Fajroaverto"
+      },
+      "evacuation_alert": {
+        "name": "Atentigo pri evakuado"
+      },
+      "nifc_source_available": {
+        "name": "NIFC fonto havebla"
+      },
+      "nws_source_available": {
+        "name": "NWS fonto havebla"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Arbarfajra minaca nivelo",
+        "state": {
+          "none": "Neniu",
+          "low": "Malalta",
+          "moderate": "Modera",
+          "high": "Alta",
+          "extreme": "Ekstrema"
+        }
+      },
+      "evacuation_level": {
+        "name": "Evakua nivelo",
+        "state": {
+          "none": "Neniu evakuadnivelo",
+          "unclassified": "Evakuadnivelo ne klasita",
+          "level_1_ready": "Nivelo 1 — Preta (preparita)",
+          "level_2_set": "Nivelo 2 — Agordu (esti preta por evakui)",
+          "level_3_go": "Nivelo 3 — Iru (evakui nun)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Evakuada stato",
+        "state": {
+          "none": "Neniu evakuado",
+          "advisory": "Evakua konsilo",
+          "warning": "Evakuaverto",
+          "order": "Evakua ordono",
+          "immediate": "Tuja evakuado",
+          "unknown": "Nekonata evakuada stato"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Proksima sovaĝa fajrokalkulo"
+      },
+      "nearest_wildfire_name": {
+        "name": "Plej proksima sovaĝa fajronomo"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Plej proksima sovaĝfajra distanco"
+      },
+      "nearest_wildfire_size": {
+        "name": "Plej proksima fajrogrando"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Plej proksima procento de reteno de sovaĝa fajro"
+      },
+      "active_fire_alert_count": {
+        "name": "Aktiva fajro-avertnombro"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Plej alta fajroatenta severeco",
+        "state": {
+          "none": "Neniu",
+          "unknown": "Nekonata",
+          "minor": "Malgranda",
+          "moderate": "Modera",
+          "severe": "Severa",
+          "extreme": "Ekstrema"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC lasta sukceso"
+      },
+      "nws_last_success": {
+        "name": "NWS lasta sukceso"
+      }
+    }
+  }
+}

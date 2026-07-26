@@ -1,0 +1,102 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Standort überwachen",
+        "description": "Verwendet offizielle Waldbranddaten des NIFC und Warnmeldungen des NWS.",
+        "data": {
+          "name": "Standortname",
+          "latitude": "Breitengrad",
+          "longitude": "Längengrad",
+          "radius": "Waldbrandradius"
+        },
+        "data_description": {
+          "radius": "Entfernung in Meilen (5–250), die für die NIFC-Waldbrandsuche verwendet wird."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Dieser Standort ist bereits konfiguriert."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Überwachten Standort bearbeiten",
+        "data": {
+          "name": "Standortname",
+          "latitude": "Breitengrad",
+          "longitude": "Längengrad",
+          "radius": "Waldbrandradius"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Dieser Standort ist bereits konfiguriert."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {"name": "Waldbrand in der Nähe"},
+      "wildfire_inside_perimeter": {"name": "Standort innerhalb eines Waldbrandperimeters"},
+      "fire_weather_alert": {"name": "Feuerwetterwarnung"},
+      "fire_warning": {"name": "Waldbrandwarnung"},
+      "evacuation_alert": {"name": "Evakuierungswarnung"},
+      "nifc_source_available": {"name": "NIFC-Quelle verfügbar"},
+      "nws_source_available": {"name": "NWS-Quelle verfügbar"}
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Waldbrandgefahrenstufe",
+        "state": {
+          "none": "Keine",
+          "low": "Niedrig",
+          "moderate": "Mäßig",
+          "high": "Hoch",
+          "extreme": "Extrem"
+        }
+      },
+      "evacuation_level": {
+        "name": "Evakuierungsstufe",
+        "state": {
+          "none": "Keine",
+          "unclassified": "Nicht klassifiziert",
+          "level_1_ready": "Stufe 1 — Bereithalten",
+          "level_2_set": "Stufe 2 — Vorbereiten",
+          "level_3_go": "Stufe 3 — Evakuieren"
+        }
+      },
+      "evacuation_status": {
+        "name": "Evakuierungsstatus",
+        "state": {
+          "none": "Keiner",
+          "advisory": "Hinweis",
+          "warning": "Warnung",
+          "order": "Anordnung",
+          "immediate": "Sofort",
+          "unknown": "Unbekannt"
+        }
+      },
+      "nearby_wildfire_count": {"name": "Anzahl der Waldbrände in der Nähe"},
+      "nearest_wildfire_name": {"name": "Name des nächsten Waldbrands"},
+      "nearest_wildfire_distance": {"name": "Entfernung zum nächsten Waldbrand"},
+      "nearest_wildfire_size": {"name": "Größe des nächsten Waldbrands"},
+      "nearest_wildfire_containment": {"name": "Eindämmung des nächsten Waldbrands"},
+      "active_fire_alert_count": {"name": "Anzahl aktiver Feuerwarnungen"},
+      "highest_fire_alert_severity": {
+        "name": "Höchster Schweregrad der Feuerwarnung",
+        "state": {
+          "none": "Keiner",
+          "unknown": "Unbekannt",
+          "minor": "Gering",
+          "moderate": "Mäßig",
+          "severe": "Schwer",
+          "extreme": "Extrem"
+        }
+      },
+      "nifc_last_success": {"name": "Letzte erfolgreiche NIFC-Aktualisierung"},
+      "nws_last_success": {"name": "Letzte erfolgreiche NWS-Aktualisierung"}
+    }
+  }
+}

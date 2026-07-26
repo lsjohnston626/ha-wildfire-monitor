@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "위치 모니터링",
+        "description": "공식 NIFC 산불 및 NWS 경보 데이터를 사용합니다.",
+        "data": {
+          "name": "위치 이름",
+          "latitude": "위도",
+          "longitude": "경도",
+          "radius": "산불 검색 반경"
+        },
+        "data_description": {
+          "radius": "NIFC 산불 검색에 사용되는 거리(마일)(5~250)입니다."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "이 위치는 이미 구성되어 있습니다."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "모니터링되는 위치 수정",
+        "data": {
+          "name": "위치 이름",
+          "latitude": "위도",
+          "longitude": "경도",
+          "radius": "산불 반경"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "이 위치는 이미 구성되어 있습니다."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "인근 산불"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "경계 내부의 산불"
+      },
+      "fire_weather_alert": {
+        "name": "화재 기상 경보"
+      },
+      "fire_warning": {
+        "name": "화재 경고"
+      },
+      "evacuation_alert": {
+        "name": "대피 경보"
+      },
+      "nifc_source_available": {
+        "name": "NIFC 소스 사용 가능"
+      },
+      "nws_source_available": {
+        "name": "NWS 소스 사용 가능"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "산불 위협 수준",
+        "state": {
+          "none": "없음",
+          "low": "낮은",
+          "moderate": "보통의",
+          "high": "높은",
+          "extreme": "극심한"
+        }
+      },
+      "evacuation_level": {
+        "name": "대피 수준",
+        "state": {
+          "none": "대피 수준 없음",
+          "unclassified": "대피 수준이 분류되지 않음",
+          "level_1_ready": "레벨 1 - 준비(준비)",
+          "level_2_set": "2단계 — 설정(대피 준비)",
+          "level_3_go": "3단계 - 이동(지금 대피)"
+        }
+      },
+      "evacuation_status": {
+        "name": "피난 상황",
+        "state": {
+          "none": "대피 금지",
+          "advisory": "피난 권고",
+          "warning": "대피 경고",
+          "order": "대피 명령",
+          "immediate": "즉시 대피",
+          "unknown": "대피 상황을 알 수 없음"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "인근 산불 횟수"
+      },
+      "nearest_wildfire_name": {
+        "name": "가장 가까운 산불 이름"
+      },
+      "nearest_wildfire_distance": {
+        "name": "가장 가까운 산불 거리"
+      },
+      "nearest_wildfire_size": {
+        "name": "가장 가까운 산불 규모"
+      },
+      "nearest_wildfire_containment": {
+        "name": "가장 가까운 산불 억제 비율"
+      },
+      "active_fire_alert_count": {
+        "name": "활성 화재 경보 수"
+      },
+      "highest_fire_alert_severity": {
+        "name": "가장 높은 화재 경보 심각도",
+        "state": {
+          "none": "없음",
+          "unknown": "알려지지 않은",
+          "minor": "미성년자",
+          "moderate": "보통의",
+          "severe": "극심한",
+          "extreme": "극심한"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC 마지막 성공"
+      },
+      "nws_last_success": {
+        "name": "NWS 마지막 성공"
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Övervaka en plats",
+        "description": "Använder officiella skogsbrandsdata från NIFC och varningar från NWS.",
+        "data": {
+          "name": "Platsnamn",
+          "latitude": "Latitud",
+          "longitude": "Longitud",
+          "radius": "Radie för skogsbränder"
+        },
+        "data_description": {
+          "radius": "Avstånd i miles (5–250) som används för att söka efter skogsbränder hos NIFC."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Platsen är redan konfigurerad."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Redigera övervakad plats",
+        "data": {
+          "name": "Platsnamn",
+          "latitude": "Latitud",
+          "longitude": "Longitud",
+          "radius": "Radie för skogsbränder"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Platsen är redan konfigurerad."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {"name": "Skogsbrand i närheten"},
+      "wildfire_inside_perimeter": {"name": "Platsen inom en brandperimeter"},
+      "fire_weather_alert": {"name": "Varning för brandfarligt väder"},
+      "fire_warning": {"name": "Brandvarning"},
+      "evacuation_alert": {"name": "Evakueringsvarning"},
+      "nifc_source_available": {"name": "NIFC-källa tillgänglig"},
+      "nws_source_available": {"name": "NWS-källa tillgänglig"}
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Hotnivå för skogsbrand",
+        "state": {
+          "none": "Ingen",
+          "low": "Låg",
+          "moderate": "Måttlig",
+          "high": "Hög",
+          "extreme": "Extrem"
+        }
+      },
+      "evacuation_level": {
+        "name": "Evakueringsnivå",
+        "state": {
+          "none": "Ingen",
+          "unclassified": "Oklassificerad",
+          "level_1_ready": "Nivå 1 — Var beredd",
+          "level_2_set": "Nivå 2 — Gör dig redo",
+          "level_3_go": "Nivå 3 — Evakuera"
+        }
+      },
+      "evacuation_status": {
+        "name": "Evakueringsstatus",
+        "state": {
+          "none": "Ingen",
+          "advisory": "Rekommendation",
+          "warning": "Varning",
+          "order": "Order",
+          "immediate": "Omedelbar",
+          "unknown": "Okänd"
+        }
+      },
+      "nearby_wildfire_count": {"name": "Antal skogsbränder i närheten"},
+      "nearest_wildfire_name": {"name": "Namn på närmaste skogsbrand"},
+      "nearest_wildfire_distance": {"name": "Avstånd till närmaste skogsbrand"},
+      "nearest_wildfire_size": {"name": "Storlek på närmaste skogsbrand"},
+      "nearest_wildfire_containment": {"name": "Inneslutningsgrad för närmaste skogsbrand"},
+      "active_fire_alert_count": {"name": "Antal aktiva brandvarningar"},
+      "highest_fire_alert_severity": {
+        "name": "Högsta allvarlighetsgrad för brandvarning",
+        "state": {
+          "none": "Ingen",
+          "unknown": "Okänd",
+          "minor": "Mindre",
+          "moderate": "Måttlig",
+          "severe": "Allvarlig",
+          "extreme": "Extrem"
+        }
+      },
+      "nifc_last_success": {"name": "Senaste lyckade NIFC-uppdatering"},
+      "nws_last_success": {"name": "Senaste lyckade NWS-uppdatering"}
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Monitro lleoliad",
+        "description": "Yn defnyddio data rhybuddion swyddogol NIFC tanau gwyllt a NWS.",
+        "data": {
+          "name": "Enw lleoliad",
+          "latitude": "Lledred",
+          "longitude": "Hydred",
+          "radius": "Radiws chwilio tanau gwyllt"
+        },
+        "data_description": {
+          "radius": "Pellter mewn milltiroedd (5–250) a ddefnyddir ar gyfer chwiliadau tanau gwyllt NIFC."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Mae'r lleoliad hwn eisoes wedi'i ffurfweddu."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Golygu lleoliad wedi'i fonitro",
+        "data": {
+          "name": "Enw lleoliad",
+          "latitude": "Lledred",
+          "longitude": "Hydred",
+          "radius": "Radiws tanau gwyllt"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Mae'r lleoliad hwn eisoes wedi'i ffurfweddu."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Tanau gwyllt gerllaw"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Tanau gwyllt y tu mewn i'r perimedr"
+      },
+      "fire_weather_alert": {
+        "name": "Rhybudd tywydd tân"
+      },
+      "fire_warning": {
+        "name": "Rhybudd tân"
+      },
+      "evacuation_alert": {
+        "name": "Rhybudd gwacáu"
+      },
+      "nifc_source_available": {
+        "name": "NIFC ffynhonnell ar gael"
+      },
+      "nws_source_available": {
+        "name": "NWS ffynhonnell ar gael"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Lefel bygythiad tanau gwyllt",
+        "state": {
+          "none": "Dim",
+          "low": "Isel",
+          "moderate": "Cymedrol",
+          "high": "Uchel",
+          "extreme": "Eithafol"
+        }
+      },
+      "evacuation_level": {
+        "name": "Lefel gwacáu",
+        "state": {
+          "none": "Dim lefel gwacáu",
+          "unclassified": "Lefel gwacáu heb ei dosbarthu",
+          "level_1_ready": "Lefel 1 — Barod (paratoi)",
+          "level_2_set": "Lefel 2 — Set (byddwch yn barod i wacáu)",
+          "level_3_go": "Lefel 3 — Ewch (gwacáu nawr)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Statws gwacáu",
+        "state": {
+          "none": "Dim gwacáu",
+          "advisory": "Cyngor ar wacáu",
+          "warning": "Rhybudd gwacáu",
+          "order": "Gorchymyn gwacáu",
+          "immediate": "Gwacáu ar unwaith",
+          "unknown": "Statws gwacáu anhysbys"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Cyfrif tanau gwyllt gerllaw"
+      },
+      "nearest_wildfire_name": {
+        "name": "Enw tanau gwyllt agosaf"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Pellter tanau gwyllt agosaf"
+      },
+      "nearest_wildfire_size": {
+        "name": "Maint tanau gwyllt agosaf"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Y ganran cyfyngu tanau gwyllt agosaf"
+      },
+      "active_fire_alert_count": {
+        "name": "Cyfrif rhybuddion tân gweithredol"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Difrifoldeb rhybudd tân uchaf",
+        "state": {
+          "none": "Dim",
+          "unknown": "Anhysbys",
+          "minor": "Mân",
+          "moderate": "Cymedrol",
+          "severe": "Difrifol",
+          "extreme": "Eithafol"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC llwyddiant diwethaf"
+      },
+      "nws_last_success": {
+        "name": "NWS llwyddiant diwethaf"
+      }
+    }
+  }
+}

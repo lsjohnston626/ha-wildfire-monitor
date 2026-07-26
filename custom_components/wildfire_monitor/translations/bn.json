@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "একটি অবস্থান নিরীক্ষণ",
+        "description": "অফিসিয়াল NIFC দাবানল এবং NWS সতর্কতা ডেটা ব্যবহার করে।",
+        "data": {
+          "name": "অবস্থানের নাম",
+          "latitude": "অক্ষাংশ",
+          "longitude": "দ্রাঘিমাংশ",
+          "radius": "দাবানল অনুসন্ধান ব্যাসার্ধ"
+        },
+        "data_description": {
+          "radius": "মাইলে দূরত্ব (5–250) NIFC দাবানল অনুসন্ধানের জন্য ব্যবহৃত হয়।"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "এই অবস্থানটি ইতিমধ্যেই কনফিগার করা আছে৷"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "পর্যবেক্ষণ করা অবস্থান সম্পাদনা করুন",
+        "data": {
+          "name": "অবস্থানের নাম",
+          "latitude": "অক্ষাংশ",
+          "longitude": "দ্রাঘিমাংশ",
+          "radius": "দাবানলের ব্যাসার্ধ"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "এই অবস্থানটি ইতিমধ্যেই কনফিগার করা আছে৷"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "কাছাকাছি দাবানল"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "ঘেরের ভিতরে দাবানল"
+      },
+      "fire_weather_alert": {
+        "name": "আগুন আবহাওয়া সতর্কতা"
+      },
+      "fire_warning": {
+        "name": "আগুনের সতর্কতা"
+      },
+      "evacuation_alert": {
+        "name": "সরিয়ে নেওয়ার সতর্কতা"
+      },
+      "nifc_source_available": {
+        "name": "NIFC উৎস উপলব্ধ"
+      },
+      "nws_source_available": {
+        "name": "NWS উৎস উপলব্ধ"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "দাবানলের হুমকির মাত্রা",
+        "state": {
+          "none": "কোনোটিই নয়",
+          "low": "কম",
+          "moderate": "পরিমিত",
+          "high": "উচ্চ",
+          "extreme": "চরম"
+        }
+      },
+      "evacuation_level": {
+        "name": "উচ্ছেদ স্তর",
+        "state": {
+          "none": "কোন উচ্ছেদ স্তর",
+          "unclassified": "উচ্ছেদ স্তর শ্রেণীবদ্ধ নয়",
+          "level_1_ready": "লেভেল 1 — প্রস্তুত (প্রস্তুত)",
+          "level_2_set": "লেভেল 2 — সেট (খালি করার জন্য প্রস্তুত থাকুন)",
+          "level_3_go": "লেভেল 3 — যান (এখনই খালি করুন)"
+        }
+      },
+      "evacuation_status": {
+        "name": "উচ্ছেদ অবস্থা",
+        "state": {
+          "none": "কোন উচ্ছেদ নেই",
+          "advisory": "সরিয়ে নেওয়ার পরামর্শ",
+          "warning": "সরিয়ে নেওয়ার সতর্কতা",
+          "order": "সরিয়ে নেওয়ার আদেশ",
+          "immediate": "অবিলম্বে উচ্ছেদ",
+          "unknown": "অজানা উচ্ছেদ অবস্থা"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "কাছাকাছি দাবানল গণনা"
+      },
+      "nearest_wildfire_name": {
+        "name": "নিকটতম দাবানলের নাম"
+      },
+      "nearest_wildfire_distance": {
+        "name": "নিকটতম দাবানল দূরত্ব"
+      },
+      "nearest_wildfire_size": {
+        "name": "নিকটতম দাবানলের আকার"
+      },
+      "nearest_wildfire_containment": {
+        "name": "নিকটতম দাবানল নিয়ন্ত্রণ শতাংশ"
+      },
+      "active_fire_alert_count": {
+        "name": "সক্রিয় আগুন সতর্কতা গণনা"
+      },
+      "highest_fire_alert_severity": {
+        "name": "সর্বোচ্চ অগ্নি সতর্কতা তীব্রতা",
+        "state": {
+          "none": "কোনোটিই নয়",
+          "unknown": "অজানা",
+          "minor": "নাবালক",
+          "moderate": "মধ্যপন্থী",
+          "severe": "গুরুতর",
+          "extreme": "চরম"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC শেষ সাফল্য"
+      },
+      "nws_last_success": {
+        "name": "NWS শেষ সাফল্য"
+      }
+    }
+  }
+}

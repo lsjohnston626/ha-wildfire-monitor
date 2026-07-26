@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Fylgstu með staðsetningu",
+        "description": "Notar opinber NIFC skógarelda og NWS viðvörunargögn.",
+        "data": {
+          "name": "Staðsetningarheiti",
+          "latitude": "Breidd",
+          "longitude": "Lengdargráða",
+          "radius": "Leitarradíus vegna skógarelda"
+        },
+        "data_description": {
+          "radius": "Fjarlægð í mílum (5–250) notuð fyrir NIFC skógareldaleit."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Þessi staðsetning er þegar stillt."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Breyta vöktuðum staðsetningu",
+        "data": {
+          "name": "Staðsetningarheiti",
+          "latitude": "Breidd",
+          "longitude": "Lengdargráða",
+          "radius": "Skógareldaradíus"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Þessi staðsetning er þegar stillt."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Skógareldur í nágrenninu"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Skógareldur innan jaðar"
+      },
+      "fire_weather_alert": {
+        "name": "Veðurviðvörun vegna eldsvoða"
+      },
+      "fire_warning": {
+        "name": "Brunaviðvörun"
+      },
+      "evacuation_alert": {
+        "name": "Rýmingarviðvörun"
+      },
+      "nifc_source_available": {
+        "name": "NIFC heimild í boði"
+      },
+      "nws_source_available": {
+        "name": "NWS heimild í boði"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Skógareldahættustig",
+        "state": {
+          "none": "Ekkert",
+          "low": "Lágt",
+          "moderate": "Í meðallagi",
+          "high": "Hár",
+          "extreme": "Öfgafullt"
+        }
+      },
+      "evacuation_level": {
+        "name": "Rýmingarstig",
+        "state": {
+          "none": "Ekkert rýmingarstig",
+          "unclassified": "Rýmingarstig ekki flokkað",
+          "level_1_ready": "Stig 1 – Tilbúið (undirbúa)",
+          "level_2_set": "Stig 2 - Stillt (vertu tilbúinn til að rýma)",
+          "level_3_go": "Stig 3 – Farðu (rýmdu núna)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Staða rýmingar",
+        "state": {
+          "none": "Engin rýming",
+          "advisory": "Rýmingarráðgjöf",
+          "warning": "Rýmingarviðvörun",
+          "order": "Rýmingarfyrirmæli",
+          "immediate": "Tafarlaus brottflutningur",
+          "unknown": "Óþekkt rýmingarstaða"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Talning nærliggjandi skógarelda"
+      },
+      "nearest_wildfire_name": {
+        "name": "Næsta heiti skógarelda"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Næsta gróðurelda fjarlægð"
+      },
+      "nearest_wildfire_size": {
+        "name": "Næsta skógareldastærð"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Hlutfall nálægustu skógarelda"
+      },
+      "active_fire_alert_count": {
+        "name": "Virk brunaviðvörunartalning"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Hæsta brunaviðvörun",
+        "state": {
+          "none": "Ekkert",
+          "unknown": "Óþekkt",
+          "minor": "Minniháttar",
+          "moderate": "Í meðallagi",
+          "severe": "Alvarlegt",
+          "extreme": "Öfgafullt"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC síðasti árangur"
+      },
+      "nws_last_success": {
+        "name": "NWS síðasti árangur"
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "場所を監視する",
+        "description": "公式の NIFC 山火事および NWS 警報データを使用します。",
+        "data": {
+          "name": "地名",
+          "latitude": "緯度",
+          "longitude": "経度",
+          "radius": "山火事の捜索半径"
+        },
+        "data_description": {
+          "radius": "NIFC の山火事の捜索に使用されるマイル (5 ～ 250) 単位の距離。"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "この場所はすでに設定されています。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "監視場所の編集",
+        "data": {
+          "name": "地名",
+          "latitude": "緯度",
+          "longitude": "経度",
+          "radius": "山火事の半径"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "この場所はすでに構成されています。"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "近くの山火事"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "境界内の山火事"
+      },
+      "fire_weather_alert": {
+        "name": "火災気象警報"
+      },
+      "fire_warning": {
+        "name": "火災警報"
+      },
+      "evacuation_alert": {
+        "name": "避難勧告"
+      },
+      "nifc_source_available": {
+        "name": "NIFC ソースが利用可能"
+      },
+      "nws_source_available": {
+        "name": "NWS ソースが利用可能"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "山火事の脅威レベル",
+        "state": {
+          "none": "なし",
+          "low": "低い",
+          "moderate": "中程度",
+          "high": "高い",
+          "extreme": "エクストリーム"
+        }
+      },
+      "evacuation_level": {
+        "name": "避難レベル",
+        "state": {
+          "none": "避難レベルなし",
+          "unclassified": "避難レベルは分類されていません",
+          "level_1_ready": "レベル 1 — 準備完了 (準備)",
+          "level_2_set": "レベル 2 — 設定済み (避難の準備をする)",
+          "level_3_go": "レベル 3 — 避難（今すぐ避難）"
+        }
+      },
+      "evacuation_status": {
+        "name": "避難状況",
+        "state": {
+          "none": "避難禁止",
+          "advisory": "避難勧告",
+          "warning": "避難勧告",
+          "order": "避難命令",
+          "immediate": "直ちに避難してください",
+          "unknown": "避難状況不明"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "近くの山火事の数"
+      },
+      "nearest_wildfire_name": {
+        "name": "最も近い山火事の名前"
+      },
+      "nearest_wildfire_distance": {
+        "name": "最も近い山火事の距離"
+      },
+      "nearest_wildfire_size": {
+        "name": "最も近い山火事のサイズ"
+      },
+      "nearest_wildfire_containment": {
+        "name": "最も近い山火事の封じ込め率"
+      },
+      "active_fire_alert_count": {
+        "name": "アクティブな火災警報数"
+      },
+      "highest_fire_alert_severity": {
+        "name": "最も高い火災警報の重大度",
+        "state": {
+          "none": "なし",
+          "unknown": "不明",
+          "minor": "マイナー",
+          "moderate": "中程度",
+          "severe": "重度",
+          "extreme": "エクストリーム"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC 最後の成功"
+      },
+      "nws_last_success": {
+        "name": "NWS 最後の成功"
+      }
+    }
+  }
+}

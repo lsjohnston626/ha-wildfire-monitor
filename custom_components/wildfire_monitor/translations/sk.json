@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Monitorujte polohu",
+        "description": "Používa oficiálne údaje o požiaroch NIFC a výstrahách NWS.",
+        "data": {
+          "name": "Názov miesta",
+          "latitude": "Zemepisná šírka",
+          "longitude": "Zemepisná dĺžka",
+          "radius": "Polomer vyhľadávania Wildfire"
+        },
+        "data_description": {
+          "radius": "Vzdialenosť v míľach (5–250) používaná na vyhľadávanie lesných požiarov NIFC."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Toto umiestnenie je už nakonfigurované."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Upraviť monitorované miesto",
+        "data": {
+          "name": "Názov miesta",
+          "latitude": "Zemepisná šírka",
+          "longitude": "Zemepisná dĺžka",
+          "radius": "Polomer Wildfire"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Toto umiestnenie je už nakonfigurované."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Požiar v blízkosti"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Požiar vo vnútri obvodu"
+      },
+      "fire_weather_alert": {
+        "name": "Upozornenie na požiarne počasie"
+      },
+      "fire_warning": {
+        "name": "Výstraha pred požiarom"
+      },
+      "evacuation_alert": {
+        "name": "Upozornenie na evakuáciu"
+      },
+      "nifc_source_available": {
+        "name": "K dispozícii je zdroj NIFC"
+      },
+      "nws_source_available": {
+        "name": "Zdroj NWS k dispozícii"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Úroveň ohrozenia lesným požiarom",
+        "state": {
+          "none": "žiadne",
+          "low": "Nízka",
+          "moderate": "Mierne",
+          "high": "Vysoká",
+          "extreme": "Extrémne"
+        }
+      },
+      "evacuation_level": {
+        "name": "Úroveň evakuácie",
+        "state": {
+          "none": "Žiadna úroveň evakuácie",
+          "unclassified": "Úroveň evakuácie nie je klasifikovaná",
+          "level_1_ready": "Úroveň 1 – Pripravený (pripraviť sa)",
+          "level_2_set": "Úroveň 2 – Nastavte (buďte pripravení na evakuáciu)",
+          "level_3_go": "Úroveň 3 – Choďte (teraz evakuujte)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Stav evakuácie",
+        "state": {
+          "none": "Žiadna evakuácia",
+          "advisory": "Evakuačné poradenstvo",
+          "warning": "Varovanie pred evakuáciou",
+          "order": "Príkaz na evakuáciu",
+          "immediate": "Okamžitá evakuácia",
+          "unknown": "Neznámy stav evakuácie"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Počet požiarov v blízkosti"
+      },
+      "nearest_wildfire_name": {
+        "name": "Názov najbližšieho požiaru"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Najbližšia vzdialenosť požiaru"
+      },
+      "nearest_wildfire_size": {
+        "name": "Najbližšia veľkosť požiaru"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Najbližšie percento ochrany pred lesnými požiarmi"
+      },
+      "active_fire_alert_count": {
+        "name": "Počet aktívnych požiarnych výstrah"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Najvyššia závažnosť požiarnej výstrahy",
+        "state": {
+          "none": "žiadne",
+          "unknown": "Neznámy",
+          "minor": "Menší",
+          "moderate": "Mierne",
+          "severe": "Ťažké",
+          "extreme": "Extrémne"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC posledný úspech"
+      },
+      "nws_last_success": {
+        "name": "NWS posledný úspech"
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Monitor 'n ligging",
+        "description": "Gebruik amptelike NIFC veldbrand en NWS waarskuwing data.",
+        "data": {
+          "name": "Liggingnaam",
+          "latitude": "Breedtegraad",
+          "longitude": "Lengtegraad",
+          "radius": "Veldbrand soek radius"
+        },
+        "data_description": {
+          "radius": "Afstand in myl (5–250) gebruik vir NIFC veldbrandsoektogte."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Hierdie ligging is reeds opgestel."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Wysig gemonitorde ligging",
+        "data": {
+          "name": "Liggingnaam",
+          "latitude": "Breedtegraad",
+          "longitude": "Lengtegraad",
+          "radius": "Veldbrandradius"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Hierdie ligging is reeds opgestel."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Veldbrand naby"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Veldbrand binne omtrek"
+      },
+      "fire_weather_alert": {
+        "name": "Brandweerwaarskuwing"
+      },
+      "fire_warning": {
+        "name": "Brandwaarskuwing"
+      },
+      "evacuation_alert": {
+        "name": "Ontruimingswaarskuwing"
+      },
+      "nifc_source_available": {
+        "name": "NIFC bron beskikbaar"
+      },
+      "nws_source_available": {
+        "name": "NWS bron beskikbaar"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Veldbrandbedreigingsvlak",
+        "state": {
+          "none": "Geen",
+          "low": "Laag",
+          "moderate": "Matig",
+          "high": "Hoog",
+          "extreme": "Ekstreem"
+        }
+      },
+      "evacuation_level": {
+        "name": "Ontruimingsvlak",
+        "state": {
+          "none": "Geen ontruimingsvlak nie",
+          "unclassified": "Ontruimingsvlak nie geklassifiseer nie",
+          "level_1_ready": "Vlak 1 – Gereed (berei voor)",
+          "level_2_set": "Vlak 2 – Stel (wees gereed om te ontruim)",
+          "level_3_go": "Vlak 3 – Gaan (ontruim nou)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Ontruimingstatus",
+        "state": {
+          "none": "Geen ontruiming nie",
+          "advisory": "Ontruimingsadvies",
+          "warning": "Ontruimingswaarskuwing",
+          "order": "Ontruimingsbevel",
+          "immediate": "Onmiddellike ontruiming",
+          "unknown": "Onbekende ontruimingstatus"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Nabygeleë veldbrande tel"
+      },
+      "nearest_wildfire_name": {
+        "name": "Naam van naaste veldbrand"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Naaste veldbrandafstand"
+      },
+      "nearest_wildfire_size": {
+        "name": "Naaste veldbrandgrootte"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Persentasie naaste veldbrandbeperking"
+      },
+      "active_fire_alert_count": {
+        "name": "Aktiewe brandwaarskuwingtelling"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Hoogste brandwaarskuwingserns",
+        "state": {
+          "none": "Geen",
+          "unknown": "Onbekend",
+          "minor": "Klein",
+          "moderate": "Matig",
+          "severe": "Ernstig",
+          "extreme": "Ekstreem"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC laaste sukses"
+      },
+      "nws_last_success": {
+        "name": "NWS laaste sukses"
+      }
+    }
+  }
+}

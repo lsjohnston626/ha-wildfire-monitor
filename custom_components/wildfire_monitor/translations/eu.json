@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Kokapen bat kontrolatu",
+        "description": "NIFC suteen eta NWS alerta datu ofizialak erabiltzen ditu.",
+        "data": {
+          "name": "Kokapen-izena",
+          "latitude": "Latitudea",
+          "longitude": "Luzera",
+          "radius": "Suteen bilaketa-erradioa"
+        },
+        "data_description": {
+          "radius": "NIFC suteen bilaketetarako erabiltzen den distantzia (5–250) miliatan."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Kokapen hau dagoeneko konfiguratuta dago."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Editatu kontrolatutako kokapena",
+        "data": {
+          "name": "Kokapen-izena",
+          "latitude": "Latitudea",
+          "longitude": "Luzera",
+          "radius": "Baso-suteen erradioa"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Kokapen hau dagoeneko konfiguratuta dago."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Sutea inguruan"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Baso-sutea perimetro barruan"
+      },
+      "fire_weather_alert": {
+        "name": "Suteen eguraldiaren alerta"
+      },
+      "fire_warning": {
+        "name": "Suteen abisua"
+      },
+      "evacuation_alert": {
+        "name": "Ebakuazio alerta"
+      },
+      "nifc_source_available": {
+        "name": "NIFC iturria eskuragarri"
+      },
+      "nws_source_available": {
+        "name": "NWS iturria eskuragarri"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Baso-suteen mehatxu maila",
+        "state": {
+          "none": "Bat ere ez",
+          "low": "Baxua",
+          "moderate": "Ertaina",
+          "high": "Altua",
+          "extreme": "Muturrekoa"
+        }
+      },
+      "evacuation_level": {
+        "name": "Ebakuazio maila",
+        "state": {
+          "none": "Ez dago ebakuazio mailarik",
+          "unclassified": "Ebakuazio maila ez dago sailkatuta",
+          "level_1_ready": "1. maila — Prest (prestatu)",
+          "level_2_set": "2. maila — Ezarri (prest egon ebakuatzeko)",
+          "level_3_go": "3. maila — Joan (ebakuatu orain)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Ebakuazio egoera",
+        "state": {
+          "none": "Ebakuaziorik ez",
+          "advisory": "Ebakuazio-aholkua",
+          "warning": "Ebakuazio-abisua",
+          "order": "Ebakuazio agindua",
+          "immediate": "Berehalako ebakuazioa",
+          "unknown": "Ebakuazio-egoera ezezaguna"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Inguruko suteen zenbaketa"
+      },
+      "nearest_wildfire_name": {
+        "name": "Hurbilen dagoen sutearen izena"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Suteen distantzia hurbilena"
+      },
+      "nearest_wildfire_size": {
+        "name": "Sutearen tamaina hurbilena"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Baso-suteak eusteko portzentajerik hurbilena"
+      },
+      "active_fire_alert_count": {
+        "name": "Suteen alerta-zenbaketa aktiboa"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Suteen alerta larritasun handiena",
+        "state": {
+          "none": "Bat ere ez",
+          "unknown": "Ezezaguna",
+          "minor": "Txikia",
+          "moderate": "Ertaina",
+          "severe": "Larria",
+          "extreme": "Muturrekoa"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC azken arrakasta"
+      },
+      "nws_last_success": {
+        "name": "NWS azken arrakasta"
+      }
+    }
+  }
+}

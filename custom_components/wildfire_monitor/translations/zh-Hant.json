@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "監控位置",
+        "description": "使用官方 NIFC 野火和 NWS 警報資料。",
+        "data": {
+          "name": "地點名稱",
+          "latitude": "緯度",
+          "longitude": "經度",
+          "radius": "野火搜尋半徑"
+        },
+        "data_description": {
+          "radius": "用於 NIFC 野火搜尋的距離（5-250 英里）。"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "該位置已配置。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "編輯監控位置",
+        "data": {
+          "name": "地點名稱",
+          "latitude": "緯度",
+          "longitude": "經度",
+          "radius": "野火半徑"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "該位置已配置。"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "附近有野火"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "週邊發生野火"
+      },
+      "fire_weather_alert": {
+        "name": "火災天氣警報"
+      },
+      "fire_warning": {
+        "name": "火災警告"
+      },
+      "evacuation_alert": {
+        "name": "疏散警報"
+      },
+      "nifc_source_available": {
+        "name": "NIFC 來源可用"
+      },
+      "nws_source_available": {
+        "name": "NWS 來源可用"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "野火威脅級別",
+        "state": {
+          "none": "無",
+          "low": "低",
+          "moderate": "中等",
+          "high": "高",
+          "extreme": "極端"
+        }
+      },
+      "evacuation_level": {
+        "name": "疏散等級",
+        "state": {
+          "none": "無疏散層",
+          "unclassified": "疏散等級未分類",
+          "level_1_ready": "1 級 — 準備好（準備）",
+          "level_2_set": "2 級 — 準備就緒（準備撤離）",
+          "level_3_go": "3 級 — 出發（立即撤離）"
+        }
+      },
+      "evacuation_status": {
+        "name": "疏散狀態",
+        "state": {
+          "none": "不撤離",
+          "advisory": "疏散建議",
+          "warning": "疏散警告",
+          "order": "疏散命令",
+          "immediate": "立即疏散",
+          "unknown": "疏散状态未知"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "附近野火計數"
+      },
+      "nearest_wildfire_name": {
+        "name": "最近的野火名稱"
+      },
+      "nearest_wildfire_distance": {
+        "name": "最近的野火距離"
+      },
+      "nearest_wildfire_size": {
+        "name": "最近的野火規模"
+      },
+      "nearest_wildfire_containment": {
+        "name": "最近的野火遏制百分比"
+      },
+      "active_fire_alert_count": {
+        "name": "活動火災警報計數"
+      },
+      "highest_fire_alert_severity": {
+        "name": "最高火災警報嚴重程度",
+        "state": {
+          "none": "沒有任何",
+          "unknown": "未知",
+          "minor": "次要的",
+          "moderate": "緩和",
+          "severe": "劇烈",
+          "extreme": "極端"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC 最後一次成功"
+      },
+      "nws_last_success": {
+        "name": "NWS 最後的成功"
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Դիտեք տեղանքը",
+        "description": "Օգտագործում է NIFC անտառային հրդեհների և NWS ահազանգերի պաշտոնական տվյալները:",
+        "data": {
+          "name": "Տեղադրության անվանումը",
+          "latitude": "Լայնություն",
+          "longitude": "Երկայնություն",
+          "radius": "Անտառային հրդեհների որոնման շառավիղ"
+        },
+        "data_description": {
+          "radius": "Հեռավորությունը մղոններով (5–250), որն օգտագործվում է NIFC անտառային հրդեհների որոնումների համար։"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Այս տեղադրությունն արդեն կազմաձևված է:"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Խմբագրել վերահսկվող վայրը",
+        "data": {
+          "name": "Տեղադրության անվանումը",
+          "latitude": "Լայնություն",
+          "longitude": "Երկայնություն",
+          "radius": "Անտառային հրդեհի շառավիղ"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Այս տեղադրությունն արդեն կազմաձևված է:"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Մոտակայքում անտառային հրդեհ"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Անտառային հրդեհ ներսի պարագծի"
+      },
+      "fire_weather_alert": {
+        "name": "Հրդեհային եղանակի ահազանգ"
+      },
+      "fire_warning": {
+        "name": "Հրդեհի նախազգուշացում"
+      },
+      "evacuation_alert": {
+        "name": "Տարհանման ահազանգ"
+      },
+      "nifc_source_available": {
+        "name": "NIFC աղբյուրը հասանելի է"
+      },
+      "nws_source_available": {
+        "name": "NWS աղբյուրը հասանելի է"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Անտառային հրդեհների սպառնալիքի մակարդակ",
+        "state": {
+          "none": "Ոչ",
+          "low": "Ցածր",
+          "moderate": "Չափավոր",
+          "high": "Բարձր",
+          "extreme": "Ծայրահեղ"
+        }
+      },
+      "evacuation_level": {
+        "name": "Տարհանման մակարդակը",
+        "state": {
+          "none": "Տարհանման մակարդակ չկա",
+          "unclassified": "Տարհանման մակարդակը դասակարգված չէ",
+          "level_1_ready": "Մակարդակ 1 — Պատրաստ (պատրաստել)",
+          "level_2_set": "Մակարդակ 2 — Սահմանված է (պատրաստ եղեք տարհանման)",
+          "level_3_go": "Մակարդակ 3 — Գնացեք (տարհանեք հիմա)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Տարհանման կարգավիճակ",
+        "state": {
+          "none": "Տարհանում չկա",
+          "advisory": "Խորհրդատվություն տարհանման մասին",
+          "warning": "Տարհանման նախազգուշացում",
+          "order": "Տարհանման հրաման",
+          "immediate": "Անհապաղ տարհանում",
+          "unknown": "Անհայտ տարհանման կարգավիճակ"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Մոտակայքում անտառային հրդեհների հաշվարկ"
+      },
+      "nearest_wildfire_name": {
+        "name": "Անտառային հրդեհի մոտակա անունը"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Անտառային հրդեհների մոտակա հեռավորությունը"
+      },
+      "nearest_wildfire_size": {
+        "name": "Անտառային հրդեհի մոտակա չափը"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Անտառային հրդեհների զսպման ամենամոտ տոկոսը"
+      },
+      "active_fire_alert_count": {
+        "name": "Ակտիվ հրդեհային ազդանշանների հաշվարկ"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Հրդեհի ահազանգման ամենաբարձր խստությունը",
+        "state": {
+          "none": "Ոչ",
+          "unknown": "Անհայտ",
+          "minor": "Անչափահաս",
+          "moderate": "Չափավոր",
+          "severe": "Ծանր",
+          "extreme": "Ծայրահեղ"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC վերջին հաջողությունը"
+      },
+      "nws_last_success": {
+        "name": "NWS վերջին հաջողությունը"
+      }
+    }
+  }
+}

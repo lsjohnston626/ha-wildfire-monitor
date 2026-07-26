@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "מעקב אחר מיקום",
+        "description": "משתמש בנתונים רשמיים של NIFC שריפות בשדה קוצים והתראה NWS.",
+        "data": {
+          "name": "שם מיקום",
+          "latitude": "קו רוחב",
+          "longitude": "קו אורך",
+          "radius": "רדיוס חיפוש שריפות"
+        },
+        "data_description": {
+          "radius": "מרחק במיילים (5–250) המשמש לחיפושי שריפות בשדה קוצים NIFC."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "מיקום זה כבר מוגדר."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "ערוך מיקום מנוטר",
+        "data": {
+          "name": "שם מיקום",
+          "latitude": "קו רוחב",
+          "longitude": "קו אורך",
+          "radius": "רדיוס שריפות"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "המיקום הזה כבר מוגדר."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "שריפה בקרבת מקום"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "שריפה בתוך ההיקף"
+      },
+      "fire_weather_alert": {
+        "name": "התראה על מזג אוויר אש"
+      },
+      "fire_warning": {
+        "name": "אזהרת אש"
+      },
+      "evacuation_alert": {
+        "name": "התראת פינוי"
+      },
+      "nifc_source_available": {
+        "name": "מקור NIFC זמין"
+      },
+      "nws_source_available": {
+        "name": "מקור NWS זמין"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "רמת איום שריפות",
+        "state": {
+          "none": "אין",
+          "low": "נמוך",
+          "moderate": "מתון",
+          "high": "גבוה",
+          "extreme": "קיצוני"
+        }
+      },
+      "evacuation_level": {
+        "name": "רמת פינוי",
+        "state": {
+          "none": "אין רמת פינוי",
+          "unclassified": "רמת הפינוי אינה מסווגת",
+          "level_1_ready": "רמה 1 - מוכן (הכנה)",
+          "level_2_set": "רמה 2 - הגדר (היה מוכן לפינוי)",
+          "level_3_go": "רמה 3 - עבור (תפנה עכשיו)"
+        }
+      },
+      "evacuation_status": {
+        "name": "מצב פינוי",
+        "state": {
+          "none": "אין פינוי",
+          "advisory": "ייעוץ לפינוי",
+          "warning": "אזהרת פינוי",
+          "order": "צו פינוי",
+          "immediate": "פינוי מיידי",
+          "unknown": "מצב פינוי לא ידוע"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "ספירת שריפות בקרבת מקום"
+      },
+      "nearest_wildfire_name": {
+        "name": "שם השריפה הקרובה ביותר"
+      },
+      "nearest_wildfire_distance": {
+        "name": "מרחק השריפות הקרוב ביותר"
+      },
+      "nearest_wildfire_size": {
+        "name": "גודל השריפות הקרוב ביותר"
+      },
+      "nearest_wildfire_containment": {
+        "name": "אחוז בלימת השריפות הקרובה ביותר"
+      },
+      "active_fire_alert_count": {
+        "name": "ספירת התראות אש פעילות"
+      },
+      "highest_fire_alert_severity": {
+        "name": "חומרת התראת האש הגבוהה ביותר",
+        "state": {
+          "none": "אין",
+          "unknown": "לא ידוע",
+          "minor": "קטין",
+          "moderate": "מתון",
+          "severe": "חמור",
+          "extreme": "קיצוני"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC הצלחה אחרונה"
+      },
+      "nws_last_success": {
+        "name": "NWS הצלחה אחרונה"
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Iwwerwaacht eng Plaz",
+        "description": "Benotzt offiziell NIFC Wildfire an NWS Alarmdaten.",
+        "data": {
+          "name": "Standuert Numm",
+          "latitude": "Breedegrad",
+          "longitude": "Längt",
+          "radius": "Wildfire Sich Radius"
+        },
+        "data_description": {
+          "radius": "Distanz a Meilen (5-250) benotzt fir NIFC Bëschbrand Sich."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Dës Plaz ass scho konfiguréiert."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Iwwerwaacht Standuert änneren",
+        "data": {
+          "name": "Standuert Numm",
+          "latitude": "Breet",
+          "longitude": "Längt",
+          "radius": "Wildfire Radius"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Dës Plaz ass scho konfiguréiert."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Wildfire an der Géigend"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Wildfire bannent Perimeter"
+      },
+      "fire_weather_alert": {
+        "name": "Feierwiederalarm"
+      },
+      "fire_warning": {
+        "name": "Feierwarnung"
+      },
+      "evacuation_alert": {
+        "name": "Evakuéierungsalarm"
+      },
+      "nifc_source_available": {
+        "name": "NIFC Quell verfügbar"
+      },
+      "nws_source_available": {
+        "name": "NWS Quell verfügbar"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Wildfire Bedrohungsniveau",
+        "state": {
+          "none": "Keen",
+          "low": "Niddereg",
+          "moderate": "Mëttelméisseg",
+          "high": "Héich",
+          "extreme": "Extrem"
+        }
+      },
+      "evacuation_level": {
+        "name": "Evakuéierungsniveau",
+        "state": {
+          "none": "Keen Evakuéierungsniveau",
+          "unclassified": "Evakuéierungsniveau net klasséiert",
+          "level_1_ready": "Niveau 1 - Ready (preparéieren)",
+          "level_2_set": "Niveau 2 - Set (sief prett fir ze evakuéieren)",
+          "level_3_go": "Niveau 3 - Gitt (evakuéieren elo)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Evakuéierungsstatus",
+        "state": {
+          "none": "Keng Evakuéierung",
+          "advisory": "Evakuéierungsberodung",
+          "warning": "Evakuéierungswarnung",
+          "order": "Evakuéierung Uerdnung",
+          "immediate": "Direkt Evakuéierung",
+          "unknown": "Onbekannt Evakuéierungsstatus"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Nopesch Bëschbränn Zuel"
+      },
+      "nearest_wildfire_name": {
+        "name": "Noosten Wildfire Numm"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Nooste wildfire Distanz"
+      },
+      "nearest_wildfire_size": {
+        "name": "Noosten wildfire Gréisst"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Noosten Wildfire Inhalter Prozentsaz"
+      },
+      "active_fire_alert_count": {
+        "name": "Aktiv Feieralarm Zuel"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Héchste Brandalarm Gravitéit",
+        "state": {
+          "none": "Keen",
+          "unknown": "Onbekannt",
+          "minor": "Minor",
+          "moderate": "Mëttelméisseg",
+          "severe": "Schwéier",
+          "extreme": "Extrem"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC leschte Succès"
+      },
+      "nws_last_success": {
+        "name": "NWS leschte Succès"
+      }
+    }
+  }
+}

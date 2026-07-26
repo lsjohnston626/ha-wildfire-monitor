@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Monitoroni një vendndodhje",
+        "description": "Përdor të dhënat zyrtare të zjarrit NIFC dhe sinjalizimeve NWS.",
+        "data": {
+          "name": "Emri i vendndodhjes",
+          "latitude": "Gjerësia gjeografike",
+          "longitude": "Gjatësia gjeografike",
+          "radius": "Rrezja e kërkimit të zjarrit"
+        },
+        "data_description": {
+          "radius": "Distanca në milje (5–250) e përdorur për kërkimet e zjarrit NIFC."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Ky vend është tashmë i konfiguruar."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Redakto vendndodhjen e monitoruar",
+        "data": {
+          "name": "Emri i vendndodhjes",
+          "latitude": "Gjerësia gjeografike",
+          "longitude": "Gjatësia gjeografike",
+          "radius": "Rrezja e zjarrit"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Ky vend është tashmë i konfiguruar."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Zjarri aty pranë"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Zjarri brenda perimetrit"
+      },
+      "fire_weather_alert": {
+        "name": "Alarmi për motin nga zjarri"
+      },
+      "fire_warning": {
+        "name": "Paralajmërim zjarri"
+      },
+      "evacuation_alert": {
+        "name": "Alarmi evakuimi"
+      },
+      "nifc_source_available": {
+        "name": "Burimi NIFC disponohet"
+      },
+      "nws_source_available": {
+        "name": "Burimi NWS disponohet"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Niveli i kërcënimit nga zjarri",
+        "state": {
+          "none": "Asnjë",
+          "low": "E ulët",
+          "moderate": "E moderuar",
+          "high": "Lartë",
+          "extreme": "Ekstreme"
+        }
+      },
+      "evacuation_level": {
+        "name": "Niveli i evakuimit",
+        "state": {
+          "none": "Asnjë nivel evakuimi",
+          "unclassified": "Niveli i evakuimit nuk është i klasifikuar",
+          "level_1_ready": "Niveli 1 - Gati (përgatit)",
+          "level_2_set": "Niveli 2 - Cakto (jenë gati për evakuim)",
+          "level_3_go": "Niveli 3 - Shko (evakuo tani)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Statusi i evakuimit",
+        "state": {
+          "none": "Asnjë evakuim",
+          "advisory": "Këshillim për evakuim",
+          "warning": "Paralajmërim evakuimi",
+          "order": "Urdhër evakuimi",
+          "immediate": "Evakuim i menjëhershëm",
+          "unknown": "Status i panjohur evakuimi"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Numri i zjarreve në afërsi"
+      },
+      "nearest_wildfire_name": {
+        "name": "Emri më i afërt i zjarrit"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Distanca më e afërt e zjarrit"
+      },
+      "nearest_wildfire_size": {
+        "name": "Madhësia më e afërt e zjarrit"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Përqindja më e afërt e kontrollit të zjarrit"
+      },
+      "active_fire_alert_count": {
+        "name": "Numri aktiv i alarmit të zjarrit"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Ashpërsia më e lartë e alarmit nga zjarri",
+        "state": {
+          "none": "Asnjë",
+          "unknown": "E panjohur",
+          "minor": "I vogël",
+          "moderate": "E moderuar",
+          "severe": "E rëndë",
+          "extreme": "Ekstrem"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC suksesi i fundit"
+      },
+      "nws_last_success": {
+        "name": "NWS suksesi i fundit"
+      }
+    }
+  }
+}

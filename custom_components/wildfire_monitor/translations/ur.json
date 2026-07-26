@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "مقام کی نگرانی کریں۔",
+        "description": "سرکاری NIFC وائلڈ فائر اور NWS الرٹ ڈیٹا استعمال کرتا ہے۔",
+        "data": {
+          "name": "مقام کا نام",
+          "latitude": "عرض بلد",
+          "longitude": "طول البلد",
+          "radius": "جنگل کی آگ کی تلاش کا رداس"
+        },
+        "data_description": {
+          "radius": "میلوں میں فاصلہ (5–250) NIFC جنگل کی آگ کی تلاش کے لیے استعمال کیا جاتا ہے۔"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "یہ مقام پہلے سے ترتیب شدہ ہے۔"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "نگرانی کی گئی جگہ میں ترمیم کریں۔",
+        "data": {
+          "name": "مقام کا نام",
+          "latitude": "عرض البلد",
+          "longitude": "طول البلد",
+          "radius": "جنگل کی آگ کا رداس"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "یہ مقام پہلے سے ترتیب شدہ ہے۔"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "قریب ہی جنگل کی آگ"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "فریم کے اندر جنگل کی آگ"
+      },
+      "fire_weather_alert": {
+        "name": "آگ کے موسم کا انتباہ"
+      },
+      "fire_warning": {
+        "name": "آگ کی وارننگ"
+      },
+      "evacuation_alert": {
+        "name": "انخلاء کا انتباہ"
+      },
+      "nifc_source_available": {
+        "name": "NIFC ذریعہ دستیاب ہے۔"
+      },
+      "nws_source_available": {
+        "name": "NWS ذریعہ دستیاب ہے۔"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "جنگل کی آگ کے خطرے کی سطح",
+        "state": {
+          "none": "کوئی نہیں۔",
+          "low": "کم",
+          "moderate": "اعتدال پسند",
+          "high": "اعلی",
+          "extreme": "انتہائی"
+        }
+      },
+      "evacuation_level": {
+        "name": "انخلاء کی سطح",
+        "state": {
+          "none": "انخلاء کی سطح نہیں ہے۔",
+          "unclassified": "انخلاء کی سطح کی درجہ بندی نہیں کی گئی ہے۔",
+          "level_1_ready": "لیول 1 - تیار (تیار)",
+          "level_2_set": "لیول 2 - سیٹ کریں (نکالنے کے لیے تیار رہیں)",
+          "level_3_go": "سطح 3 - جاؤ (اب خالی کرو)"
+        }
+      },
+      "evacuation_status": {
+        "name": "انخلاء کی حیثیت",
+        "state": {
+          "none": "کوئی انخلاء نہیں۔",
+          "advisory": "انخلاء کا مشورہ",
+          "warning": "انخلاء کی وارننگ",
+          "order": "انخلاء کا حکم",
+          "immediate": "فوری طور پر انخلاء",
+          "unknown": "نامعلوم انخلاء کی حیثیت"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "قریبی جنگل کی آگ کی گنتی"
+      },
+      "nearest_wildfire_name": {
+        "name": "قریب ترین جنگل کی آگ کا نام"
+      },
+      "nearest_wildfire_distance": {
+        "name": "قریب ترین جنگل کی آگ کا فاصلہ"
+      },
+      "nearest_wildfire_size": {
+        "name": "قریب ترین جنگل کی آگ کا سائز"
+      },
+      "nearest_wildfire_containment": {
+        "name": "قریب ترین جنگل کی آگ پر قابو پانے کا فیصد"
+      },
+      "active_fire_alert_count": {
+        "name": "فعال فائر الرٹ شمار"
+      },
+      "highest_fire_alert_severity": {
+        "name": "سب سے زیادہ فائر الرٹ کی شدت",
+        "state": {
+          "none": "کوئی نہیں۔",
+          "unknown": "نامعلوم",
+          "minor": "معمولی",
+          "moderate": "اعتدال پسند",
+          "severe": "شدید",
+          "extreme": "انتہائی"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC آخری کامیابی"
+      },
+      "nws_last_success": {
+        "name": "NWS آخری کامیابی"
+      }
+    }
+  }
+}
