@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Bir konumu izleyin",
+        "description": "Resmi NIFC orman yangını ve NWS uyarı verilerini kullanır.",
+        "data": {
+          "name": "Konum adı",
+          "latitude": "Enlem",
+          "longitude": "Boylam",
+          "radius": "Kontrol edilemeyen yangın arama yarıçapı"
+        },
+        "data_description": {
+          "radius": "NIFC orman yangını aramaları için kullanılan mil cinsinden mesafe (5–250)."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Bu konum zaten yapılandırılmış."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "İzlenen konumu düzenle",
+        "data": {
+          "name": "Konum adı",
+          "latitude": "Enlem",
+          "longitude": "Boylam",
+          "radius": "Kontrol edilemeyen yangın yarıçapı"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Bu konum zaten yapılandırılmış."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Yakınlarda orman yangını"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Çevre içinde orman yangını"
+      },
+      "fire_weather_alert": {
+        "name": "Yangın hava durumu uyarısı"
+      },
+      "fire_warning": {
+        "name": "Yangın uyarısı"
+      },
+      "evacuation_alert": {
+        "name": "Tahliye uyarısı"
+      },
+      "nifc_source_available": {
+        "name": "NIFC kaynağı mevcut"
+      },
+      "nws_source_available": {
+        "name": "NWS kaynağı mevcut"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Orman yangını tehdit seviyesi",
+        "state": {
+          "none": "Hiçbiri",
+          "low": "Düşük",
+          "moderate": "Orta",
+          "high": "Yüksek",
+          "extreme": "Aşırı"
+        }
+      },
+      "evacuation_level": {
+        "name": "Tahliye seviyesi",
+        "state": {
+          "none": "Tahliye seviyesi yok",
+          "unclassified": "Tahliye seviyesi sınıflandırılmamış",
+          "level_1_ready": "Seviye 1 — Hazır (hazırlık)",
+          "level_2_set": "Seviye 2 — Ayarla (tahliyeye hazır olun)",
+          "level_3_go": "Seviye 3 — Git (şimdi tahliye et)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Tahliye durumu",
+        "state": {
+          "none": "Tahliye yok",
+          "advisory": "Tahliye tavsiyesi",
+          "warning": "Tahliye uyarısı",
+          "order": "Tahliye emri",
+          "immediate": "Derhal tahliye",
+          "unknown": "Bilinmeyen tahliye durumu"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Yakındaki kontrol edilemeyen yangın sayısı"
+      },
+      "nearest_wildfire_name": {
+        "name": "En yakın orman yangını adı"
+      },
+      "nearest_wildfire_distance": {
+        "name": "En yakın orman yangını mesafesi"
+      },
+      "nearest_wildfire_size": {
+        "name": "En yakın orman yangını boyutu"
+      },
+      "nearest_wildfire_containment": {
+        "name": "En yakın orman yangınını kontrol altına alma yüzdesi"
+      },
+      "active_fire_alert_count": {
+        "name": "Aktif yangın alarmı sayısı"
+      },
+      "highest_fire_alert_severity": {
+        "name": "En yüksek yangın alarmı ciddiyeti",
+        "state": {
+          "none": "Hiçbiri",
+          "unknown": "Bilinmiyor",
+          "minor": "Küçük",
+          "moderate": "Orta",
+          "severe": "Şiddetli",
+          "extreme": "Aşırı"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC son başarı"
+      },
+      "nws_last_success": {
+        "name": "NWS son başarı"
+      }
+    }
+  }
+}

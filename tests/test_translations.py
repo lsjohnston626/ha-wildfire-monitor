@@ -3,23 +3,77 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
 INTEGRATION_DIR = Path(__file__).parents[1] / "custom_components" / "wildfire_monitor"
 TRANSLATIONS_DIR = INTEGRATION_DIR / "translations"
 EXPECTED_LOCALES = {
+    "af",
+    "ar",
+    "bg",
+    "bn",
+    "bs",
+    "ca",
+    "cs",
+    "cy",
+    "da",
     "de",
+    "el",
     "en",
+    "en-GB",
+    "eo",
     "es",
+    "es-419",
+    "et",
+    "eu",
+    "fa",
+    "fi",
+    "fy",
     "fr",
+    "ga",
+    "gl",
+    "gsw",
+    "he",
+    "hi",
+    "hr",
+    "hu",
+    "hy",
+    "id",
+    "is",
     "it",
+    "ja",
+    "ka",
+    "ko",
+    "lb",
+    "lt",
+    "lv",
+    "mk",
+    "ml",
+    "nb",
     "nl",
+    "nn",
     "pl",
     "pt",
+    "pt-BR",
+    "ro",
     "ru",
+    "sk",
+    "sl",
+    "sq",
+    "sr",
+    "sr-Latn",
     "sv",
+    "ta",
+    "te",
+    "th",
+    "tr",
+    "uk",
+    "ur",
+    "vi",
     "zh-Hans",
+    "zh-Hant",
 }
 
 
@@ -45,8 +99,14 @@ def test_translation_files_match_english_schema() -> None:
     english_paths = _leaf_paths(english)
 
     for locale, path in files.items():
-        translation = json.loads(path.read_text(encoding="utf-8"))
+        text = path.read_text(encoding="utf-8")
+        translation = json.loads(text)
         assert _leaf_paths(translation) == english_paths, locale
+        assert translation["title"] == "Wildfire Monitor", locale
+        assert "NIFC" in text, locale
+        assert "NWS" in text, locale
+        assert "\ufffd" not in text, locale
+        assert not re.search(r"\[\[\w*\d{3}\]\]", text), locale
 
 
 def test_custom_integration_does_not_ship_core_strings_file() -> None:

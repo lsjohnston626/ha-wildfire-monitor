@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Monitorizați o locație",
+        "description": "Utilizează datele oficiale de incendiu NIFC și alerte NWS.",
+        "data": {
+          "name": "Numele locației",
+          "latitude": "Latitudine",
+          "longitude": "Longitudine",
+          "radius": "Raza de căutare a incendiilor sălbatice"
+        },
+        "data_description": {
+          "radius": "Distanța în mile (5–250) utilizată pentru căutările NIFC în caz de incendiu."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Această locație este deja configurată."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Editați locația monitorizată",
+        "data": {
+          "name": "Numele locației",
+          "latitude": "Latitudine",
+          "longitude": "Longitudine",
+          "radius": "Raza incendiului"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Această locație este deja configurată."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Incendiu din apropiere"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Incendiu în interiorul perimetrului"
+      },
+      "fire_weather_alert": {
+        "name": "Alertă meteo de incendiu"
+      },
+      "fire_warning": {
+        "name": "Avertizare de incendiu"
+      },
+      "evacuation_alert": {
+        "name": "Alertă de evacuare"
+      },
+      "nifc_source_available": {
+        "name": "Sursă NIFC disponibilă"
+      },
+      "nws_source_available": {
+        "name": "NWS sursă disponibilă"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Nivelul de amenințare cu incendiu",
+        "state": {
+          "none": "Niciuna",
+          "low": "Scăzut",
+          "moderate": "Moderat",
+          "high": "Mare",
+          "extreme": "Extrem"
+        }
+      },
+      "evacuation_level": {
+        "name": "Nivel de evacuare",
+        "state": {
+          "none": "Nici un nivel de evacuare",
+          "unclassified": "Nivelul de evacuare nu este clasificat",
+          "level_1_ready": "Nivel 1 — Pregătit (pregătire)",
+          "level_2_set": "Nivelul 2 — Set (fii gata de evacuare)",
+          "level_3_go": "Nivelul 3 — Du-te (evacuează acum)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Starea de evacuare",
+        "state": {
+          "none": "Nicio evacuare",
+          "advisory": "Aviz de evacuare",
+          "warning": "Avertizare de evacuare",
+          "order": "Ordin de evacuare",
+          "immediate": "Evacuare imediată",
+          "unknown": "Starea de evacuare necunoscută"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Număr de incendii din apropiere"
+      },
+      "nearest_wildfire_name": {
+        "name": "Cel mai apropiat nume de incendiu"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Cea mai apropiată distanță de incendiu"
+      },
+      "nearest_wildfire_size": {
+        "name": "Cea mai apropiată dimensiune a incendiului"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Cel mai apropiat procent de izolare a incendiilor"
+      },
+      "active_fire_alert_count": {
+        "name": "Număr activ de alerte de incendiu"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Cea mai mare severitate a alertei de incendiu",
+        "state": {
+          "none": "Niciuna",
+          "unknown": "Necunoscut",
+          "minor": "Minor",
+          "moderate": "Moderat",
+          "severe": "Severă",
+          "extreme": "Extrem"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC ultimul succes"
+      },
+      "nws_last_success": {
+        "name": "NWS ultimul succes"
+      }
+    }
+  }
+}

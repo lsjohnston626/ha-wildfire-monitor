@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "ตรวจสอบตำแหน่ง",
+        "description": "ใช้ข้อมูลไฟป่า NIFC อย่างเป็นทางการและข้อมูลการแจ้งเตือน NWS",
+        "data": {
+          "name": "ชื่อสถานที่",
+          "latitude": "ละติจูด",
+          "longitude": "ลองจิจูด",
+          "radius": "รัศมีการค้นหาไฟป่า"
+        },
+        "data_description": {
+          "radius": "ระยะทางเป็นไมล์ (5–250) ใช้สำหรับการค้นหาไฟป่า NIFC"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "ตำแหน่งนี้ได้รับการกำหนดค่าแล้ว"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "แก้ไขตำแหน่งที่ติดตาม",
+        "data": {
+          "name": "ชื่อสถานที่",
+          "latitude": "ละติจูด",
+          "longitude": "ลองจิจูด",
+          "radius": "รัศมีไฟป่า"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "ตำแหน่งนี้ได้รับการกำหนดค่าแล้ว"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "ไฟป่าอยู่ใกล้ๆ"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "ไฟป่าภายในปริมณฑล"
+      },
+      "fire_weather_alert": {
+        "name": "แจ้งเตือนสภาพอากาศไฟไหม้"
+      },
+      "fire_warning": {
+        "name": "คำเตือนไฟไหม้"
+      },
+      "evacuation_alert": {
+        "name": "แจ้งเตือนการอพยพ"
+      },
+      "nifc_source_available": {
+        "name": "มีแหล่งที่มา NIFC"
+      },
+      "nws_source_available": {
+        "name": "มีแหล่งที่มา NWS"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "ระดับภัยคุกคามไฟป่า",
+        "state": {
+          "none": "ไม่มี",
+          "low": "ต่ำ",
+          "moderate": "ปานกลาง",
+          "high": "สูง",
+          "extreme": "สุดขีด"
+        }
+      },
+      "evacuation_level": {
+        "name": "ระดับการอพยพ",
+        "state": {
+          "none": "ไม่มีระดับการอพยพ",
+          "unclassified": "ไม่ได้จำแนกระดับการอพยพ",
+          "level_1_ready": "ระดับ 1 — พร้อม (เตรียมพร้อม)",
+          "level_2_set": "ระดับ 2 — ตั้งค่า (เตรียมพร้อมอพยพ)",
+          "level_3_go": "ระดับ 3 — ไป (อพยพตอนนี้)"
+        }
+      },
+      "evacuation_status": {
+        "name": "สถานะการอพยพ",
+        "state": {
+          "none": "ไม่มีการอพยพ",
+          "advisory": "คำแนะนำในการอพยพ",
+          "warning": "คำเตือนการอพยพ",
+          "order": "คำสั่งอพยพ",
+          "immediate": "อพยพทันที",
+          "unknown": "ไม่ทราบสถานะการอพยพ"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "จำนวนไฟป่าใกล้เคียง"
+      },
+      "nearest_wildfire_name": {
+        "name": "ชื่อไฟป่าที่ใกล้ที่สุด"
+      },
+      "nearest_wildfire_distance": {
+        "name": "ระยะไฟป่าที่ใกล้ที่สุด"
+      },
+      "nearest_wildfire_size": {
+        "name": "ขนาดไฟป่าที่ใกล้ที่สุด"
+      },
+      "nearest_wildfire_containment": {
+        "name": "เปอร์เซ็นต์การสกัดกั้นไฟป่าที่ใกล้ที่สุด"
+      },
+      "active_fire_alert_count": {
+        "name": "จำนวนการแจ้งเตือนเพลิงไหม้ที่ทำงานอยู่"
+      },
+      "highest_fire_alert_severity": {
+        "name": "ระดับการแจ้งเตือนเพลิงไหม้สูงสุด",
+        "state": {
+          "none": "ไม่มี",
+          "unknown": "ไม่ทราบ",
+          "minor": "ไมเนอร์",
+          "moderate": "ปานกลาง",
+          "severe": "รุนแรง",
+          "extreme": "สุดขีด"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC ความสำเร็จครั้งสุดท้าย"
+      },
+      "nws_last_success": {
+        "name": "NWS ความสำเร็จครั้งสุดท้าย"
+      }
+    }
+  }
+}

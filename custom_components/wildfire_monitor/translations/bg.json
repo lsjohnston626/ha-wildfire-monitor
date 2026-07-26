@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Наблюдение на местоположение",
+        "description": "Използва официални данни за предупреждение за горски пожар NIFC и NWS.",
+        "data": {
+          "name": "Име на местоположение",
+          "latitude": "Географска ширина",
+          "longitude": "Географска дължина",
+          "radius": "Радиус на търсене на горски пожар"
+        },
+        "data_description": {
+          "radius": "Разстояние в мили (5–250), използвано за търсене на NIFC горски пожар."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Това местоположение вече е конфигурирано."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Редактиране на наблюдаваното местоположение",
+        "data": {
+          "name": "Име на местоположение",
+          "latitude": "Географска ширина",
+          "longitude": "Географска дължина",
+          "radius": "Радиус на горския пожар"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Това местоположение вече е конфигурирано."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Горски пожар наблизо"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Горски пожар в периметъра"
+      },
+      "fire_weather_alert": {
+        "name": "Предупреждение за времето за пожар"
+      },
+      "fire_warning": {
+        "name": "Предупреждение за пожар"
+      },
+      "evacuation_alert": {
+        "name": "Предупреждение за евакуация"
+      },
+      "nifc_source_available": {
+        "name": "Наличен NIFC източник"
+      },
+      "nws_source_available": {
+        "name": "Наличен NWS източник"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Ниво на заплаха от горски пожар",
+        "state": {
+          "none": "Няма",
+          "low": "Ниско",
+          "moderate": "Умерено",
+          "high": "Високо",
+          "extreme": "Изключително"
+        }
+      },
+      "evacuation_level": {
+        "name": "Ниво на евакуация",
+        "state": {
+          "none": "Няма ниво на евакуация",
+          "unclassified": "Нивото на евакуация не е класифицирано",
+          "level_1_ready": "Ниво 1 — Готов (подготвен)",
+          "level_2_set": "Ниво 2 — Готово (бъдете готови за евакуация)",
+          "level_3_go": "Ниво 3 — Тръгни (евакуирай се сега)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Статус на евакуация",
+        "state": {
+          "none": "Без евакуация",
+          "advisory": "Препоръка за евакуация",
+          "warning": "Предупреждение за евакуация",
+          "order": "Заповед за евакуация",
+          "immediate": "Незабавна евакуация",
+          "unknown": "Неизвестен статус на евакуация"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Брой горски пожари в близост"
+      },
+      "nearest_wildfire_name": {
+        "name": "Име на най-близкия горски пожар"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Най-близкото разстояние при горски пожар"
+      },
+      "nearest_wildfire_size": {
+        "name": "Най-близкият размер на горския пожар"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Най-близкият процент на ограничаване на горския пожар"
+      },
+      "active_fire_alert_count": {
+        "name": "Брой активни предупреждения за пожар"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Най-висока степен на опасност при пожар",
+        "state": {
+          "none": "Няма",
+          "unknown": "Неизвестен",
+          "minor": "Малък",
+          "moderate": "Умерено",
+          "severe": "Тежка",
+          "extreme": "Изключително"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC последен успех"
+      },
+      "nws_last_success": {
+        "name": "NWS последен успех"
+      }
+    }
+  }
+}

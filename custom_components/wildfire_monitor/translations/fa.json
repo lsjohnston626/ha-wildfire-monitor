@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "نظارت بر یک مکان",
+        "description": "از داده‌های هشدار رسمی NIFC و NWS استفاده می‌کند.",
+        "data": {
+          "name": "نام مکان",
+          "latitude": "عرض جغرافیایی",
+          "longitude": "طول جغرافیایی",
+          "radius": "شعاع جستجوی آتش سوزی"
+        },
+        "data_description": {
+          "radius": "مسافت بر حسب مایل (5 تا 250) برای جستجوی آتش‌سوزی NIFC استفاده می‌شود."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "این مکان قبلاً پیکربندی شده است."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "مکان نظارت شده را ویرایش کنید",
+        "data": {
+          "name": "نام مکان",
+          "latitude": "عرض جغرافیایی",
+          "longitude": "طول جغرافیایی",
+          "radius": "شعاع آتش‌سوزی"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "این مکان قبلاً پیکربندی شده است."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "آتش سوزی در نزدیکی"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "آتش سوزی در داخل محیط"
+      },
+      "fire_weather_alert": {
+        "name": "هشدار آب و هوای آتش سوزی"
+      },
+      "fire_warning": {
+        "name": "هشدار آتش سوزی"
+      },
+      "evacuation_alert": {
+        "name": "هشدار تخلیه"
+      },
+      "nifc_source_available": {
+        "name": "منبع NIFC موجود است"
+      },
+      "nws_source_available": {
+        "name": "منبع NWS موجود است"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "سطح تهدید آتش سوزی",
+        "state": {
+          "none": "هیچ کدام",
+          "low": "پایین",
+          "moderate": "متوسط",
+          "high": "بالا",
+          "extreme": "افراطی"
+        }
+      },
+      "evacuation_level": {
+        "name": "سطح تخلیه",
+        "state": {
+          "none": "بدون سطح تخلیه",
+          "unclassified": "سطح تخلیه طبقه بندی نشده است",
+          "level_1_ready": "سطح 1 - آماده (آماده)",
+          "level_2_set": "سطح 2 - تنظیم (آماده تخلیه باشید)",
+          "level_3_go": "سطح 3 - بروید (اکنون تخلیه شوید)"
+        }
+      },
+      "evacuation_status": {
+        "name": "وضعیت تخلیه",
+        "state": {
+          "none": "بدون تخلیه",
+          "advisory": "مشاوره تخلیه",
+          "warning": "هشدار تخلیه",
+          "order": "دستور تخلیه",
+          "immediate": "تخلیه فوری",
+          "unknown": "وضعیت تخلیه نامشخص"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "تعداد آتش‌سوزی‌های اطراف"
+      },
+      "nearest_wildfire_name": {
+        "name": "نزدیکترین نام آتش سوزی"
+      },
+      "nearest_wildfire_distance": {
+        "name": "نزدیکترین فاصله آتش سوزی"
+      },
+      "nearest_wildfire_size": {
+        "name": "نزدیکترین اندازه آتش سوزی"
+      },
+      "nearest_wildfire_containment": {
+        "name": "نزدیکترین درصد مهار آتش سوزی"
+      },
+      "active_fire_alert_count": {
+        "name": "تعداد هشدار آتش فعال"
+      },
+      "highest_fire_alert_severity": {
+        "name": "بالاترین شدت هشدار آتش",
+        "state": {
+          "none": "هیچ کدام",
+          "unknown": "ناشناس",
+          "minor": "جزئی",
+          "moderate": "متوسط",
+          "severe": "شدید",
+          "extreme": "افراطی"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC آخرین موفقیت"
+      },
+      "nws_last_success": {
+        "name": "NWS آخرین موفقیت"
+      }
+    }
+  }
+}

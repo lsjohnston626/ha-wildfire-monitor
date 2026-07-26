@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Kontrolearje in lokaasje",
+        "description": "Brûkt offisjele NIFC wildfire en NWS warskôgingsgegevens.",
+        "data": {
+          "name": "Lokaasje namme",
+          "latitude": "Breedte",
+          "longitude": "Longitude",
+          "radius": "Wildfire sykje radius"
+        },
+        "data_description": {
+          "radius": "Ofstân yn miles (5–250) brûkt foar NIFC wyldbrân sykjen."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Dizze lokaasje is al ynsteld."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Monitored lokaasje bewurkje",
+        "data": {
+          "name": "Lokaasjenamme",
+          "latitude": "Breedtegraad",
+          "longitude": "Lengtegraad",
+          "radius": "Wildfire radius"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Dizze lokaasje is al ynsteld."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Wildfire tichtby"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Wildfire binnen perimeter"
+      },
+      "fire_weather_alert": {
+        "name": "Alarm foar brânwaar"
+      },
+      "fire_warning": {
+        "name": "Fjoer warskôging"
+      },
+      "evacuation_alert": {
+        "name": "Evakuaasje warskôging"
+      },
+      "nifc_source_available": {
+        "name": "NIFC boarne beskikber"
+      },
+      "nws_source_available": {
+        "name": "NWS boarne beskikber"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Wildfire bedrigingsnivo",
+        "state": {
+          "none": "Gjin",
+          "low": "Leech",
+          "moderate": "Matich",
+          "high": "Heech",
+          "extreme": "Ekstreem"
+        }
+      },
+      "evacuation_level": {
+        "name": "Evakuaasje nivo",
+        "state": {
+          "none": "Gjin evakuaasjenivo",
+          "unclassified": "Evakuaasjenivo net klassifisearre",
+          "level_1_ready": "Nivo 1 - Klear (tariede)",
+          "level_2_set": "Nivo 2 - Set (wês ree om te evakuearjen)",
+          "level_3_go": "Nivo 3 - Gean (evakuearje no)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Evakuaasje status",
+        "state": {
+          "none": "Gjin evakuaasje",
+          "advisory": "Evakuaasje advys",
+          "warning": "Evakuaasje warskôging",
+          "order": "Evakuaasje oarder",
+          "immediate": "Daliks evakuaasje",
+          "unknown": "Unbekende evakuaasjestatus"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Byldbrân yn de buert"
+      },
+      "nearest_wildfire_name": {
+        "name": "Nammeste wildfire namme"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Dichtstbijzijnde wildfire ôfstân"
+      },
+      "nearest_wildfire_size": {
+        "name": "Nearest wildfire grutte"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Persintaazje tichtstbyste wyldbrânbefetting"
+      },
+      "active_fire_alert_count": {
+        "name": "Aktive brânwarskôging"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Heechste hurdens fan fjoeralarm",
+        "state": {
+          "none": "Gjin",
+          "unknown": "Unbekend",
+          "minor": "Lyts",
+          "moderate": "Matich",
+          "severe": "Swier",
+          "extreme": "Ekstreem"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC lêste súkses"
+      },
+      "nws_last_success": {
+        "name": "NWS lêste súkses"
+      }
+    }
+  }
+}

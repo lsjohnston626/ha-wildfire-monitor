@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Відстежувати місцезнаходження",
+        "description": "Використовує офіційні дані NIFC про лісові пожежі та NWS.",
+        "data": {
+          "name": "Назва місця",
+          "latitude": "Широта",
+          "longitude": "Довгота",
+          "radius": "Радіус пошуку лісової пожежі"
+        },
+        "data_description": {
+          "radius": "Відстань у милях (5–250), що використовується для пошуку лісової пожежі NIFC."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Це розташування вже налаштовано."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Редагувати місце спостереження",
+        "data": {
+          "name": "Назва місця",
+          "latitude": "Широта",
+          "longitude": "Довгота",
+          "radius": "Радіус пожежі"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Це розташування вже налаштовано."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Поруч лісова пожежа"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Лісова пожежа всередині периметра"
+      },
+      "fire_weather_alert": {
+        "name": "Оповіщення про пожежну погоду"
+      },
+      "fire_warning": {
+        "name": "Попередження про пожежу"
+      },
+      "evacuation_alert": {
+        "name": "Попередження про евакуацію"
+      },
+      "nifc_source_available": {
+        "name": "Доступне джерело NIFC"
+      },
+      "nws_source_available": {
+        "name": "Доступне джерело NWS"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Рівень лісової пожежі",
+        "state": {
+          "none": "Жодного",
+          "low": "Низький",
+          "moderate": "Помірний",
+          "high": "Високий",
+          "extreme": "Екстремальний"
+        }
+      },
+      "evacuation_level": {
+        "name": "Рівень евакуації",
+        "state": {
+          "none": "Немає рівня евакуації",
+          "unclassified": "Рівень евакуації не класифікований",
+          "level_1_ready": "Рівень 1 — Готовий (підготовка)",
+          "level_2_set": "Рівень 2 — Готовий (будь готовий до евакуації)",
+          "level_3_go": "Рівень 3 — Ідіть (евакуюйтеся зараз)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Статус евакуації",
+        "state": {
+          "none": "Без евакуації",
+          "advisory": "Повідомлення щодо евакуації",
+          "warning": "Попередження про евакуацію",
+          "order": "Наказ про евакуацію",
+          "immediate": "Негайна евакуація",
+          "unknown": "Невідомий статус евакуації"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Кількість лісових пожеж неподалік"
+      },
+      "nearest_wildfire_name": {
+        "name": "Назва найближчої лісової пожежі"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Найближча відстань до пожежі"
+      },
+      "nearest_wildfire_size": {
+        "name": "Найближчий розмір лісової пожежі"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Найближчий відсоток локалізації лісової пожежі"
+      },
+      "active_fire_alert_count": {
+        "name": "Кількість активних оповіщень про пожежу"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Найвищий ступінь серйозності оповіщення про пожежу",
+        "state": {
+          "none": "Жодного",
+          "unknown": "Невідомо",
+          "minor": "Неповнолітній",
+          "moderate": "Помірний",
+          "severe": "Важка",
+          "extreme": "Екстремальний"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC останній успіх"
+      },
+      "nws_last_success": {
+        "name": "NWS останній успіх"
+      }
+    }
+  }
+}

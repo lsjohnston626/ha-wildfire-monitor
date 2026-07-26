@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Hely figyelése",
+        "description": "Hivatalos NIFC futótűz és NWS riasztási adatokat használ.",
+        "data": {
+          "name": "Helynév",
+          "latitude": "Szélesség",
+          "longitude": "Hosszúság",
+          "radius": "Futótűz keresési sugár"
+        },
+        "data_description": {
+          "radius": "Távolság mérföldben (5–250) az NIFC futótűz-kereséshez."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Ez a hely már be van állítva."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Felügyelt hely szerkesztése",
+        "data": {
+          "name": "Helynév",
+          "latitude": "Szélesség",
+          "longitude": "Hosszúság",
+          "radius": "Erdőtűz sugara"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Ez a hely már konfigurálva van."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Futótűz a közelben"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Erdőtűz a kerületen belül"
+      },
+      "fire_weather_alert": {
+        "name": "Tűz-, időjárási riasztás"
+      },
+      "fire_warning": {
+        "name": "Tűzjelzés"
+      },
+      "evacuation_alert": {
+        "name": "Kiürítési riasztás"
+      },
+      "nifc_source_available": {
+        "name": "NIFC forrás elérhető"
+      },
+      "nws_source_available": {
+        "name": "NWS forrás elérhető"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Vadtüzek fenyegetettségi szintje",
+        "state": {
+          "none": "Nincs",
+          "low": "Alacsony",
+          "moderate": "Mérsékelt",
+          "high": "Magas",
+          "extreme": "Extrém"
+        }
+      },
+      "evacuation_level": {
+        "name": "Kiürítési szint",
+        "state": {
+          "none": "Nincs evakuálási szint",
+          "unclassified": "Az evakuálási szint nincs besorolva",
+          "level_1_ready": "1. szint – Kész (felkészülés)",
+          "level_2_set": "2. szint – Beállítás (legyen készen az evakuálásra)",
+          "level_3_go": "3. szint – indulás (ürítés most)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Kiürítés állapota",
+        "state": {
+          "none": "Nincs evakuálás",
+          "advisory": "Kiürítési figyelmeztetés",
+          "warning": "Kiürítési figyelmeztetés",
+          "order": "Kiürítési parancs",
+          "immediate": "Azonnali evakuálás",
+          "unknown": "Ismeretlen evakuálási állapot"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Közeli futótüzek számlálása"
+      },
+      "nearest_wildfire_name": {
+        "name": "A legközelebbi futótűz neve"
+      },
+      "nearest_wildfire_distance": {
+        "name": "A legközelebbi futótűz távolság"
+      },
+      "nearest_wildfire_size": {
+        "name": "A legközelebbi futótűz mérete"
+      },
+      "nearest_wildfire_containment": {
+        "name": "A legközelebbi erdőtűz elleni védekezési százalék"
+      },
+      "active_fire_alert_count": {
+        "name": "Aktív tűzriasztások száma"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Legmagasabb tűzriadó súlyosság",
+        "state": {
+          "none": "Nincs",
+          "unknown": "Ismeretlen",
+          "minor": "Kisebb",
+          "moderate": "Mérsékelt",
+          "severe": "Súlyos",
+          "extreme": "Extrém"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC utolsó siker"
+      },
+      "nws_last_success": {
+        "name": "NWS utolsó siker"
+      }
+    }
+  }
+}

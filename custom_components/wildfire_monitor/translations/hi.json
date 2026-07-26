@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "किसी स्थान की निगरानी करें",
+        "description": "आधिकारिक NIFC जंगल की आग और NWS अलर्ट डेटा का उपयोग करता है।",
+        "data": {
+          "name": "स्थान का नाम",
+          "latitude": "अक्षांश",
+          "longitude": "देशांतर",
+          "radius": "जंगल की आग की खोज का दायरा"
+        },
+        "data_description": {
+          "radius": "NIFC जंगल की आग की खोज के लिए उपयोग की जाने वाली मील में दूरी (5-250)।"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "यह स्थान पहले से ही कॉन्फ़िगर किया गया है।"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "मॉनिटर किए गए स्थान को संपादित करें",
+        "data": {
+          "name": "स्थान का नाम",
+          "latitude": "अक्षांश",
+          "longitude": "देशांतर",
+          "radius": "जंगल की आग का दायरा"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "यह स्थान पहले से ही कॉन्फ़िगर किया गया है।"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "पास में जंगल की आग"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "परिधि के अंदर जंगल की आग"
+      },
+      "fire_weather_alert": {
+        "name": "आग के मौसम की चेतावनी"
+      },
+      "fire_warning": {
+        "name": "आग की चेतावनी"
+      },
+      "evacuation_alert": {
+        "name": "निकासी चेतावनी"
+      },
+      "nifc_source_available": {
+        "name": "NIFC स्रोत उपलब्ध है"
+      },
+      "nws_source_available": {
+        "name": "NWS स्रोत उपलब्ध है"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "जंगल की आग के खतरे का स्तर",
+        "state": {
+          "none": "कोई नहीं",
+          "low": "कम",
+          "moderate": "मध्यम",
+          "high": "ऊँचा",
+          "extreme": "चरम"
+        }
+      },
+      "evacuation_level": {
+        "name": "निकासी स्तर",
+        "state": {
+          "none": "कोई निकासी स्तर नहीं",
+          "unclassified": "निकासी स्तर वर्गीकृत नहीं है",
+          "level_1_ready": "स्तर 1 - तैयार (तैयार करें)",
+          "level_2_set": "लेवल 2 - सेट (खाली करने के लिए तैयार रहें)",
+          "level_3_go": "स्तर 3 - जाओ (अभी खाली करो)"
+        }
+      },
+      "evacuation_status": {
+        "name": "निकासी की स्थिति",
+        "state": {
+          "none": "कोई निकासी नहीं",
+          "advisory": "निकासी सलाह",
+          "warning": "निकासी की चेतावनी",
+          "order": "निकासी आदेश",
+          "immediate": "तत्काल निकासी",
+          "unknown": "अज्ञात निकासी स्थिति"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "निकटवर्ती जंगल की आग की गिनती"
+      },
+      "nearest_wildfire_name": {
+        "name": "निकटतम जंगल की आग का नाम"
+      },
+      "nearest_wildfire_distance": {
+        "name": "निकटतम जंगल की आग की दूरी"
+      },
+      "nearest_wildfire_size": {
+        "name": "निकटतम जंगल की आग का आकार"
+      },
+      "nearest_wildfire_containment": {
+        "name": "निकटतम जंगल की आग रोकथाम प्रतिशत"
+      },
+      "active_fire_alert_count": {
+        "name": "सक्रिय अग्नि चेतावनी गणना"
+      },
+      "highest_fire_alert_severity": {
+        "name": "उच्चतम अग्नि चेतावनी गंभीरता",
+        "state": {
+          "none": "कोई नहीं",
+          "unknown": "अज्ञात",
+          "minor": "लघु",
+          "moderate": "मध्यम",
+          "severe": "गंभीर",
+          "extreme": "चरम"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC अंतिम सफलता"
+      },
+      "nws_last_success": {
+        "name": "NWS अंतिम सफलता"
+      }
+    }
+  }
+}

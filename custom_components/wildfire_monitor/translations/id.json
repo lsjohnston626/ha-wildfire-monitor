@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Pantau lokasi",
+        "description": "Menggunakan data kebakaran resmi NIFC dan peringatan NWS.",
+        "data": {
+          "name": "Nama lokasi",
+          "latitude": "Lintang",
+          "longitude": "Garis Bujur",
+          "radius": "Radius pencarian kebakaran hutan"
+        },
+        "data_description": {
+          "radius": "Jarak dalam mil (5–250) yang digunakan untuk penelusuran kebakaran hutan NIFC."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Lokasi ini sudah dikonfigurasi."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Edit lokasi yang dipantau",
+        "data": {
+          "name": "Nama lokasi",
+          "latitude": "Lintang",
+          "longitude": "Garis Bujur",
+          "radius": "Radius kebakaran hutan"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Lokasi ini sudah dikonfigurasi."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Kebakaran hutan di sekitar"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Kebakaran hutan di dalam perimeter"
+      },
+      "fire_weather_alert": {
+        "name": "Peringatan cuaca kebakaran"
+      },
+      "fire_warning": {
+        "name": "Peringatan kebakaran"
+      },
+      "evacuation_alert": {
+        "name": "Peringatan evakuasi"
+      },
+      "nifc_source_available": {
+        "name": "Sumber NIFC tersedia"
+      },
+      "nws_source_available": {
+        "name": "Sumber NWS tersedia"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Tingkat ancaman kebakaran hutan",
+        "state": {
+          "none": "Tidak ada",
+          "low": "Rendah",
+          "moderate": "Sedang",
+          "high": "Tinggi",
+          "extreme": "Ekstrim"
+        }
+      },
+      "evacuation_level": {
+        "name": "Tingkat evakuasi",
+        "state": {
+          "none": "Tidak ada tingkat evakuasi",
+          "unclassified": "Tingkat evakuasi tidak diklasifikasikan",
+          "level_1_ready": "Level 1 — Siap (persiapan)",
+          "level_2_set": "Level 2 — Set (bersiap untuk mengungsi)",
+          "level_3_go": "Level 3 — Pergi (evakuasi sekarang)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Status evakuasi",
+        "state": {
+          "none": "Tidak ada evakuasi",
+          "advisory": "Saran evakuasi",
+          "warning": "Peringatan evakuasi",
+          "order": "Perintah evakuasi",
+          "immediate": "Evakuasi segera",
+          "unknown": "Status evakuasi tidak diketahui"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Jumlah kebakaran hutan di sekitar"
+      },
+      "nearest_wildfire_name": {
+        "name": "Nama api terdekat"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Jarak kebakaran hutan terdekat"
+      },
+      "nearest_wildfire_size": {
+        "name": "Ukuran api terdekat"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Persentase pengendalian kebakaran hutan terdekat"
+      },
+      "active_fire_alert_count": {
+        "name": "Jumlah peringatan kebakaran aktif"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Tingkat keparahan peringatan kebakaran tertinggi",
+        "state": {
+          "none": "Tidak ada",
+          "unknown": "Tidak diketahui",
+          "minor": "Kecil",
+          "moderate": "Sedang",
+          "severe": "Parah",
+          "extreme": "Ekstrim"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC sukses terakhir"
+      },
+      "nws_last_success": {
+        "name": "NWS kesuksesan terakhir"
+      }
+    }
+  }
+}

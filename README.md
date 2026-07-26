@@ -50,6 +50,13 @@ Multiple locations can be monitored with separate config entries.
 The data sources primarily cover the United States. Availability and detail
 vary by incident and issuing authority.
 
+## Translations
+
+Wildfire Monitor includes every locale currently supported by Home Assistant.
+English is canonical; the other locales are machine-assisted drafts awaiting
+native-speaker review. See the [translation guide](TRANSLATIONS.md) for the
+supported locale list, safety glossary, and contribution process.
+
 ## Installation
 
 ### HACS

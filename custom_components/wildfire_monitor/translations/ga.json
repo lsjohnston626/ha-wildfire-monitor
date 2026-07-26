@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Monatóireacht a dhéanamh ar shuíomh",
+        "description": "Úsáideann sé sonraí foláirimh oifigiúil NIFC wildfire agus NWS.",
+        "data": {
+          "name": "Ainm suímh",
+          "latitude": "Domhanleithead",
+          "longitude": "Domhanfhad",
+          "radius": "Ga cuardaigh tinte fiáine"
+        },
+        "data_description": {
+          "radius": "Fad na mílte (5–250) a úsáidtear le haghaidh cuardaigh tinte fiáine NIFC."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Tá an suíomh seo cumraithe cheana féin."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Cuir an suíomh monatóireachta in eagar",
+        "data": {
+          "name": "Ainm suímh",
+          "latitude": "Domhanleithead",
+          "longitude": "Domhanfhad",
+          "radius": "Ga dóiteán fiáin"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Tá an suíomh seo cumraithe cheana féin."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Tinte fiáin in aice láimhe"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Tinte fiáin laistigh den imlíne"
+      },
+      "fire_weather_alert": {
+        "name": "Foláireamh aimsire dóiteáin"
+      },
+      "fire_warning": {
+        "name": "Rabhadh dóiteáin"
+      },
+      "evacuation_alert": {
+        "name": "Foláireamh aslonnaithe"
+      },
+      "nifc_source_available": {
+        "name": "foinse NIFC ar fáil"
+      },
+      "nws_source_available": {
+        "name": "NWS foinse ar fáil"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Leibhéal bagairt tine fiáin",
+        "state": {
+          "none": "Níl aon cheann",
+          "low": "Íseal",
+          "moderate": "Measartha",
+          "high": "Ard",
+          "extreme": "Foircneach"
+        }
+      },
+      "evacuation_level": {
+        "name": "Leibhéal aslonnaithe",
+        "state": {
+          "none": "Níl aon leibhéal aslonnaithe",
+          "unclassified": "Níl an leibhéal aslonnaithe aicmithe",
+          "level_1_ready": "Leibhéal 1 - Réidh (ullmhaigh)",
+          "level_2_set": "Leibhéal 2 — Socraigh (bí réidh le haslonnú)",
+          "level_3_go": "Leibhéal 3 — Téigh (aslonnaigh anois)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Stádas aslonnaithe",
+        "state": {
+          "none": "Gan aslonnú",
+          "advisory": "Comhairleach aslonnaithe",
+          "warning": "Rabhadh aslonnaithe",
+          "order": "Ordú aslonnaithe",
+          "immediate": "Aslonnú láithreach",
+          "unknown": "Stádas aslonnaithe anaithnid"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Comhaireamh tinte fiáine in aice láimhe"
+      },
+      "nearest_wildfire_name": {
+        "name": "An t-ainm tine fhiáin is gaire"
+      },
+      "nearest_wildfire_distance": {
+        "name": "An t-achar tine fiáin is gaire"
+      },
+      "nearest_wildfire_size": {
+        "name": "An méid tine fiáin is gaire"
+      },
+      "nearest_wildfire_containment": {
+        "name": "An céatadán srianta dóiteán fiáin is gaire"
+      },
+      "active_fire_alert_count": {
+        "name": "Comhaireamh gníomhach foláirimh dóiteáin"
+      },
+      "highest_fire_alert_severity": {
+        "name": "An déine foláireamh dóiteáin is airde",
+        "state": {
+          "none": "Níl aon cheann",
+          "unknown": "Anaithnid",
+          "minor": "Mionlach",
+          "moderate": "Measartha",
+          "severe": "Tromchúiseach",
+          "extreme": "Extreme"
+        }
+      },
+      "nifc_last_success": {
+        "name": "D’éirigh le NIFC go deireanach"
+      },
+      "nws_last_success": {
+        "name": "D’éirigh le NWS go deireanach"
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Overvåg en placering",
+        "description": "Bruger officielle NIFC naturbrande og NWS alarmdata.",
+        "data": {
+          "name": "Stedets navn",
+          "latitude": "Breddegrad",
+          "longitude": "Længde",
+          "radius": "Søgeradius for skovbrande"
+        },
+        "data_description": {
+          "radius": "Afstand i miles (5–250) brugt til NIFC søgninger efter naturbrande."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Denne placering er allerede konfigureret."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Rediger overvåget placering",
+        "data": {
+          "name": "Placeringsnavn",
+          "latitude": "Breddegrad",
+          "longitude": "Længdegrad",
+          "radius": "Naturbrandradius"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Denne placering er allerede konfigureret."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Naturbrand i nærheden"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Naturbrand inden for omkredsen"
+      },
+      "fire_weather_alert": {
+        "name": "Alarm om brandvejr"
+      },
+      "fire_warning": {
+        "name": "Brandadvarsel"
+      },
+      "evacuation_alert": {
+        "name": "Evakueringsalarm"
+      },
+      "nifc_source_available": {
+        "name": "NIFC kilde tilgængelig"
+      },
+      "nws_source_available": {
+        "name": "NWS kilde tilgængelig"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Trusselsniveau for skovbrand",
+        "state": {
+          "none": "Ingen",
+          "low": "Lav",
+          "moderate": "Moderat",
+          "high": "Høj",
+          "extreme": "Ekstrem"
+        }
+      },
+      "evacuation_level": {
+        "name": "Evakueringsniveau",
+        "state": {
+          "none": "Intet evakueringsniveau",
+          "unclassified": "Evakueringsniveau er ikke klassificeret",
+          "level_1_ready": "Niveau 1 — Klar (forbered)",
+          "level_2_set": "Niveau 2 — Indstil (vær klar til at evakuere)",
+          "level_3_go": "Niveau 3 – Gå (evakuer nu)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Evakueringsstatus",
+        "state": {
+          "none": "Ingen evakuering",
+          "advisory": "Evakueringsrådgivning",
+          "warning": "Evakueringsadvarsel",
+          "order": "Evakueringsordre",
+          "immediate": "Øjeblikkelig evakuering",
+          "unknown": "Ukendt evakueringsstatus"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Tæller for naturbrande i nærheden"
+      },
+      "nearest_wildfire_name": {
+        "name": "Nærmeste naturbrand"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Nærmeste naturbrandafstand"
+      },
+      "nearest_wildfire_size": {
+        "name": "Nærmeste naturbrandstørrelse"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Procentdel for indeslutning af nærmeste naturbrand"
+      },
+      "active_fire_alert_count": {
+        "name": "Antal aktive brandalarmer"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Højeste brandalarmsgrad",
+        "state": {
+          "none": "Ingen",
+          "unknown": "Ukendt",
+          "minor": "Mindre",
+          "moderate": "Moderat",
+          "severe": "Alvorlig",
+          "extreme": "Ekstrem"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC sidste succes"
+      },
+      "nws_last_success": {
+        "name": "NWS sidste succes"
+      }
+    }
+  }
+}

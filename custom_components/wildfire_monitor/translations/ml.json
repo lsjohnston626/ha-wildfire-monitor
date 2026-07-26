@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "ഒരു ലൊക്കേഷൻ നിരീക്ഷിക്കുക",
+        "description": "ഔദ്യോഗിക NIFC കാട്ടുതീയും NWS അലേർട്ട് ഡാറ്റയും ഉപയോഗിക്കുന്നു.",
+        "data": {
+          "name": "ലൊക്കേഷൻ്റെ പേര്",
+          "latitude": "അക്ഷാംശം",
+          "longitude": "രേഖാംശം",
+          "radius": "കാട്ടുതീ തിരച്ചിൽ പരിധി"
+        },
+        "data_description": {
+          "radius": "NIFC കാട്ടുതീ തിരയലിനായി ഉപയോഗിക്കുന്ന മൈലുകളിലെ ദൂരം (5–250)."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "ഈ ലൊക്കേഷൻ ഇതിനകം കോൺഫിഗർ ചെയ്തിട്ടുണ്ട്."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "നിരീക്ഷിച്ച ലൊക്കേഷൻ എഡിറ്റ് ചെയ്യുക",
+        "data": {
+          "name": "ലൊക്കേഷൻ്റെ പേര്",
+          "latitude": "അക്ഷാംശം",
+          "longitude": "രേഖാംശം",
+          "radius": "കാട്ടുതീ ആരം"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "ഈ ലൊക്കേഷൻ ഇതിനകം കോൺഫിഗർ ചെയ്തിട്ടുണ്ട്."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "സമീപത്തുള്ള കാട്ടുതീ"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "പരിധിക്കകത്ത് കാട്ടുതീ"
+      },
+      "fire_weather_alert": {
+        "name": "അഗ്നി കാലാവസ്ഥ മുന്നറിയിപ്പ്"
+      },
+      "fire_warning": {
+        "name": "അഗ്നി മുന്നറിയിപ്പ്"
+      },
+      "evacuation_alert": {
+        "name": "ഒഴിപ്പിക്കൽ മുന്നറിയിപ്പ്"
+      },
+      "nifc_source_available": {
+        "name": "NIFC ഉറവിടം ലഭ്യമാണ്"
+      },
+      "nws_source_available": {
+        "name": "NWS ഉറവിടം ലഭ്യമാണ്"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "കാട്ടുതീ ഭീഷണി നില",
+        "state": {
+          "none": "ഒന്നുമില്ല",
+          "low": "കുറവ്",
+          "moderate": "മിതത്വം",
+          "high": "ഉയർന്നത്",
+          "extreme": "അങ്ങേയറ്റം"
+        }
+      },
+      "evacuation_level": {
+        "name": "ഒഴിപ്പിക്കൽ നില",
+        "state": {
+          "none": "ഒഴിപ്പിക്കൽ നിലയില്ല",
+          "unclassified": "ഒഴിപ്പിക്കൽ നില തരംതിരിച്ചിട്ടില്ല",
+          "level_1_ready": "ലെവൽ 1 — തയ്യാറാണ് (തയ്യാറാക്കുന്നു)",
+          "level_2_set": "ലെവൽ 2 — സജ്ജീകരിക്കുക (ഒഴിഞ്ഞുമാറാൻ തയ്യാറാകുക)",
+          "level_3_go": "ലെവൽ 3 — പോകുക (ഇപ്പോൾ ഒഴിഞ്ഞുമാറുക)"
+        }
+      },
+      "evacuation_status": {
+        "name": "ഒഴിപ്പിക്കൽ നില",
+        "state": {
+          "none": "ഒഴിപ്പിക്കലില്ല",
+          "advisory": "ഒഴിപ്പിക്കൽ ഉപദേശം",
+          "warning": "ഒഴിപ്പിക്കൽ മുന്നറിയിപ്പ്",
+          "order": "ഒഴിപ്പിക്കൽ ഉത്തരവ്",
+          "immediate": "ഉടനടി ഒഴിപ്പിക്കൽ",
+          "unknown": "അജ്ഞാതമായ ഒഴിപ്പിക്കൽ നില"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "സമീപത്തെ കാട്ടുതീയുടെ എണ്ണം"
+      },
+      "nearest_wildfire_name": {
+        "name": "ഏറ്റവും അടുത്തുള്ള കാട്ടുതീയുടെ പേര്"
+      },
+      "nearest_wildfire_distance": {
+        "name": "ഏറ്റവും അടുത്തുള്ള കാട്ടുതീ ദൂരം"
+      },
+      "nearest_wildfire_size": {
+        "name": "ഏറ്റവും അടുത്തുള്ള കാട്ടുതീ വലിപ്പം"
+      },
+      "nearest_wildfire_containment": {
+        "name": "ഏറ്റവും അടുത്തുള്ള കാട്ടുതീ നിയന്ത്രണ ശതമാനം"
+      },
+      "active_fire_alert_count": {
+        "name": "സജീവ അഗ്നിശമന മുന്നറിയിപ്പ് എണ്ണം"
+      },
+      "highest_fire_alert_severity": {
+        "name": "ഏറ്റവും ഉയർന്ന അഗ്നിശമന മുന്നറിയിപ്പ് തീവ്രത",
+        "state": {
+          "none": "ഒന്നുമില്ല",
+          "unknown": "അജ്ഞാതം",
+          "minor": "മൈനർ",
+          "moderate": "മിതത്വം",
+          "severe": "കഠിനം",
+          "extreme": "അങ്ങേയറ്റം"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC അവസാന വിജയം"
+      },
+      "nws_last_success": {
+        "name": "NWS അവസാന വിജയം"
+      }
+    }
+  }
+}

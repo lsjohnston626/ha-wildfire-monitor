@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Giám sát vị trí",
+        "description": "Sử dụng dữ liệu cảnh báo cháy rừng và NWS chính thức của NIFC.",
+        "data": {
+          "name": "Tên địa điểm",
+          "latitude": "Vĩ độ",
+          "longitude": "Kinh độ",
+          "radius": "Bán kính tìm kiếm cháy rừng"
+        },
+        "data_description": {
+          "radius": "Khoảng cách tính bằng dặm (5–250) được sử dụng cho tìm kiếm cháy rừng NIFC."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Vị trí này đã được định cấu hình."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Chỉnh sửa vị trí được giám sát",
+        "data": {
+          "name": "Tên địa điểm",
+          "latitude": "Vĩ độ",
+          "longitude": "Kinh độ",
+          "radius": "Bán kính cháy rừng"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Vị trí này đã được định cấu hình."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Cháy rừng lân cận"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Cháy rừng bên trong chu vi"
+      },
+      "fire_weather_alert": {
+        "name": "Cảnh báo thời tiết cháy nổ"
+      },
+      "fire_warning": {
+        "name": "Cảnh báo cháy nổ"
+      },
+      "evacuation_alert": {
+        "name": "Cảnh báo sơ tán"
+      },
+      "nifc_source_available": {
+        "name": "Nguồn NIFC có sẵn"
+      },
+      "nws_source_available": {
+        "name": "Nguồn NWS có sẵn"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Mức độ đe dọa cháy rừng",
+        "state": {
+          "none": "Không có",
+          "low": "Thấp",
+          "moderate": "Vừa phải",
+          "high": "Cao",
+          "extreme": "Cực đoan"
+        }
+      },
+      "evacuation_level": {
+        "name": "Mức độ sơ tán",
+        "state": {
+          "none": "Không có cấp độ sơ tán",
+          "unclassified": "Mức độ sơ tán không được phân loại",
+          "level_1_ready": "Cấp 1 — Sẵn sàng (chuẩn bị)",
+          "level_2_set": "Cấp 2 — Đặt (sẵn sàng sơ tán)",
+          "level_3_go": "Cấp 3 — Đi (sơ tán ngay)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Tình trạng sơ tán",
+        "state": {
+          "none": "Không sơ tán",
+          "advisory": "Tư vấn sơ tán",
+          "warning": "Cảnh báo sơ tán",
+          "order": "Lệnh sơ tán",
+          "immediate": "Sơ tán ngay lập tức",
+          "unknown": "Tình trạng sơ tán không xác định"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Số lượng cháy rừng gần đó"
+      },
+      "nearest_wildfire_name": {
+        "name": "Tên cháy rừng gần nhất"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Khoảng cách cháy rừng gần nhất"
+      },
+      "nearest_wildfire_size": {
+        "name": "Kích thước cháy rừng gần nhất"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Tỷ lệ ngăn chặn cháy rừng gần nhất"
+      },
+      "active_fire_alert_count": {
+        "name": "Số lượng cảnh báo cháy đang hoạt động"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Mức độ cảnh báo cháy cao nhất",
+        "state": {
+          "none": "Không có",
+          "unknown": "Không rõ",
+          "minor": "Nhỏ",
+          "moderate": "Vừa phải",
+          "severe": "Nghiêm trọng",
+          "extreme": "Cực đoan"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC thành công cuối cùng"
+      },
+      "nws_last_success": {
+        "name": "NWS thành công cuối cùng"
+      }
+    }
+  }
+}

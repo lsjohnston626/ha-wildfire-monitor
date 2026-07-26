@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Παρακολούθηση τοποθεσίας",
+        "description": "Χρησιμοποιεί επίσημα δεδομένα πυρκαγιάς NIFC και ειδοποιήσεων NWS.",
+        "data": {
+          "name": "Όνομα τοποθεσίας",
+          "latitude": "Γεωγραφικό πλάτος",
+          "longitude": "Γεωγραφικό μήκος",
+          "radius": "Ακτίνα αναζήτησης πυρκαγιάς"
+        },
+        "data_description": {
+          "radius": "Απόσταση σε μίλια (5–250) που χρησιμοποιείται για αναζητήσεις πυρκαγιάς NIFC."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Αυτή η τοποθεσία έχει ήδη διαμορφωθεί."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Επεξεργασία παρακολουθούμενης τοποθεσίας",
+        "data": {
+          "name": "Όνομα τοποθεσίας",
+          "latitude": "Γεωγραφικό πλάτος",
+          "longitude": "Γεωγραφικό μήκος",
+          "radius": "Ακτίνα πυρκαγιάς"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Αυτή η τοποθεσία έχει ήδη διαμορφωθεί."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Πυρκαγιά σε κοντινή απόσταση"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Πυρκαγιά εντός της περιμέτρου"
+      },
+      "fire_weather_alert": {
+        "name": "Ειδοποίηση καιρού πυρκαγιάς"
+      },
+      "fire_warning": {
+        "name": "Προειδοποίηση πυρκαγιάς"
+      },
+      "evacuation_alert": {
+        "name": "Ειδοποίηση εκκένωσης"
+      },
+      "nifc_source_available": {
+        "name": "Διαθέσιμη πηγή NIFC"
+      },
+      "nws_source_available": {
+        "name": "Διαθέσιμη πηγή NWS"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Επίπεδο απειλής πυρκαγιάς",
+        "state": {
+          "none": "Κανένα",
+          "low": "Χαμηλός",
+          "moderate": "Μέτριος",
+          "high": "Ψηλά",
+          "extreme": "Ακρο"
+        }
+      },
+      "evacuation_level": {
+        "name": "Επίπεδο εκκένωσης",
+        "state": {
+          "none": "Δεν υπάρχει επίπεδο εκκένωσης",
+          "unclassified": "Το επίπεδο εκκένωσης δεν ταξινομείται",
+          "level_1_ready": "Επίπεδο 1 — Έτοιμος (προετοιμασία)",
+          "level_2_set": "Επίπεδο 2 — Σετ (να είστε έτοιμοι για εκκένωση)",
+          "level_3_go": "Επίπεδο 3 — Μετάβαση (εκκένωση τώρα)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Κατάσταση εκκένωσης",
+        "state": {
+          "none": "Χωρίς εκκένωση",
+          "advisory": "Συμβουλευτική εκκένωσης",
+          "warning": "Προειδοποίηση εκκένωσης",
+          "order": "Εντολή εκκένωσης",
+          "immediate": "Άμεση εκκένωση",
+          "unknown": "Άγνωστη κατάσταση εκκένωσης"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Πλήθος πυρκαγιών σε κοντινή απόσταση"
+      },
+      "nearest_wildfire_name": {
+        "name": "Πλησιέστερο όνομα πυρκαγιάς"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Πλησιέστερη απόσταση πυρκαγιάς"
+      },
+      "nearest_wildfire_size": {
+        "name": "Πλησιέστερο μέγεθος πυρκαγιάς"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Πλησιέστερο ποσοστό περιορισμού πυρκαγιάς"
+      },
+      "active_fire_alert_count": {
+        "name": "Αριθμός ενεργών ειδοποιήσεων πυρκαγιάς"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Υψηλότερη σοβαρότητα συναγερμού πυρκαγιάς",
+        "state": {
+          "none": "Κανένα",
+          "unknown": "Άγνωστο",
+          "minor": "Ανήλικο",
+          "moderate": "Μέτρια",
+          "severe": "Σοβαρό",
+          "extreme": "Ακραίο"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC τελευταία επιτυχία"
+      },
+      "nws_last_success": {
+        "name": "NWS τελευταία επιτυχία"
+      }
+    }
+  }
+}

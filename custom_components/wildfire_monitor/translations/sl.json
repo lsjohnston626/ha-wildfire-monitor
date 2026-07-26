@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Spremljajte lokacijo",
+        "description": "Uporablja uradne podatke NIFC požara v naravi in opozorila NWS.",
+        "data": {
+          "name": "Ime lokacije",
+          "latitude": "Zemljepisna širina",
+          "longitude": "Dolžina",
+          "radius": "Radij iskanja požara v naravi"
+        },
+        "data_description": {
+          "radius": "Razdalja v miljah (5–250), uporabljena za iskanje požarov v naravi NIFC."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Ta lokacija je že konfigurirana."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Urejanje nadzorovane lokacije",
+        "data": {
+          "name": "Ime lokacije",
+          "latitude": "Zemljepisna širina",
+          "longitude": "Zemljepisna dolžina",
+          "radius": "Polmer gozdnega požara"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Ta lokacija je že konfigurirana."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "Požar v bližini"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "Požar znotraj območja"
+      },
+      "fire_weather_alert": {
+        "name": "Vremensko opozorilo za požar"
+      },
+      "fire_warning": {
+        "name": "Požarno opozorilo"
+      },
+      "evacuation_alert": {
+        "name": "Evakuacijsko opozorilo"
+      },
+      "nifc_source_available": {
+        "name": "NIFC vir na voljo"
+      },
+      "nws_source_available": {
+        "name": "Vir NWS je na voljo"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Stopnja nevarnosti gozdnih požarov",
+        "state": {
+          "none": "Brez",
+          "low": "Nizka",
+          "moderate": "Zmerno",
+          "high": "Visoko",
+          "extreme": "Ekstremno"
+        }
+      },
+      "evacuation_level": {
+        "name": "Raven evakuacije",
+        "state": {
+          "none": "Brez stopnje evakuacije",
+          "unclassified": "Stopnja evakuacije ni klasificirana",
+          "level_1_ready": "Raven 1 — Pripravljen (priprava)",
+          "level_2_set": "2. stopnja — pripravljen (bodite pripravljeni na evakuacijo)",
+          "level_3_go": "Stopnja 3 — Pojdi (evakuiraj zdaj)"
+        }
+      },
+      "evacuation_status": {
+        "name": "Status evakuacije",
+        "state": {
+          "none": "Brez evakuacije",
+          "advisory": "Nasvet za evakuacijo",
+          "warning": "Opozorilo za evakuacijo",
+          "order": "Ukaz za evakuacijo",
+          "immediate": "Takojšnja evakuacija",
+          "unknown": "Neznano stanje evakuacije"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "Število požarov v bližini"
+      },
+      "nearest_wildfire_name": {
+        "name": "Ime najbližjega požara v naravi"
+      },
+      "nearest_wildfire_distance": {
+        "name": "Najbližja razdalja požara v naravi"
+      },
+      "nearest_wildfire_size": {
+        "name": "Najbližja velikost požara v naravi"
+      },
+      "nearest_wildfire_containment": {
+        "name": "Najbližji odstotek zajezitve požara v naravi"
+      },
+      "active_fire_alert_count": {
+        "name": "Število aktivnih požarnih opozoril"
+      },
+      "highest_fire_alert_severity": {
+        "name": "Najvišja resnost požarnega alarma",
+        "state": {
+          "none": "Brez",
+          "unknown": "Neznano",
+          "minor": "Manjša",
+          "moderate": "Zmerno",
+          "severe": "Hudo",
+          "extreme": "Ekstremno"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC zadnji uspeh"
+      },
+      "nws_last_success": {
+        "name": "NWS zadnji uspeh"
+      }
+    }
+  }
+}

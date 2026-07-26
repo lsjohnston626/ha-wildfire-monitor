@@ -1,0 +1,132 @@
+{
+  "title": "Wildfire Monitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "இருப்பிடத்தைக் கண்காணிக்கவும்",
+        "description": "அதிகாரப்பூர்வ NIFC காட்டுத்தீ மற்றும் NWS எச்சரிக்கைத் தரவைப் பயன்படுத்துகிறது.",
+        "data": {
+          "name": "இருப்பிடத்தின் பெயர்",
+          "latitude": "அட்சரேகை",
+          "longitude": "தீர்க்கரேகை",
+          "radius": "காட்டுத்தீ தேடல் ஆரம்"
+        },
+        "data_description": {
+          "radius": "NIFC காட்டுத்தீ தேடல்களுக்கு மைல்களில் உள்ள தூரம் (5–250)."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "இந்த இடம் ஏற்கனவே உள்ளமைக்கப்பட்டுள்ளது."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "கண்காணிக்கப்படும் இடத்தைத் திருத்தவும்",
+        "data": {
+          "name": "இருப்பிடத்தின் பெயர்",
+          "latitude": "அட்சரேகை",
+          "longitude": "தீர்க்கரேகை",
+          "radius": "காட்டுத்தீ ஆரம்"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "இந்த இடம் ஏற்கனவே உள்ளமைக்கப்பட்டுள்ளது."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {
+        "name": "அருகில் காட்டுத்தீ"
+      },
+      "wildfire_inside_perimeter": {
+        "name": "சுற்றளவுக்குள் காட்டுத்தீ"
+      },
+      "fire_weather_alert": {
+        "name": "தீ வானிலை எச்சரிக்கை"
+      },
+      "fire_warning": {
+        "name": "தீ எச்சரிக்கை"
+      },
+      "evacuation_alert": {
+        "name": "வெளியேற்ற எச்சரிக்கை"
+      },
+      "nifc_source_available": {
+        "name": "NIFC ஆதாரம் உள்ளது"
+      },
+      "nws_source_available": {
+        "name": "NWS ஆதாரம் உள்ளது"
+      }
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "காட்டுத்தீ அச்சுறுத்தல் நிலை",
+        "state": {
+          "none": "இல்லை",
+          "low": "குறைவு",
+          "moderate": "மிதமான",
+          "high": "உயர்",
+          "extreme": "தீவிரம்"
+        }
+      },
+      "evacuation_level": {
+        "name": "வெளியேற்ற நிலை",
+        "state": {
+          "none": "வெளியேற்ற நிலை இல்லை",
+          "unclassified": "வெளியேற்றும் நிலை வகைப்படுத்தப்படவில்லை",
+          "level_1_ready": "நிலை 1 — தயார் (தயார்)",
+          "level_2_set": "நிலை 2 — அமை (வெளியேறத் தயாராக இருங்கள்)",
+          "level_3_go": "நிலை 3 — செல் (இப்போது வெளியேறு)"
+        }
+      },
+      "evacuation_status": {
+        "name": "வெளியேற்ற நிலை",
+        "state": {
+          "none": "வெளியேற்றம் இல்லை",
+          "advisory": "வெளியேற்ற ஆலோசனை",
+          "warning": "வெளியேற்ற எச்சரிக்கை",
+          "order": "வெளியேற்ற உத்தரவு",
+          "immediate": "உடனடி வெளியேற்றம்",
+          "unknown": "அறியப்படாத வெளியேற்ற நிலை"
+        }
+      },
+      "nearby_wildfire_count": {
+        "name": "அருகிலுள்ள காட்டுத்தீ எண்ணிக்கை"
+      },
+      "nearest_wildfire_name": {
+        "name": "அருகிலுள்ள காட்டுத்தீ பெயர்"
+      },
+      "nearest_wildfire_distance": {
+        "name": "அருகில் காட்டுத்தீ தூரம்"
+      },
+      "nearest_wildfire_size": {
+        "name": "அருகிலுள்ள காட்டுத்தீ அளவு"
+      },
+      "nearest_wildfire_containment": {
+        "name": "அருகிலுள்ள காட்டுத்தீ தடுப்பு சதவீதம்"
+      },
+      "active_fire_alert_count": {
+        "name": "செயலில் உள்ள தீ எச்சரிக்கை எண்ணிக்கை"
+      },
+      "highest_fire_alert_severity": {
+        "name": "அதிக தீ எச்சரிக்கை தீவிரம்",
+        "state": {
+          "none": "இல்லை",
+          "unknown": "தெரியவில்லை",
+          "minor": "சிறியது",
+          "moderate": "மிதமான",
+          "severe": "கடுமையானது",
+          "extreme": "தீவிரம்"
+        }
+      },
+      "nifc_last_success": {
+        "name": "NIFC கடைசி வெற்றி"
+      },
+      "nws_last_success": {
+        "name": "NWS கடைசி வெற்றி"
+      }
+    }
+  }
+}
