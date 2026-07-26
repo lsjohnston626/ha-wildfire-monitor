@@ -1,15 +1,15 @@
-# Wildfire Monitor
+# Wildfire Monitor (US)
 
 <p align="center">
-  <img src="custom_components/wildfire_monitor/brand/icon.png"
-       alt="Wildfire Monitor icon"
+  <img src="https://raw.githubusercontent.com/lsjohnston626/ha-wildfire-monitor/main/custom_components/wildfire_monitor/brand/icon.png"
+       alt="Wildfire Monitor (US) icon"
        width="180">
 </p>
 
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/)
 [![Home Assistant 2025.1+](https://img.shields.io/badge/Home%20Assistant-2025.1%2B-41BDF5.svg)](https://www.home-assistant.io/)
 [![Validate](https://github.com/lsjohnston626/ha-wildfire-monitor/actions/workflows/validate.yml/badge.svg)](https://github.com/lsjohnston626/ha-wildfire-monitor/actions/workflows/validate.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[MIT License](https://github.com/lsjohnston626/ha-wildfire-monitor/blob/main/LICENSE)
 
 Wildfire Monitor is a custom integration for Home Assistant that watches a
 named location for nearby wildfires, reported fire perimeters, official fire
