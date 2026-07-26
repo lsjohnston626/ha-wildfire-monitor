@@ -1,0 +1,102 @@
+{
+  "title": "Natuurbrandmonitor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Een locatie bewaken",
+        "description": "Gebruikt officiële NIFC-gegevens over natuurbranden en waarschuwingen van de NWS.",
+        "data": {
+          "name": "Locatienaam",
+          "latitude": "Breedtegraad",
+          "longitude": "Lengtegraad",
+          "radius": "Natuurbrandradius"
+        },
+        "data_description": {
+          "radius": "Afstand in mijlen (5–250) die wordt gebruikt om in NIFC naar natuurbranden te zoeken."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Deze locatie is al geconfigureerd."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Bewaakte locatie bewerken",
+        "data": {
+          "name": "Locatienaam",
+          "latitude": "Breedtegraad",
+          "longitude": "Lengtegraad",
+          "radius": "Natuurbrandradius"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Deze locatie is al geconfigureerd."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {"name": "Natuurbrand in de buurt"},
+      "wildfire_inside_perimeter": {"name": "Locatie binnen een brandperimeter"},
+      "fire_weather_alert": {"name": "Waarschuwing voor brandgevaarlijk weer"},
+      "fire_warning": {"name": "Brandwaarschuwing"},
+      "evacuation_alert": {"name": "Evacuatiewaarschuwing"},
+      "nifc_source_available": {"name": "NIFC-bron beschikbaar"},
+      "nws_source_available": {"name": "NWS-bron beschikbaar"}
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "Dreigingsniveau natuurbrand",
+        "state": {
+          "none": "Geen",
+          "low": "Laag",
+          "moderate": "Gemiddeld",
+          "high": "Hoog",
+          "extreme": "Extreem"
+        }
+      },
+      "evacuation_level": {
+        "name": "Evacuatieniveau",
+        "state": {
+          "none": "Geen",
+          "unclassified": "Niet geclassificeerd",
+          "level_1_ready": "Niveau 1 — Wees voorbereid",
+          "level_2_set": "Niveau 2 — Houd u gereed",
+          "level_3_go": "Niveau 3 — Evacueer"
+        }
+      },
+      "evacuation_status": {
+        "name": "Evacuatiestatus",
+        "state": {
+          "none": "Geen",
+          "advisory": "Advies",
+          "warning": "Waarschuwing",
+          "order": "Bevel",
+          "immediate": "Onmiddellijk",
+          "unknown": "Onbekend"
+        }
+      },
+      "nearby_wildfire_count": {"name": "Aantal natuurbranden in de buurt"},
+      "nearest_wildfire_name": {"name": "Naam van dichtstbijzijnde natuurbrand"},
+      "nearest_wildfire_distance": {"name": "Afstand tot dichtstbijzijnde natuurbrand"},
+      "nearest_wildfire_size": {"name": "Grootte van dichtstbijzijnde natuurbrand"},
+      "nearest_wildfire_containment": {"name": "Insluitingsgraad van dichtstbijzijnde natuurbrand"},
+      "active_fire_alert_count": {"name": "Aantal actieve brandwaarschuwingen"},
+      "highest_fire_alert_severity": {
+        "name": "Hoogste ernst van brandwaarschuwingen",
+        "state": {
+          "none": "Geen",
+          "unknown": "Onbekend",
+          "minor": "Licht",
+          "moderate": "Gemiddeld",
+          "severe": "Ernstig",
+          "extreme": "Extreem"
+        }
+      },
+      "nifc_last_success": {"name": "Laatste geslaagde NIFC-update"},
+      "nws_last_success": {"name": "Laatste geslaagde NWS-update"}
+    }
+  }
+}

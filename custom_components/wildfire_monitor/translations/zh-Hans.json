@@ -1,0 +1,102 @@
+{
+  "title": "山火监测",
+  "config": {
+    "step": {
+      "user": {
+        "title": "监测位置",
+        "description": "使用 NIFC 官方山火数据和 NWS 预警数据。",
+        "data": {
+          "name": "位置名称",
+          "latitude": "纬度",
+          "longitude": "经度",
+          "radius": "山火监测半径"
+        },
+        "data_description": {
+          "radius": "用于 NIFC 山火搜索的距离，单位为英里（5–250）。"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "此位置已配置。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "编辑监测位置",
+        "data": {
+          "name": "位置名称",
+          "latitude": "纬度",
+          "longitude": "经度",
+          "radius": "山火监测半径"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "此位置已配置。"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "wildfire_nearby": {"name": "附近有山火"},
+      "wildfire_inside_perimeter": {"name": "位置位于山火边界内"},
+      "fire_weather_alert": {"name": "火险天气预警"},
+      "fire_warning": {"name": "火灾警报"},
+      "evacuation_alert": {"name": "疏散警报"},
+      "nifc_source_available": {"name": "NIFC 数据源可用"},
+      "nws_source_available": {"name": "NWS 数据源可用"}
+    },
+    "sensor": {
+      "wildfire_threat_level": {
+        "name": "山火威胁等级",
+        "state": {
+          "none": "无",
+          "low": "低",
+          "moderate": "中",
+          "high": "高",
+          "extreme": "极高"
+        }
+      },
+      "evacuation_level": {
+        "name": "疏散等级",
+        "state": {
+          "none": "无",
+          "unclassified": "未分类",
+          "level_1_ready": "1 级 — 准备",
+          "level_2_set": "2 级 — 待命",
+          "level_3_go": "3 级 — 立即撤离"
+        }
+      },
+      "evacuation_status": {
+        "name": "疏散状态",
+        "state": {
+          "none": "无",
+          "advisory": "提示",
+          "warning": "警告",
+          "order": "命令",
+          "immediate": "立即",
+          "unknown": "未知"
+        }
+      },
+      "nearby_wildfire_count": {"name": "附近山火数量"},
+      "nearest_wildfire_name": {"name": "最近山火名称"},
+      "nearest_wildfire_distance": {"name": "最近山火距离"},
+      "nearest_wildfire_size": {"name": "最近山火面积"},
+      "nearest_wildfire_containment": {"name": "最近山火控制率"},
+      "active_fire_alert_count": {"name": "当前火灾警报数量"},
+      "highest_fire_alert_severity": {
+        "name": "最高火灾警报严重程度",
+        "state": {
+          "none": "无",
+          "unknown": "未知",
+          "minor": "轻微",
+          "moderate": "中等",
+          "severe": "严重",
+          "extreme": "极端"
+        }
+      },
+      "nifc_last_success": {"name": "NIFC 上次成功更新时间"},
+      "nws_last_success": {"name": "NWS 上次成功更新时间"}
+    }
+  }
+}
