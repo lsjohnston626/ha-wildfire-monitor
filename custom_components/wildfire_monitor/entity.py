@@ -6,7 +6,7 @@ from homeassistant.core import callback
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from .const import DOMAIN
+from .const import DOCUMENTATION_URL, DOMAIN
 from .coordinator import NifcCoordinator, NwsCoordinator, WildfireConfigEntry
 
 
@@ -32,7 +32,7 @@ class WildfireEntity(CoordinatorEntity[NifcCoordinator]):
             name=entry.title,
             manufacturer="Wildfire Monitor",
             model="Official NIFC and NWS data",
-            configuration_url="https://www.weather.gov/documentation/services-web-api",
+            configuration_url=DOCUMENTATION_URL,
         )
 
     async def async_added_to_hass(self) -> None:

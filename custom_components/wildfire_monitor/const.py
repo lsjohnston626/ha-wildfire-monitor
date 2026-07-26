@@ -4,6 +4,7 @@ from datetime import timedelta
 from typing import Final
 
 DOMAIN: Final = "wildfire_monitor"
+DOCUMENTATION_URL: Final = "https://github.com/lsjohnston626/ha-wildfire-monitor#readme"
 PLATFORMS: Final = ["binary_sensor", "sensor"]
 
 CONF_RADIUS: Final = "radius"
@@ -27,7 +28,7 @@ NIFC_PERIMETER_URL: Final = (
     "WFIGS_Interagency_Perimeters_Current/FeatureServer/0/query"
 )
 NWS_ALERTS_URL: Final = "https://api.weather.gov/alerts/active"
-USER_AGENT: Final = "WildfireMonitor/0.1.0 (Home Assistant custom integration)"
+USER_AGENT: Final = "WildfireMonitor/0.1.1 (Home Assistant custom integration)"
 
 EVACUATION_LEVELS: Final = [
     "none",
