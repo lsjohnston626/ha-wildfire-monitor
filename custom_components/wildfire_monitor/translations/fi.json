@@ -60,6 +60,9 @@
         "name": "NWS lähde saatavilla"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Maastopalotapahtumat"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Maastopalon uhan taso",

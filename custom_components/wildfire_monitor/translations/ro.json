@@ -60,6 +60,9 @@
         "name": "NWS sursă disponibilă"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Evenimente de incendiu"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Nivelul de amenințare cu incendiu",

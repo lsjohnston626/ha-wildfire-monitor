@@ -60,6 +60,9 @@
         "name": "NWS উৎস উপলব্ধ"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "দাবানলের ঘটনা"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "দাবানলের হুমকির মাত্রা",

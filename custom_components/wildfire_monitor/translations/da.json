@@ -60,6 +60,9 @@
         "name": "NWS kilde tilgængelig"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Naturbrand begivenheder"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Trusselsniveau for skovbrand",

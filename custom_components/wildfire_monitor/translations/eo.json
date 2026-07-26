@@ -60,6 +60,9 @@
         "name": "NWS fonto havebla"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Okazaĵoj de arbarfajro"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Arbarfajra minaca nivelo",

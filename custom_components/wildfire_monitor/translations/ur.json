@@ -60,6 +60,9 @@
         "name": "NWS ذریعہ دستیاب ہے۔"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "جنگل کی آگ کے واقعات"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "جنگل کی آگ کے خطرے کی سطح",

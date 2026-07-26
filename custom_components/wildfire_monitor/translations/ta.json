@@ -60,6 +60,9 @@
         "name": "NWS ஆதாரம் உள்ளது"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "காட்டுத்தீ நிகழ்வுகள்"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "காட்டுத்தீ அச்சுறுத்தல் நிலை",

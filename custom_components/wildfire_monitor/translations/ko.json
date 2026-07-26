@@ -60,6 +60,9 @@
         "name": "NWS 소스 사용 가능"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "산불 사건"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "산불 위협 수준",

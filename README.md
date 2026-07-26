@@ -35,6 +35,8 @@ Multiple locations can be monitored with separate config entries.
 - Retrieves official NWS alerts for the exact configured coordinates.
 - Conservatively maps official alert language to Ready/Set/Go evacuation
   levels without inferring evacuation from fire proximity.
+- Publishes transition-safe events for automations without firing a startup
+  notification storm.
 - Keeps NIFC and NWS operational independently during a partial outage.
 - Prevents stale or missing data from producing reassuring negative states.
 - Exposes source availability and last-success diagnostic entities.
@@ -133,6 +135,59 @@ The wildfire count sensor exposes up to 20 distance-sorted records in its
 `nearby_fires` attribute. The alert count sensor exposes up to 20
 urgency-sorted official records in `active_alerts`. Polygon geometry is never
 stored in entity attributes.
+
+### Events
+
+Each monitored location provides an `event.wildfire_events` entity. Use the
+**Event received** trigger in the automation editor and select one or more of
+these event types:
+
+| Event type | Emitted when |
+|---|---|
+| `wildfire_discovered` | A wildfire is newly observed within the configured radius |
+| `wildfire_no_longer_nearby` | A previously observed wildfire is absent from two consecutive successful NIFC refreshes |
+| `fire_entered_perimeter` | A newly observed or existing wildfire contains the monitored point in its reported perimeter |
+| `official_alert_started` | A new fire-related NWS alert becomes active |
+| `official_alert_ended` | A previously active fire-related NWS alert is absent after a successful refresh |
+| `threat_level_increased` | The derived wildfire threat level rises |
+| `threat_level_decreased` | The derived wildfire threat level falls |
+| `evacuation_level_increased` | The derived evacuation level rises |
+| `evacuation_level_decreased` | The derived evacuation level falls |
+| `source_stale` | NIFC or NWS data crosses its stale threshold |
+| `source_recovered` | A source previously reported as stale refreshes successfully |
+
+The initial data refresh establishes a baseline and emits no events. Events
+are emitted only for observed transitions, not on every polling cycle.
+Disappearance events require a successful source refresh; a source failure
+cannot declare a fire or alert gone.
+
+Event attributes include `location_name` and `source`. Fire events also include
+the fire ID, name, distance, perimeter status, acreage, containment, discovery
+date, and source URL. Alert events include the official alert ID, event,
+headline, instructions, severity, urgency, expiration, sender, and source URL.
+Level events include `previous_level` and `level`.
+
+Example automation:
+
+```yaml
+triggers:
+  - trigger: event.received
+    target:
+      entity_id: event.home_wildfire_events
+    options:
+      event_type:
+        - evacuation_level_increased
+actions:
+  - action: notify.send_message
+    data:
+      message: >-
+        Evacuation level changed from
+            {{ trigger.to_state.attributes.previous_level }}
+        to {{ trigger.to_state.attributes.level }}.
+```
+
+Replace `event.home_wildfire_events` with the entity created for your monitored
+location.
 
 ### Diagnostics
 

@@ -60,6 +60,9 @@
         "name": "NWS kaynağı mevcut"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Orman yangını etkinlikleri"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Orman yangını tehdit seviyesi",

@@ -60,6 +60,9 @@
         "name": "Zdroj NWS k dispozícii"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Udalosti súvisiace s lesným požiarom"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Úroveň ohrozenia lesným požiarom",

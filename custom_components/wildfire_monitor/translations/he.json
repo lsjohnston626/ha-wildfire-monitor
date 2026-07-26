@@ -60,6 +60,9 @@
         "name": "מקור NWS זמין"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "אירועי שריפות בשדה קוצים"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "רמת איום שריפות",

@@ -60,6 +60,9 @@
         "name": "NWS iturria eskuragarri"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Baso-suteen gertaerak"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Baso-suteen mehatxu maila",

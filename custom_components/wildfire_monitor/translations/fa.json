@@ -60,6 +60,9 @@
         "name": "منبع NWS موجود است"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "حوادث آتش سوزی"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "سطح تهدید آتش سوزی",

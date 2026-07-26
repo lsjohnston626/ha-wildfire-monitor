@@ -60,6 +60,9 @@
         "name": "NWS bron beskikbaar"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Veldbrandgebeure"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Veldbrandbedreigingsvlak",

@@ -60,6 +60,9 @@
         "name": "Burimi NWS disponohet"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Ngjarjet e zjarrit"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Niveli i kërcënimit nga zjarri",

@@ -60,6 +60,9 @@
         "name": "NWS šaltinis"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Laukinių gaisrų renginiai"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Laukinių gaisrų grėsmės lygis",

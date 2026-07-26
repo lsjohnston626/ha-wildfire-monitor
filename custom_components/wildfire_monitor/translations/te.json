@@ -60,6 +60,9 @@
         "name": "NWS మూలం అందుబాటులో ఉంది"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "అడవి మంట సంఘటనలు"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "అడవి మంటల ముప్పు స్థాయి",

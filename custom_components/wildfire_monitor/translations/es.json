@@ -46,6 +46,9 @@
       "nifc_source_available": {"name": "Fuente NIFC disponible"},
       "nws_source_available": {"name": "Fuente NWS disponible"}
     },
+    "event": {
+      "wildfire_events": {"name": "Eventos de incendios forestales"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Nivel de amenaza de incendio",

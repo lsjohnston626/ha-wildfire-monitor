@@ -60,6 +60,9 @@
         "name": "Наличен NWS източник"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Горски пожари"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Ниво на заплаха от горски пожар",

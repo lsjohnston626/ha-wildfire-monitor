@@ -60,6 +60,9 @@
         "name": "NWS 來源可用"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "野火事件"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "野火威脅級別",

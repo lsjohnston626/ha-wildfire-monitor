@@ -60,6 +60,9 @@
         "name": "NWS ffynhonnell ar gael"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Digwyddiadau tanau gwyllt"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Lefel bygythiad tanau gwyllt",

@@ -60,6 +60,9 @@
         "name": "NWS heimild í boði"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "Skógareldaviðburðir"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "Skógareldahættustig",

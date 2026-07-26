@@ -60,6 +60,9 @@
         "name": "NWS ഉറവിടം ലഭ്യമാണ്"
       }
     },
+    "event": {
+      "wildfire_events": {"name": "കാട്ടുതീ സംഭവങ്ങൾ"}
+    },
     "sensor": {
       "wildfire_threat_level": {
         "name": "കാട്ടുതീ ഭീഷണി നില",
