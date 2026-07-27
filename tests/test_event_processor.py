@@ -131,6 +131,19 @@ def test_temporarily_missing_fire_does_not_rediscover() -> None:
     assert EVENT_WILDFIRE_NO_LONGER_NEARBY not in _types(events)
 
 
+def test_temporarily_missing_fire_does_not_reenter_perimeter() -> None:
+    detector = _detector([_fire("A", distance=0, inside=True)])
+    detector.process_nifc([], successful_refresh=True, is_fresh=True)
+
+    events = detector.process_nifc(
+        [_fire("A", distance=0, inside=True)],
+        successful_refresh=True,
+        is_fresh=True,
+    )
+
+    assert EVENT_FIRE_ENTERED_PERIMETER not in _types(events)
+
+
 def test_alert_and_evacuation_transitions_emit_events() -> None:
     detector = _detector()
     evacuation = _alert(

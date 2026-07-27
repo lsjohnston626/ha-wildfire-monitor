@@ -51,6 +51,11 @@ def _schema(defaults: dict[str, Any]) -> vol.Schema:
     )
 
 
+def _location_unique_id(latitude: Any, longitude: Any) -> str:
+    """Return the stable identity used to prevent duplicate locations."""
+    return f"{float(latitude):.5f},{float(longitude):.5f}"
+
+
 class WildfireMonitorConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Configure a monitored location."""
 
@@ -60,11 +65,11 @@ class WildfireMonitorConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         self, user_input: dict[str, Any] | None = None
     ) -> config_entries.ConfigFlowResult:
         if user_input is not None:
-            unique_id = (
-                f"{float(user_input[CONF_LATITUDE]):.5f},"
-                f"{float(user_input[CONF_LONGITUDE]):.5f}"
+            await self.async_set_unique_id(
+                _location_unique_id(
+                    user_input[CONF_LATITUDE], user_input[CONF_LONGITUDE]
+                )
             )
-            await self.async_set_unique_id(unique_id)
             self._abort_if_unique_id_configured()
             return self.async_create_entry(title=user_input[CONF_NAME], data=user_input)
         return self.async_show_form(
@@ -93,9 +98,8 @@ class WildfireMonitorOptionsFlow(config_entries.OptionsFlow):
     ) -> config_entries.ConfigFlowResult:
         errors: dict[str, str] = {}
         if user_input is not None:
-            unique_id = (
-                f"{float(user_input[CONF_LATITUDE]):.5f},"
-                f"{float(user_input[CONF_LONGITUDE]):.5f}"
+            unique_id = _location_unique_id(
+                user_input[CONF_LATITUDE], user_input[CONF_LONGITUDE]
             )
             for other in self.hass.config_entries.async_entries(DOMAIN):
                 if (
