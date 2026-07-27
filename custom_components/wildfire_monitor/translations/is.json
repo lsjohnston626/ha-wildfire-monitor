@@ -51,6 +51,52 @@
       "source_recovered": "Gagnagjafi endurheimtur"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Kemur af stað þegar einn eða fleiri staðsetningar sem hafa eftirlit uppgötva nærliggjandi skógarelda.",
+      "name": "Skógareldur uppgötvaður"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Kemur af stað þegar skógareldur sem áður hefur sést er ekki lengur nálægt.",
+      "name": "Skógareldur ekki lengur nálægt"
+    },
+    "fire_entered_perimeter": {
+      "description": "Kemur af stað þegar einn eða fleiri staðsetningar sem fylgst er með fara inn í tilkynntan skógarelda.",
+      "name": "Staðsetning fór inn í jaðar skógarelda"
+    },
+    "official_alert_started": {
+      "description": "Virkar þegar einn eða fleiri staðir sem eru vaktir fá nýja opinbera brunatengda viðvörun.",
+      "name": "Opinber viðvörun hófst"
+    },
+    "official_alert_ended": {
+      "description": "Virkar þegar opinberri eldtengdri viðvörun lýkur.",
+      "name": "Opinberri viðvörun lauk"
+    },
+    "threat_level_increased": {
+      "description": "Virkar þegar skógareldahættustig eins eða fleiri eftirlitsstaða eykst.",
+      "name": "Skógareldahættustig jókst"
+    },
+    "threat_level_decreased": {
+      "description": "Virkar þegar skógareldahættustig eins eða fleiri eftirlitsstaða minnkar.",
+      "name": "Eldaógn minnkaði"
+    },
+    "evacuation_level_increased": {
+      "description": "Virkar þegar rýmingarstig á einum eða fleiri vöktuðum stöðum eykst.",
+      "name": "Rýmingarstig hækkaði"
+    },
+    "evacuation_level_decreased": {
+      "description": "Virkar þegar rýmingarstig á einum eða fleiri vöktuðum stöðum lækkar.",
+      "name": "Rýmingarstigið lækkaði"
+    },
+    "source_stale": {
+      "description": "Kemur af stað þegar gagnauppspretta skógarelda fyrir einn eða fleiri staði sem fylgst er með verður gamall.",
+      "name": "Uppruni gagna varð gömul"
+    },
+    "source_recovered": {
+      "description": "Kemur af stað þegar gagnauppspretta skógarelda sem áður hefur verið ónýt jafnar sig.",
+      "name": "Gagnagjafi endurheimtur"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

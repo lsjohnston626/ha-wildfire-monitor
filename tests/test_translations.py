@@ -124,8 +124,22 @@ def test_translation_files_match_english_schema() -> None:
             set(translation["device_automation"]["trigger_type"])
             == EXPECTED_TRIGGER_TYPES
         ), locale
+        assert set(translation["triggers"]) == EXPECTED_TRIGGER_TYPES, locale
+        for trigger in translation["triggers"].values():
+            assert trigger["name"].strip(), locale
+            assert trigger["description"].strip(), locale
 
 
 def test_custom_integration_does_not_ship_core_strings_file() -> None:
     """Custom integrations load complete strings from translations."""
     assert not (INTEGRATION_DIR / "strings.json").exists()
+
+
+def test_trigger_catalog_files_cover_every_transition() -> None:
+    """Catalog schemas and icons should cover exactly the supported triggers."""
+    trigger_schema = (INTEGRATION_DIR / "triggers.yaml").read_text(encoding="utf-8")
+    schema_keys = set(re.findall(r"^([a-z][a-z0-9_]*):$", trigger_schema, re.MULTILINE))
+    assert schema_keys == EXPECTED_TRIGGER_TYPES
+
+    icons = json.loads((INTEGRATION_DIR / "icons.json").read_text(encoding="utf-8"))
+    assert set(icons["triggers"]) == EXPECTED_TRIGGER_TYPES

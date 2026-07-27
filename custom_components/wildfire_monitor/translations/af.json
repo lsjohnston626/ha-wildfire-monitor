@@ -51,6 +51,52 @@
       "source_recovered": "Databron herwin"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Snellers wanneer een of meer gemonitorde liggings 'n nabygeleë veldbrand ontdek.",
+      "name": "Veldbrand ontdek"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Snellers wanneer 'n voorheen waargenome veldbrand nie meer naby is nie.",
+      "name": "Veldbrand nie meer naby nie"
+    },
+    "fire_entered_perimeter": {
+      "description": "Snellers wanneer een of meer gemonitorde liggings 'n gerapporteerde veldbrandomtrek binnegaan.",
+      "name": "Plek het veldbrandomtrek binnegegaan"
+    },
+    "official_alert_started": {
+      "description": "Snellers wanneer een of meer gemonitorde liggings 'n nuwe amptelike brandverwante waarskuwing ontvang.",
+      "name": "Amptelike waarskuwing het begin"
+    },
+    "official_alert_ended": {
+      "description": "Sneller wanneer 'n amptelike brandverwante waarskuwing eindig.",
+      "name": "Amptelike waarskuwing het geëindig"
+    },
+    "threat_level_increased": {
+      "description": "Snellers wanneer die veldbrandbedreigingsvlak van een of meer gemonitorde liggings toeneem.",
+      "name": "Veldbrandbedreigingsvlak het toegeneem"
+    },
+    "threat_level_decreased": {
+      "description": "Snellers wanneer die veldbrandbedreigingsvlak van een of meer gemonitorde liggings afneem.",
+      "name": "Die vlak van veldbrandbedreiging het afgeneem"
+    },
+    "evacuation_level_increased": {
+      "description": "Snellers wanneer die ontruimingsvlak van een of meer gemonitorde liggings toeneem.",
+      "name": "Ontruimingsvlak het toegeneem"
+    },
+    "evacuation_level_decreased": {
+      "description": "Snellers wanneer die ontruimingsvlak van een of meer gemonitorde liggings afneem.",
+      "name": "Ontruimingsvlak het afgeneem"
+    },
+    "source_stale": {
+      "description": "Snellers wanneer 'n veldbranddatabron vir een of meer gemonitorde liggings verouderd raak.",
+      "name": "Databron het verouderd geraak"
+    },
+    "source_recovered": {
+      "description": "Snellers wanneer 'n voorheen ou veldbranddatabron herstel.",
+      "name": "Databron herwin"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

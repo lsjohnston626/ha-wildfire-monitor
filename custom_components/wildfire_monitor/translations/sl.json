@@ -51,6 +51,52 @@
       "source_recovered": "Vir podatkov obnovljen"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Sproži se, ko ena ali več nadzorovanih lokacij odkrije bližnji gozdni požar.",
+      "name": "Odkrit požar v naravi"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Sproži se, ko predhodno opaženega požara v naravi ni več v bližini.",
+      "name": "Požara ni več v bližini"
+    },
+    "fire_entered_perimeter": {
+      "description": "Sproži se, ko ena ali več nadzorovanih lokacij vstopi v območje javljenega požara v naravi.",
+      "name": "Lokacija je v območju požara v naravi"
+    },
+    "official_alert_started": {
+      "description": "Sproži se, ko ena ali več nadzorovanih lokacij prejme novo uradno opozorilo v zvezi s požarom.",
+      "name": "Začelo se je uradno opozorilo"
+    },
+    "official_alert_ended": {
+      "description": "Sproži se, ko se konča uradno opozorilo v zvezi s požarom.",
+      "name": "Uradno opozorilo se je končalo"
+    },
+    "threat_level_increased": {
+      "description": "Sproži se, ko se poveča stopnja nevarnosti požara v naravi na eni ali več nadzorovanih lokacijah.",
+      "name": "Stopnja nevarnosti gozdnih požarov se je povečala"
+    },
+    "threat_level_decreased": {
+      "description": "Sproži se, ko se raven ogroženosti požara v naravi na eni ali več nadzorovanih lokacijah zmanjša.",
+      "name": "Stopnja nevarnosti gozdnih požarov se je zmanjšala"
+    },
+    "evacuation_level_increased": {
+      "description": "Sproži se, ko se raven evakuacije ene ali več nadzorovanih lokacij poveča.",
+      "name": "Stopnja evakuacije se je povečala"
+    },
+    "evacuation_level_decreased": {
+      "description": "Sproži se, ko se raven evakuacije ene ali več nadzorovanih lokacij zmanjša.",
+      "name": "Stopnja evakuacije se je zmanjšala"
+    },
+    "source_stale": {
+      "description": "Sproži se, ko vir podatkov o gozdnih požarih za eno ali več nadzorovanih lokacij postane zastarel.",
+      "name": "Vir podatkov je postal zastarel"
+    },
+    "source_recovered": {
+      "description": "Sproži se, ko se prej zastareli vir podatkov o gozdnem požaru obnovi.",
+      "name": "Vir podatkov obnovljen"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

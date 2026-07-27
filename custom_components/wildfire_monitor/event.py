@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import ClassVar
 
 from homeassistant.components.event import EventEntity
+from homeassistant.const import ATTR_ENTITY_ID
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
@@ -82,6 +83,7 @@ class WildfireMonitorEventEntity(EventEntity):
         for event in events:
             event_data = {
                 "entry_id": self.entry.entry_id,
+                ATTR_ENTITY_ID: self.entity_id,
                 "type": event.event_type,
                 "location_name": self.entry.title,
                 **event.data,

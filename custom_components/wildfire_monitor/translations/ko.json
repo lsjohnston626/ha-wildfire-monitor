@@ -51,6 +51,52 @@
       "source_recovered": "데이터 소스가 복구되었습니다."
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "하나 이상의 모니터링 위치에서 근처 산불이 발견되면 트리거됩니다.",
+      "name": "산불 발견"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "이전에 관찰된 산불이 더 이상 근처에 없을 때 트리거됩니다.",
+      "name": "더 이상 근처에 산불이 없습니다"
+    },
+    "fire_entered_perimeter": {
+      "description": "하나 이상의 모니터링된 위치가 보고된 산불 경계에 진입할 때 트리거됩니다.",
+      "name": "위치가 산불 경계에 진입했습니다."
+    },
+    "official_alert_started": {
+      "description": "하나 이상의 모니터링된 위치가 새로운 공식 화재 관련 경보를 수신할 때 트리거됩니다.",
+      "name": "공식 경보가 시작되었습니다"
+    },
+    "official_alert_ended": {
+      "description": "공식적인 화재 관련 경보가 종료되면 트리거됩니다.",
+      "name": "공식 알림이 종료되었습니다"
+    },
+    "threat_level_increased": {
+      "description": "하나 이상의 모니터링 위치에서 산불 위협 수준이 증가할 때 트리거됩니다.",
+      "name": "산불 위협 수준이 증가했습니다."
+    },
+    "threat_level_decreased": {
+      "description": "하나 이상의 모니터링 위치에서 산불 위협 수준이 감소할 때 트리거됩니다.",
+      "name": "산불 위협 수준 감소"
+    },
+    "evacuation_level_increased": {
+      "description": "하나 이상의 모니터링된 위치의 대피 수준이 높아질 때 트리거됩니다.",
+      "name": "대피 레벨이 증가했습니다."
+    },
+    "evacuation_level_decreased": {
+      "description": "하나 이상의 모니터링된 위치의 대피 수준이 감소할 때 트리거됩니다.",
+      "name": "대피 수준 감소"
+    },
+    "source_stale": {
+      "description": "하나 이상의 모니터링 위치에 대한 산불 데이터 원본이 오래되면 트리거됩니다.",
+      "name": "데이터 소스가 오래되었습니다."
+    },
+    "source_recovered": {
+      "description": "이전에 오래된 산불 데이터 소스가 복구될 때 트리거됩니다.",
+      "name": "데이터 소스가 복구되었습니다."
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

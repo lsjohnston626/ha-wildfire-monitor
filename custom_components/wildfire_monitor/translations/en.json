@@ -51,6 +51,52 @@
       "source_recovered": "Data source recovered"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Triggers when one or more monitored locations discover a nearby wildfire.",
+      "name": "Nearby wildfire discovered"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Triggers when a previously observed wildfire is no longer nearby.",
+      "name": "Wildfire no longer nearby"
+    },
+    "fire_entered_perimeter": {
+      "description": "Triggers when one or more monitored locations enter a reported wildfire perimeter.",
+      "name": "Location entered wildfire perimeter"
+    },
+    "official_alert_started": {
+      "description": "Triggers when one or more monitored locations receive a new official fire-related alert.",
+      "name": "Official fire alert started"
+    },
+    "official_alert_ended": {
+      "description": "Triggers when an official fire-related alert ends.",
+      "name": "Official fire alert ended"
+    },
+    "threat_level_increased": {
+      "description": "Triggers when the wildfire threat level of one or more monitored locations increases.",
+      "name": "Wildfire threat level increased"
+    },
+    "threat_level_decreased": {
+      "description": "Triggers when the wildfire threat level of one or more monitored locations decreases.",
+      "name": "Wildfire threat level decreased"
+    },
+    "evacuation_level_increased": {
+      "description": "Triggers when the evacuation level of one or more monitored locations increases.",
+      "name": "Evacuation level increased"
+    },
+    "evacuation_level_decreased": {
+      "description": "Triggers when the evacuation level of one or more monitored locations decreases.",
+      "name": "Evacuation level decreased"
+    },
+    "source_stale": {
+      "description": "Triggers when a wildfire data source for one or more monitored locations becomes stale.",
+      "name": "Data source became stale"
+    },
+    "source_recovered": {
+      "description": "Triggers when a previously stale wildfire data source recovers.",
+      "name": "Data source recovered"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Wildfire nearby"},

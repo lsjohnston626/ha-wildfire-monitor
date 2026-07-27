@@ -51,6 +51,52 @@
       "source_recovered": "Tietolähde palautettu"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Laukaisee, kun yksi tai useampi valvottu paikka havaitsee lähellä olevan maastopalon.",
+      "name": "Maastopalo löydetty"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Laukaisee, kun aiemmin havaittu metsäpalo ei ole enää lähellä.",
+      "name": "Maastopalo ei ole enää lähellä"
+    },
+    "fire_entered_perimeter": {
+      "description": "Laukaisee, kun yksi tai useampi valvottu paikka saapuu raportoidulle metsäpaloalueelle.",
+      "name": "Paikka tuli metsäpalon rajalle"
+    },
+    "official_alert_started": {
+      "description": "Laukaisee, kun yksi tai useampi valvottu paikka saa uuden virallisen tulipaloon liittyvän hälytyksen.",
+      "name": "Virallinen hälytys alkoi"
+    },
+    "official_alert_ended": {
+      "description": "Laukaisee, kun virallinen tulipaloon liittyvä hälytys päättyy.",
+      "name": "Virallinen hälytys päättyi"
+    },
+    "threat_level_increased": {
+      "description": "Laukaisee, kun yhden tai useamman valvotun sijainnin metsäpalon uhkataso nousee.",
+      "name": "Maastopalojen uhan taso nousi"
+    },
+    "threat_level_decreased": {
+      "description": "Laukaisee, kun yhden tai useamman valvotun sijainnin metsäpalon uhkataso laskee.",
+      "name": "Maastopalojen uhan taso laski"
+    },
+    "evacuation_level_increased": {
+      "description": "Laukaisee, kun yhden tai useamman valvotun sijainnin evakuointitaso nousee.",
+      "name": "Evakuointitaso nousi"
+    },
+    "evacuation_level_decreased": {
+      "description": "Laukaisee, kun yhden tai useamman valvotun sijainnin evakuointitaso laskee.",
+      "name": "Evakuointitaso laski"
+    },
+    "source_stale": {
+      "description": "Laukaisee, kun yhden tai useamman valvotun sijainnin metsäpalotietolähde vanhenee.",
+      "name": "Tietolähde on vanhentunut"
+    },
+    "source_recovered": {
+      "description": "Laukaisee, kun aiemmin vanhentunut wildfire-tietolähde palautuu.",
+      "name": "Tietolähde palautettu"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

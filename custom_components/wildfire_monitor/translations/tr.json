@@ -51,6 +51,52 @@
       "source_recovered": "Veri kaynağı kurtarıldı"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Bir veya daha fazla izlenen konum yakınlarda bir orman yangını keşfettiğinde tetiklenir.",
+      "name": "Orman yangını keşfedildi"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Daha önce gözlemlenen bir orman yangını artık yakınlarda olmadığında tetiklenir.",
+      "name": "Orman yangını artık yakınlarda değil"
+    },
+    "fire_entered_perimeter": {
+      "description": "Bir veya daha fazla izlenen konum, bildirilen bir orman yangını çevresine girdiğinde tetiklenir.",
+      "name": "Konum orman yangını çevresine girdi"
+    },
+    "official_alert_started": {
+      "description": "Bir veya daha fazla izlenen konum yangınla ilgili yeni bir resmi uyarı aldığında tetiklenir.",
+      "name": "Resmi uyarı başladı"
+    },
+    "official_alert_ended": {
+      "description": "Yangınla ilgili resmi bir uyarı sona erdiğinde tetiklenir.",
+      "name": "Resmi uyarı sona erdi"
+    },
+    "threat_level_increased": {
+      "description": "Bir veya daha fazla izlenen konumun kontrol edilemeyen yangın tehdidi düzeyi arttığında tetiklenir.",
+      "name": "Orman yangını tehdit seviyesi artırıldı"
+    },
+    "threat_level_decreased": {
+      "description": "Bir veya daha fazla izlenen konumun kontrol edilemeyen yangın tehdidi düzeyi düştüğünde tetiklenir.",
+      "name": "Orman yangını tehdit seviyesi azaldı"
+    },
+    "evacuation_level_increased": {
+      "description": "Bir veya daha fazla izlenen konumun tahliye seviyesi arttığında tetiklenir.",
+      "name": "Tahliye seviyesi artırıldı"
+    },
+    "evacuation_level_decreased": {
+      "description": "Bir veya daha fazla izlenen konumun tahliye seviyesi düştüğünde tetiklenir.",
+      "name": "Tahliye seviyesi azaldı"
+    },
+    "source_stale": {
+      "description": "İzlenen bir veya daha fazla konum için kontrol edilemeyen bir veri kaynağı eskidiğinde tetiklenir.",
+      "name": "Veri kaynağı bayatladı"
+    },
+    "source_recovered": {
+      "description": "Daha önce eskimiş bir kontrol edilemeyen yangın veri kaynağı kurtarıldığında tetiklenir.",
+      "name": "Veri kaynağı kurtarıldı"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

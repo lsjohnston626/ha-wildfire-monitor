@@ -1,0 +1,37 @@
+.wildfire_target: &wildfire_target
+  entity:
+    integration: wildfire_monitor
+    domain: event
+
+wildfire_discovered:
+  target: *wildfire_target
+
+wildfire_no_longer_nearby:
+  target: *wildfire_target
+
+fire_entered_perimeter:
+  target: *wildfire_target
+
+official_alert_started:
+  target: *wildfire_target
+
+official_alert_ended:
+  target: *wildfire_target
+
+threat_level_increased:
+  target: *wildfire_target
+
+threat_level_decreased:
+  target: *wildfire_target
+
+evacuation_level_increased:
+  target: *wildfire_target
+
+evacuation_level_decreased:
+  target: *wildfire_target
+
+source_stale:
+  target: *wildfire_target
+
+source_recovered:
+  target: *wildfire_target

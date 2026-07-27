@@ -51,6 +51,52 @@
       "source_recovered": "Az adatforrás helyreállt"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Akkor aktiválódik, amikor egy vagy több megfigyelt hely egy közeli futótüzet észlel.",
+      "name": "Futótüzet fedeztek fel"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Akkor aktiválódik, amikor egy korábban megfigyelt futótűz már nincs a közelben.",
+      "name": "Futótűz már nincs a közelben"
+    },
+    "fire_entered_perimeter": {
+      "description": "Akkor aktiválódik, amikor egy vagy több megfigyelt hely belép a jelentett futótűz-körzetbe.",
+      "name": "A helyszín belépett a futótűz övezetébe"
+    },
+    "official_alert_started": {
+      "description": "Akkor aktiválódik, amikor egy vagy több felügyelt hely új hivatalos, tűzzel kapcsolatos riasztást kap.",
+      "name": "Megkezdődött a hivatalos riasztás"
+    },
+    "official_alert_ended": {
+      "description": "Akkor aktiválódik, amikor egy hivatalos tűzzel kapcsolatos riasztás véget ér.",
+      "name": "A hivatalos riasztás véget ért"
+    },
+    "threat_level_increased": {
+      "description": "Akkor aktiválódik, amikor egy vagy több megfigyelt hely futótűz-fenyegetettsége növekszik.",
+      "name": "Emelkedett az erdőtüzek fenyegetettsége"
+    },
+    "threat_level_decreased": {
+      "description": "Akkor aktiválódik, amikor egy vagy több megfigyelt hely erdőtűz-fenyegetettsége csökken.",
+      "name": "Csökkent az erdőtüzek fenyegetettsége"
+    },
+    "evacuation_level_increased": {
+      "description": "Akkor aktiválódik, ha egy vagy több megfigyelt hely evakuálási szintje megemelkedik.",
+      "name": "Az evakuálási szint emelkedett"
+    },
+    "evacuation_level_decreased": {
+      "description": "Akkor aktiválódik, amikor egy vagy több megfigyelt hely evakuálási szintje csökken.",
+      "name": "Az evakuálási szint csökkent"
+    },
+    "source_stale": {
+      "description": "Akkor aktiválódik, amikor egy vagy több megfigyelt hely futótűz-adatforrása elavulttá válik.",
+      "name": "Az adatforrás elavulttá vált"
+    },
+    "source_recovered": {
+      "description": "Akkor aktiválódik, amikor egy korábban elavult futótűz-adatforrás helyreáll.",
+      "name": "Az adatforrás helyreállt"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

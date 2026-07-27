@@ -142,10 +142,12 @@ Each monitored location provides an `event.wildfire_events` entity. Use the
 **Event received** trigger in the automation editor and select one or more of
 these event types:
 
-These transitions are also exposed as native device triggers. In the
-automation editor, choose **Device**, select the Wildfire Monitor location,
-and then select the transition you want. The Event entity remains available
-for YAML automations and advanced filtering.
+These transitions are also exposed as individually named triggers in Home
+Assistant's trigger catalog. Search for **Wildfire Monitor** in the automation
+editor and choose a friendly trigger such as **Nearby wildfire discovered**,
+**Official fire alert started**, or **Evacuation level increased**. Then select
+the monitored location to target. The Event entity remains available for YAML
+automations and advanced filtering.
 
 | Event type | Emitted when |
 |---|---|

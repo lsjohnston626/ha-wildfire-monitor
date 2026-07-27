@@ -51,6 +51,52 @@
       "source_recovered": "Datu avots ir atkopts"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Aktivizējas, kad viena vai vairākas uzraudzītas vietas atklāj tuvumā esošu ugunsgrēku.",
+      "name": "Savvaļas ugunsgrēks atklāts"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Aktivizējas, kad tuvumā vairs nav iepriekš novērota kūlas ugunsgrēka.",
+      "name": "Savvaļas ugunsgrēks vairs nav tuvumā"
+    },
+    "fire_entered_perimeter": {
+      "description": "Aktivizējas, kad viena vai vairākas uzraudzītās vietas nonāk ziņotajā savvaļas ugunsgrēka perimetrā.",
+      "name": "Atrašanās vieta iekļuva ugunsgrēka perimetrā"
+    },
+    "official_alert_started": {
+      "description": "Aktivizējas, kad viena vai vairākas uzraudzītās vietas saņem jaunu oficiālu ar ugunsgrēku saistītu brīdinājumu.",
+      "name": "Sākās oficiālais brīdinājums"
+    },
+    "official_alert_ended": {
+      "description": "Aktivizējas, kad beidzas oficiālais ar ugunsgrēku saistīts brīdinājums.",
+      "name": "Oficiālā trauksme beigusies"
+    },
+    "threat_level_increased": {
+      "description": "Aktivizējas, kad vienas vai vairāku uzraudzītu vietu ugunsgrēka draudu līmenis palielinās.",
+      "name": "Savvaļas ugunsgrēku draudu līmenis ir palielinājies"
+    },
+    "threat_level_decreased": {
+      "description": "Aktivizējas, kad vienas vai vairāku uzraudzīto vietu ugunsgrēka draudu līmenis samazinās.",
+      "name": "Savvaļas ugunsgrēku draudu līmenis ir samazinājies"
+    },
+    "evacuation_level_increased": {
+      "description": "Ieslēdzas, kad vienas vai vairāku uzraudzīto vietu evakuācijas līmenis palielinās.",
+      "name": "Paaugstināts evakuācijas līmenis"
+    },
+    "evacuation_level_decreased": {
+      "description": "Ieslēdzas, kad vienas vai vairāku uzraudzīto vietu evakuācijas līmenis samazinās.",
+      "name": "Evakuācijas līmenis pazeminājās"
+    },
+    "source_stale": {
+      "description": "Aktivizējas, kad ugunsgrēka datu avots vienai vai vairākām uzraudzītām vietām kļūst novecojis.",
+      "name": "Datu avots ir novecojis"
+    },
+    "source_recovered": {
+      "description": "Aktivizējas, kad tiek atjaunots iepriekš novecojis ugunsgrēka datu avots.",
+      "name": "Datu avots ir atkopts"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

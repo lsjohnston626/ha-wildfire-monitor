@@ -51,6 +51,52 @@
       "source_recovered": "Zdroj dat obnoven"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Spustí se, když jedno nebo více monitorovaných míst objeví blízký lesní požár.",
+      "name": "Objeven divoký požár"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Spustí se, když dříve pozorovaný požár již není poblíž.",
+      "name": "Požár už není poblíž"
+    },
+    "fire_entered_perimeter": {
+      "description": "Spustí se, když jedno nebo více monitorovaných míst vstoupí do ohlášeného obvodu požáru.",
+      "name": "Místo vstoupilo do oblasti požáru"
+    },
+    "official_alert_started": {
+      "description": "Spustí se, když jedno nebo více monitorovaných míst obdrží nové oficiální varování související s požárem.",
+      "name": "Začalo oficiální upozornění"
+    },
+    "official_alert_ended": {
+      "description": "Spustí se, když skončí oficiální výstraha související s požárem.",
+      "name": "Oficiální výstraha skončila"
+    },
+    "threat_level_increased": {
+      "description": "Spustí se, když se zvýší úroveň ohrožení požárem jednoho nebo více monitorovaných míst.",
+      "name": "Úroveň ohrožení lesním požárem se zvýšila"
+    },
+    "threat_level_decreased": {
+      "description": "Spustí se, když se úroveň ohrožení lesním požárem v jednom nebo více monitorovaných místech sníží.",
+      "name": "Úroveň ohrožení lesním požárem se snížila"
+    },
+    "evacuation_level_increased": {
+      "description": "Spustí se, když se zvýší úroveň evakuace jednoho nebo více monitorovaných míst.",
+      "name": "Úroveň evakuace se zvýšila"
+    },
+    "evacuation_level_decreased": {
+      "description": "Spustí se, když se sníží úroveň evakuace jednoho nebo více monitorovaných míst.",
+      "name": "Úroveň evakuace se snížila"
+    },
+    "source_stale": {
+      "description": "Spustí se, když se zdroj dat divokého požáru pro jedno nebo více monitorovaných míst stane zastaralým.",
+      "name": "Zdroj dat se stal zastaralým"
+    },
+    "source_recovered": {
+      "description": "Spustí se, když se obnoví dříve zastaralý zdroj dat divokého požáru.",
+      "name": "Zdroj dat obnoven"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

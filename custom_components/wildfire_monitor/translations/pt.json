@@ -51,6 +51,52 @@
       "source_recovered": "Fonte de dados recuperada"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Aciona quando um ou mais locais monitorados descobrem um incêndio florestal próximo.",
+      "name": "Incêndio florestal descoberto"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Aciona quando um incêndio florestal observado anteriormente não está mais próximo.",
+      "name": "Incêndio florestal não está mais próximo"
+    },
+    "fire_entered_perimeter": {
+      "description": "Aciona quando um ou mais locais monitorados entram em um perímetro de incêndio florestal relatado.",
+      "name": "Local entrou no perímetro do incêndio florestal"
+    },
+    "official_alert_started": {
+      "description": "Aciona quando um ou mais locais monitorados recebem um novo alerta oficial relacionado a incêndio.",
+      "name": "Alerta oficial iniciado"
+    },
+    "official_alert_ended": {
+      "description": "Aciona quando um alerta oficial relacionado a incêndio termina.",
+      "name": "Alerta oficial encerrado"
+    },
+    "threat_level_increased": {
+      "description": "Aciona quando o nível de ameaça de incêndio florestal de um ou mais locais monitorados aumenta.",
+      "name": "Nível de ameaça de incêndio florestal aumentado"
+    },
+    "threat_level_decreased": {
+      "description": "Aciona quando o nível de ameaça de incêndio florestal de um ou mais locais monitorados diminui.",
+      "name": "Nível de ameaça de incêndio florestal reduzido"
+    },
+    "evacuation_level_increased": {
+      "description": "Aciona quando o nível de evacuação de um ou mais locais monitorados aumenta.",
+      "name": "Nível de evacuação aumentado"
+    },
+    "evacuation_level_decreased": {
+      "description": "É acionado quando o nível de evacuação de um ou mais locais monitorados diminui.",
+      "name": "Nível de evacuação diminuiu"
+    },
+    "source_stale": {
+      "description": "Aciona quando uma fonte de dados de incêndio florestal para um ou mais locais monitorados fica obsoleta.",
+      "name": "A fonte de dados ficou obsoleta"
+    },
+    "source_recovered": {
+      "description": "Aciona quando uma fonte de dados de incêndio florestal anteriormente obsoleta é recuperada.",
+      "name": "Fonte de dados recuperada"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Incêndio florestal próximo"},
