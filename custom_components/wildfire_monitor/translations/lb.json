@@ -51,6 +51,52 @@
       "source_recovered": "Datenquell erëmfonnt"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Ausléist wann een oder méi iwwerwaachte Plazen en Emgéigend Bëschbrand entdecken.",
+      "name": "Wildfire entdeckt"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Ausléist wann e virdru observéiert Bëschbrand net méi an der Géigend ass.",
+      "name": "Wildfire net méi an der Géigend"
+    },
+    "fire_entered_perimeter": {
+      "description": "Ausléist wann een oder méi iwwerwaachte Plazen an e gemellt Bëschbrännperimeter erakommen.",
+      "name": "Location koum Wildfire Perimeter"
+    },
+    "official_alert_started": {
+      "description": "Ausléist wann een oder méi iwwerwaachte Plazen eng nei offiziell Feier-Zesummenhang Alarm kréien.",
+      "name": "Offiziell Alarm ugefaang"
+    },
+    "official_alert_ended": {
+      "description": "Ausléist wann eng offiziell Feier-Zesummenhang Alarm endet.",
+      "name": "Offiziell Alarm eriwwer"
+    },
+    "threat_level_increased": {
+      "description": "Ausléist wann de Bëschbrandbedrohungsniveau vun enger oder méi iwwerwaachte Plazen eropgeet.",
+      "name": "Wildfire Bedrohungsniveau ass eropgaang"
+    },
+    "threat_level_decreased": {
+      "description": "Ausléist wann de Bëschbrandbedrohungsniveau vun enger oder méi iwwerwaachter Plazen erofgeet.",
+      "name": "D'Drohungsniveau vum Bëschbrand ass erofgaang"
+    },
+    "evacuation_level_increased": {
+      "description": "Ausléist wann den Evakuéierungsniveau vun enger oder méi iwwerwaachter Plazen eropgeet.",
+      "name": "Evakuatiounsniveau erhéicht"
+    },
+    "evacuation_level_decreased": {
+      "description": "Ausléist wann den Evakuéierungsniveau vun enger oder méi iwwerwaachte Plazen erofgeet.",
+      "name": "Evakuéierungsniveau ass erofgaang"
+    },
+    "source_stale": {
+      "description": "Ausléist wann eng Bëschbranddatenquell fir eng oder méi iwwerwaachte Plazen ofgestëmmt gëtt.",
+      "name": "D'Donnéeënquell gouf schief"
+    },
+    "source_recovered": {
+      "description": "Ausléist wann eng virdru stale Bëschbranddatenquell sech erholl.",
+      "name": "Datenquell erëmfonnt"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

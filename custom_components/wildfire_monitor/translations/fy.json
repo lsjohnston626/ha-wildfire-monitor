@@ -51,6 +51,52 @@
       "source_recovered": "Gegevensboarne weromfûn"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Triggers as ien of mear kontrolearre lokaasjes in buertbrân ûntdekke.",
+      "name": "Wildfire ûntdutsen"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Trigger as in earder waarnommen wyldbrân net mear tichtby is.",
+      "name": "Wildfire net mear tichtby"
+    },
+    "fire_entered_perimeter": {
+      "description": "Triggers as ien of mear kontrolearre lokaasjes in rapportearre wildfire perimeter ynfiere.",
+      "name": "Lokaasje ynfierd wildfire perimeter"
+    },
+    "official_alert_started": {
+      "description": "Triggers as ien of mear kontrolearre lokaasjes in nije offisjele brân-relatearre warskôging krije.",
+      "name": "Offisjele warskôging begûn"
+    },
+    "official_alert_ended": {
+      "description": "Triggert as in offisjele brân-relatearre warskôging einiget.",
+      "name": "Offisjele warskôging einige"
+    },
+    "threat_level_increased": {
+      "description": "Triggers as it bedrigingsnivo fan wyldbrân fan ien of mear kontroleare lokaasjes ferheget.",
+      "name": "Wildfire bedriging nivo ferhege"
+    },
+    "threat_level_decreased": {
+      "description": "Triggers as it bedrigingsnivo fan wyldbrân fan ien of mear kontroleare lokaasjes ôfnimt.",
+      "name": "It nivo fan de bedriging foar wildfire fermindere"
+    },
+    "evacuation_level_increased": {
+      "description": "Trigger as it evakuaasjenivo fan ien of mear kontroleare lokaasjes ferheget.",
+      "name": "Evakuaasje nivo ferhege"
+    },
+    "evacuation_level_decreased": {
+      "description": "Trigger as it evakuaasjenivo fan ien of mear kontroleare lokaasjes ôfnimt.",
+      "name": "Evakuaasje nivo fermindere"
+    },
+    "source_stale": {
+      "description": "Triggers as in gegevensboarne foar wyldbrân foar ien of mear kontroleare lokaasjes ferâldere wurdt.",
+      "name": "Gegevensboarne waard ferâldere"
+    },
+    "source_recovered": {
+      "description": "Triggers as in earder muffe wyldbrângegevensboarne herstelt.",
+      "name": "Gegevensboarne weromfûn"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

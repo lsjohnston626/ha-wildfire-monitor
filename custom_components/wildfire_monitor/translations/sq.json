@@ -51,6 +51,52 @@
       "source_recovered": "Burimi i të dhënave u rikuperua"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Aktivizohet kur një ose më shumë vendndodhje të monitoruara zbulojnë një zjarr në afërsi.",
+      "name": "Zjarri i zbuluar"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Shkaktohet kur një zjarr i vëzhguar më parë nuk është më afër.",
+      "name": "Zjarri nuk është më afër"
+    },
+    "fire_entered_perimeter": {
+      "description": "Aktivizohet kur një ose më shumë vendndodhje të monitoruara hyjnë në një perimetër të raportuar të zjarrit.",
+      "name": "Vendndodhja është futur në perimetrin e zjarrit"
+    },
+    "official_alert_started": {
+      "description": "Aktivizohet kur një ose më shumë vendndodhje të monitoruara marrin një alarm të ri zyrtar të lidhur me zjarrin.",
+      "name": "Filloi alarmi zyrtar"
+    },
+    "official_alert_ended": {
+      "description": "Aktivizohet kur përfundon një alarm zyrtar i lidhur me zjarrin.",
+      "name": "Alarmi zyrtar përfundoi"
+    },
+    "threat_level_increased": {
+      "description": "Shkaktohet kur rritet niveli i kërcënimit nga zjarri i një ose më shumë vendndodhjeve të monitoruara.",
+      "name": "Niveli i kërcënimit nga zjarri është rritur"
+    },
+    "threat_level_decreased": {
+      "description": "Aktivizohet kur niveli i kërcënimit nga zjarri i një ose më shumë vendndodhjeve të monitoruara ulet.",
+      "name": "Niveli i kërcënimit nga zjarri është ulur"
+    },
+    "evacuation_level_increased": {
+      "description": "Shkaktohet kur rritet niveli i evakuimit të një ose më shumë vendndodhjeve të monitoruara.",
+      "name": "Niveli i evakuimit është rritur"
+    },
+    "evacuation_level_decreased": {
+      "description": "Shkaktohet kur niveli i evakuimit të një ose më shumë vendndodhjeve të monitoruara ulet.",
+      "name": "Niveli i evakuimit është ulur"
+    },
+    "source_stale": {
+      "description": "Shkaktohet kur një burim i të dhënave për zjarret e egra për një ose më shumë vendndodhje të monitoruara bëhet bajat.",
+      "name": "Burimi i të dhënave u bë bajat"
+    },
+    "source_recovered": {
+      "description": "Shkaktohet kur rikuperohet një burim i të dhënave i vjetëruar më parë.",
+      "name": "Burimi i të dhënave u rikuperua"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

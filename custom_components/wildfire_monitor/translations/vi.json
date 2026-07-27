@@ -51,6 +51,52 @@
       "source_recovered": "Đã khôi phục được nguồn dữ liệu"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Kích hoạt khi một hoặc nhiều địa điểm được giám sát phát hiện ra đám cháy rừng gần đó.",
+      "name": "Cháy rừng được phát hiện"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Kích hoạt khi đám cháy rừng được quan sát trước đó không còn ở gần nữa.",
+      "name": "Cháy rừng không còn ở gần nữa"
+    },
+    "fire_entered_perimeter": {
+      "description": "Kích hoạt khi một hoặc nhiều địa điểm được giám sát đi vào phạm vi cháy rừng được báo cáo.",
+      "name": "Vị trí đã vào chu vi cháy rừng"
+    },
+    "official_alert_started": {
+      "description": "Kích hoạt khi một hoặc nhiều địa điểm được giám sát nhận được cảnh báo chính thức mới liên quan đến hỏa hoạn.",
+      "name": "Cảnh báo chính thức đã bắt đầu"
+    },
+    "official_alert_ended": {
+      "description": "Kích hoạt khi cảnh báo chính thức liên quan đến hỏa hoạn kết thúc.",
+      "name": "Cảnh báo chính thức đã kết thúc"
+    },
+    "threat_level_increased": {
+      "description": "Kích hoạt khi mức độ đe dọa cháy rừng của một hoặc nhiều địa điểm được giám sát tăng lên.",
+      "name": "Mức độ đe dọa cháy rừng tăng lên"
+    },
+    "threat_level_decreased": {
+      "description": "Kích hoạt khi mức độ đe dọa cháy rừng của một hoặc nhiều địa điểm được giám sát giảm xuống.",
+      "name": "Mức độ đe dọa cháy rừng giảm"
+    },
+    "evacuation_level_increased": {
+      "description": "Kích hoạt khi mức độ sơ tán của một hoặc nhiều địa điểm được giám sát tăng lên.",
+      "name": "Mức độ sơ tán tăng lên"
+    },
+    "evacuation_level_decreased": {
+      "description": "Kích hoạt khi mức độ sơ tán của một hoặc nhiều địa điểm được giám sát giảm.",
+      "name": "Mức độ sơ tán giảm"
+    },
+    "source_stale": {
+      "description": "Kích hoạt khi nguồn dữ liệu cháy rừng cho một hoặc nhiều vị trí được giám sát trở nên cũ.",
+      "name": "Nguồn dữ liệu đã cũ"
+    },
+    "source_recovered": {
+      "description": "Kích hoạt khi nguồn dữ liệu cháy rừng cũ trước đây được phục hồi.",
+      "name": "Đã khôi phục được nguồn dữ liệu"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

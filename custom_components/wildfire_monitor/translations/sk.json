@@ -51,6 +51,52 @@
       "source_recovered": "Zdroj údajov bol obnovený"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Spustí sa, keď jedno alebo viaceré monitorované miesta objavia blízky lesný požiar.",
+      "name": "Objavený lesný požiar"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Spustí sa, keď už nie je v blízkosti predtým pozorovaný lesný požiar.",
+      "name": "Požiar už nie je nablízku"
+    },
+    "fire_entered_perimeter": {
+      "description": "Spustí sa, keď jedno alebo viac monitorovaných miest vstúpi do hláseného obvodu požiaru.",
+      "name": "Miesto vstúpilo do oblasti lesného požiaru"
+    },
+    "official_alert_started": {
+      "description": "Spustí sa, keď jedno alebo viac monitorovaných miest dostane nové oficiálne upozornenie týkajúce sa požiaru.",
+      "name": "Začalo sa oficiálne upozornenie"
+    },
+    "official_alert_ended": {
+      "description": "Spustí sa, keď sa skončí oficiálna výstraha súvisiaca s požiarom.",
+      "name": "Oficiálna výstraha sa skončila"
+    },
+    "threat_level_increased": {
+      "description": "Spustí sa, keď sa zvýši úroveň ohrozenia lesným požiarom na jednom alebo viacerých monitorovaných miestach.",
+      "name": "Úroveň ohrozenia lesným požiarom sa zvýšila"
+    },
+    "threat_level_decreased": {
+      "description": "Spustí sa, keď sa úroveň ohrozenia lesným požiarom jedného alebo viacerých monitorovaných miest zníži.",
+      "name": "Úroveň ohrozenia lesným požiarom sa znížila"
+    },
+    "evacuation_level_increased": {
+      "description": "Spustí sa, keď sa zvýši úroveň evakuácie jedného alebo viacerých monitorovaných miest.",
+      "name": "Úroveň evakuácie sa zvýšila"
+    },
+    "evacuation_level_decreased": {
+      "description": "Spustí sa, keď sa zníži úroveň evakuácie jedného alebo viacerých monitorovaných miest.",
+      "name": "Úroveň evakuácie sa znížila"
+    },
+    "source_stale": {
+      "description": "Spustí sa, keď sa zdroj údajov o požiari pre jedno alebo viac monitorovaných miest stane neaktuálnym.",
+      "name": "Zdroj údajov zastaral"
+    },
+    "source_recovered": {
+      "description": "Spustí sa, keď sa obnoví predtým zastaraný zdroj údajov divokého požiaru.",
+      "name": "Zdroj údajov bol obnovený"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

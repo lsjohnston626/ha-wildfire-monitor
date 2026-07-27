@@ -51,6 +51,52 @@
       "source_recovered": "Origine dati recuperata"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Si attiva quando una o più posizioni monitorate scoprono un incendio nelle vicinanze.",
+      "name": "Scoperto un incendio"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Si attiva quando un incendio osservato in precedenza non è più nelle vicinanze.",
+      "name": "L'incendio non è più nelle vicinanze"
+    },
+    "fire_entered_perimeter": {
+      "description": "Si attiva quando una o più posizioni monitorate entrano in un perimetro segnalato di incendi.",
+      "name": "La posizione è entrata nel perimetro dell'incendio"
+    },
+    "official_alert_started": {
+      "description": "Si attiva quando una o più posizioni monitorate ricevono un nuovo avviso ufficiale relativo agli incendi.",
+      "name": "È scattata l'allerta ufficiale"
+    },
+    "official_alert_ended": {
+      "description": "Si attiva al termine di un avviso ufficiale correlato a un incendio.",
+      "name": "L'allerta ufficiale è terminata"
+    },
+    "threat_level_increased": {
+      "description": "Si attiva quando aumenta il livello di minaccia di incendi di una o più posizioni monitorate.",
+      "name": "Il livello di minaccia degli incendi è aumentato"
+    },
+    "threat_level_decreased": {
+      "description": "Si attiva quando il livello di minaccia di incendio di una o più posizioni monitorate diminuisce.",
+      "name": "Il livello di minaccia degli incendi è diminuito"
+    },
+    "evacuation_level_increased": {
+      "description": "Si attiva quando aumenta il livello di evacuazione di una o più posizioni monitorate.",
+      "name": "Aumentato il livello di evacuazione"
+    },
+    "evacuation_level_decreased": {
+      "description": "Si attiva quando il livello di evacuazione di una o più posizioni monitorate diminuisce.",
+      "name": "Il livello di evacuazione è diminuito"
+    },
+    "source_stale": {
+      "description": "Si attiva quando un'origine dati sugli incendi per una o più posizioni monitorate diventa obsoleta.",
+      "name": "L'origine dati è diventata obsoleta"
+    },
+    "source_recovered": {
+      "description": "Si attiva quando viene ripristinata un'origine dati di incendio precedentemente obsoleta.",
+      "name": "Origine dati recuperata"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Incendio boschivo nelle vicinanze"},

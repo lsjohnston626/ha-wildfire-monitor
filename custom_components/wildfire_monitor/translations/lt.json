@@ -51,6 +51,52 @@
       "source_recovered": "Duomenų šaltinis atkurtas"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Suveikia, kai viena ar kelios stebimos vietos aptinka netoliese esantį gaisrą.",
+      "name": "Aptiktas laukinis gaisras"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Suveikia, kai šalia nebėra anksčiau pastebėto miško gaisro.",
+      "name": "Laukinių gaisrų nebėra šalia"
+    },
+    "fire_entered_perimeter": {
+      "description": "Suveikia, kai viena ar daugiau stebimų vietų patenka į praneštą gaisro perimetrą.",
+      "name": "Vieta pateko į gaisro perimetrą"
+    },
+    "official_alert_started": {
+      "description": "Suaktyvina, kai viena ar kelios stebimos vietos gauna naują oficialų su gaisru susijusį įspėjimą.",
+      "name": "Prasidėjo oficialus įspėjimas"
+    },
+    "official_alert_ended": {
+      "description": "Suveikia, kai baigiasi oficialus su gaisru susijęs įspėjimas.",
+      "name": "Baigėsi oficialus įspėjimas"
+    },
+    "threat_level_increased": {
+      "description": "Suveikia, kai padidėja gaisro grėsmės lygis vienoje ar daugiau stebimų vietų.",
+      "name": "Laukinių gaisrų grėsmės lygis padidėjo"
+    },
+    "threat_level_decreased": {
+      "description": "Suveikia, kai vienoje ar daugiau stebimų vietų gaisro grėsmės lygis sumažėja.",
+      "name": "Laukinių gaisrų grėsmės lygis sumažėjo"
+    },
+    "evacuation_level_increased": {
+      "description": "Suveikia, kai padidėja vienos ar kelių stebimų vietų evakuacijos lygis.",
+      "name": "Padidėjo evakuacijos lygis"
+    },
+    "evacuation_level_decreased": {
+      "description": "Suveikia, kai sumažėja vienos ar kelių stebimų vietų evakuacijos lygis.",
+      "name": "Evakuacijos lygis sumažėjo"
+    },
+    "source_stale": {
+      "description": "Suveikia, kai vienos ar kelių stebimų vietų gaisro duomenų šaltinis pasensta.",
+      "name": "Duomenų šaltinis paseno"
+    },
+    "source_recovered": {
+      "description": "Suveikia, kai atkuriamas anksčiau pasenęs gaisro duomenų šaltinis.",
+      "name": "Duomenų šaltinis atkurtas"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

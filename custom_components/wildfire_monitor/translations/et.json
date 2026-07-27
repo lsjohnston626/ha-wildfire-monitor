@@ -51,6 +51,52 @@
       "source_recovered": "Andmeallikas taastatud"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Käivitub, kui üks või mitu jälgitavat asukohta avastavad läheduses asuva metsatulekahju.",
+      "name": "Metsatulekahju avastati"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Käivitub, kui varem täheldatud metsatulekahju pole enam läheduses.",
+      "name": "Metsatulekahju pole enam läheduses"
+    },
+    "fire_entered_perimeter": {
+      "description": "Käivitub, kui üks või mitu jälgitavat asukohta sisenevad teatatud metsatulekahju perimeetrisse.",
+      "name": "Asukoht sisenes metsatulekahju perimeetrisse"
+    },
+    "official_alert_started": {
+      "description": "Käivitub, kui üks või mitu jälgitavat asukohta saavad uue ametliku tulekahjuga seotud hoiatuse.",
+      "name": "Ametlik hoiatus algas"
+    },
+    "official_alert_ended": {
+      "description": "Käivitub, kui ametlik tulekahjuga seotud hoiatus lõpeb.",
+      "name": "Ametlik hoiatus lõppes"
+    },
+    "threat_level_increased": {
+      "description": "Käivitub, kui ühe või mitme jälgitava asukoha metsatulekahju ohu tase suureneb.",
+      "name": "Metsatulekahju ohu tase tõusis"
+    },
+    "threat_level_decreased": {
+      "description": "Käivitub, kui ühe või mitme jälgitava asukoha metsatulekahju ohu tase väheneb.",
+      "name": "Metsatulekahju ohu tase langes"
+    },
+    "evacuation_level_increased": {
+      "description": "Käivitub, kui ühe või mitme jälgitava asukoha evakuatsioonitase tõuseb.",
+      "name": "Evakuatsiooni tase tõusis"
+    },
+    "evacuation_level_decreased": {
+      "description": "Käivitub, kui ühe või mitme jälgitava asukoha evakuatsioonitase langeb.",
+      "name": "Evakuatsioonitase langes"
+    },
+    "source_stale": {
+      "description": "Käivitub, kui ühe või mitme jälgitava asukoha metsatulekahju andmeallikas aegub.",
+      "name": "Andmeallikas on aegunud"
+    },
+    "source_recovered": {
+      "description": "Käivitub, kui varem aegunud kulutulena kasutatud andmeallikas taastub.",
+      "name": "Andmeallikas taastatud"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

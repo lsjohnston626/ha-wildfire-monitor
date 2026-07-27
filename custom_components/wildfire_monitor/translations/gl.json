@@ -51,6 +51,52 @@
       "source_recovered": "Recuperouse a fonte de datos"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Activa cando unha ou máis localizacións monitorizadas descobren un incendio forestal nas proximidades.",
+      "name": "Incendio forestal descuberto"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Desencadena cando un incendio forestal observado previamente xa non está preto.",
+      "name": "O lume forestal xa non está preto"
+    },
+    "fire_entered_perimeter": {
+      "description": "Desencadena cando unha ou máis localizacións monitorizadas entran nun perímetro de incendio forestal informado.",
+      "name": "A localización entrou no perímetro do incendio forestal"
+    },
+    "official_alert_started": {
+      "description": "Activa cando unha ou máis localizacións supervisadas reciben unha nova alerta oficial relacionada con incendios.",
+      "name": "Comezou a alerta oficial"
+    },
+    "official_alert_ended": {
+      "description": "Acércase cando remata unha alerta oficial relacionada con incendios.",
+      "name": "Rematou a alerta oficial"
+    },
+    "threat_level_increased": {
+      "description": "Desencadena cando aumenta o nivel de ameaza de incendio forestal dunha ou máis localizacións supervisadas.",
+      "name": "O nivel de ameaza de incendio forestal aumentou"
+    },
+    "threat_level_decreased": {
+      "description": "Desencadena cando o nivel de ameaza de incendio forestal dunha ou máis localizacións monitorizadas diminúe.",
+      "name": "O nivel de ameaza de incendio forestal diminuíu"
+    },
+    "evacuation_level_increased": {
+      "description": "Desencadena cando aumenta o nivel de evacuación dunha ou máis localizacións monitorizadas.",
+      "name": "Aumentou o nivel de evacuación"
+    },
+    "evacuation_level_decreased": {
+      "description": "Dispara cando o nivel de evacuación dunha ou máis localizacións monitorizadas diminúe.",
+      "name": "O nivel de evacuación diminuíu"
+    },
+    "source_stale": {
+      "description": "Activa cando unha fonte de datos de incendio forestal para unha ou máis localizacións supervisadas queda obsoleta.",
+      "name": "A fonte de datos quedou obsoleta"
+    },
+    "source_recovered": {
+      "description": "Actívase cando se recupera unha fonte de datos de incendio forestal previamente obsoleta.",
+      "name": "Recuperouse a fonte de datos"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

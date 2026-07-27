@@ -51,6 +51,52 @@
       "source_recovered": "Sumber data pulih"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Dipicu ketika satu atau lebih lokasi yang dipantau menemukan kebakaran hutan di dekatnya.",
+      "name": "Kebakaran hutan ditemukan"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Terpicu ketika kebakaran hutan yang diamati sebelumnya sudah tidak ada lagi di dekatnya.",
+      "name": "Kebakaran hutan sudah tidak ada lagi di dekatnya"
+    },
+    "fire_entered_perimeter": {
+      "description": "Terpicu ketika satu atau lebih lokasi yang dipantau memasuki perimeter kebakaran hutan yang dilaporkan.",
+      "name": "Lokasi memasuki perimeter kebakaran"
+    },
+    "official_alert_started": {
+      "description": "Dipicu ketika satu atau lebih lokasi yang dipantau menerima peringatan resmi baru terkait kebakaran.",
+      "name": "Peringatan resmi dimulai"
+    },
+    "official_alert_ended": {
+      "description": "Dipicu ketika peringatan resmi terkait kebakaran berakhir.",
+      "name": "Peringatan resmi berakhir"
+    },
+    "threat_level_increased": {
+      "description": "Terpicu ketika tingkat ancaman kebakaran hutan di satu atau beberapa lokasi yang dipantau meningkat.",
+      "name": "Tingkat ancaman kebakaran hutan meningkat"
+    },
+    "threat_level_decreased": {
+      "description": "Terpicu ketika tingkat ancaman kebakaran hutan di satu atau beberapa lokasi yang dipantau menurun.",
+      "name": "Tingkat ancaman kebakaran hutan menurun"
+    },
+    "evacuation_level_increased": {
+      "description": "Terpicu ketika tingkat evakuasi di satu atau lebih lokasi yang dipantau meningkat.",
+      "name": "Tingkat evakuasi meningkat"
+    },
+    "evacuation_level_decreased": {
+      "description": "Terpicu ketika tingkat evakuasi di satu atau lebih lokasi yang dipantau menurun.",
+      "name": "Tingkat evakuasi menurun"
+    },
+    "source_stale": {
+      "description": "Terpicu ketika sumber data kebakaran hutan untuk satu atau beberapa lokasi yang dipantau menjadi tidak berlaku.",
+      "name": "Sumber data menjadi basi"
+    },
+    "source_recovered": {
+      "description": "Dipicu ketika sumber data kebakaran hutan yang sebelumnya sudah usang dipulihkan.",
+      "name": "Sumber data pulih"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

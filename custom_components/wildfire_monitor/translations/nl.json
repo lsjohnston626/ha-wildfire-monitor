@@ -51,6 +51,52 @@
       "source_recovered": "Gegevensbron hersteld"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Wordt geactiveerd wanneer een of meer bewaakte locaties een nabijgelegen natuurbrand ontdekken.",
+      "name": "Wildvuur ontdekt"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Wordt geactiveerd wanneer een eerder waargenomen natuurbrand niet langer in de buurt is.",
+      "name": "Natuurbrand niet meer in de buurt"
+    },
+    "fire_entered_perimeter": {
+      "description": "Wordt geactiveerd wanneer een of meer bewaakte locaties een gerapporteerde natuurbrandperimeter binnendringen.",
+      "name": "Locatie ging de natuurbrandperiferie binnen"
+    },
+    "official_alert_started": {
+      "description": "Wordt geactiveerd wanneer een of meer bewaakte locaties een nieuwe officiële brandgerelateerde waarschuwing ontvangen.",
+      "name": "Officieel alarm gestart"
+    },
+    "official_alert_ended": {
+      "description": "Wordt geactiveerd wanneer een officiële brandgerelateerde waarschuwing eindigt.",
+      "name": "Officieel alarm beëindigd"
+    },
+    "threat_level_increased": {
+      "description": "Wordt geactiveerd wanneer het dreigingsniveau van natuurbranden op een of meer bewaakte locaties toeneemt.",
+      "name": "Het dreigingsniveau voor natuurbranden is toegenomen"
+    },
+    "threat_level_decreased": {
+      "description": "Wordt geactiveerd wanneer het dreigingsniveau van natuurbranden op een of meer bewaakte locaties afneemt.",
+      "name": "Het dreigingsniveau voor natuurbranden is afgenomen"
+    },
+    "evacuation_level_increased": {
+      "description": "Wordt geactiveerd wanneer het evacuatieniveau van een of meer bewaakte locaties toeneemt.",
+      "name": "Het evacuatieniveau is toegenomen"
+    },
+    "evacuation_level_decreased": {
+      "description": "Wordt geactiveerd wanneer het evacuatieniveau van een of meer bewaakte locaties afneemt.",
+      "name": "Het evacuatieniveau is gedaald"
+    },
+    "source_stale": {
+      "description": "Wordt geactiveerd wanneer een natuurbrandgegevensbron voor een of meer bewaakte locaties verouderd raakt.",
+      "name": "De gegevensbron is verouderd"
+    },
+    "source_recovered": {
+      "description": "Wordt geactiveerd wanneer een voorheen verouderde gegevensbron voor natuurbranden wordt hersteld.",
+      "name": "Gegevensbron hersteld"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Natuurbrand in de buurt"},

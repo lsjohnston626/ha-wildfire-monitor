@@ -51,6 +51,52 @@
       "source_recovered": "データソースが回復されました"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "1 つ以上の監視された場所で近くの山火事が発見されたときにトリガーされます。",
+      "name": "山火事が発見されました"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "以前に観察された山火事が近くになくなったときにトリガーされます。",
+      "name": "山火事はもう近くにない"
+    },
+    "fire_entered_perimeter": {
+      "description": "1 つ以上の監視対象場所が報告された山火事の境界に入るとトリガーされます。",
+      "name": "山火事の境界に入った場所"
+    },
+    "official_alert_started": {
+      "description": "1 つ以上の監視対象場所が新しい公式の火災関連警報を受信したときにトリガーされます。",
+      "name": "公式警報開始"
+    },
+    "official_alert_ended": {
+      "description": "公式の火災関連警報が終了するとトリガーされます。",
+      "name": "公式警報は終了しました"
+    },
+    "threat_level_increased": {
+      "description": "1 つ以上の監視対象場所の山火事の脅威レベルが上昇したときにトリガーされます。",
+      "name": "山火事の脅威レベルが増加しました"
+    },
+    "threat_level_decreased": {
+      "description": "1 つ以上の監視対象場所の山火事の脅威レベルが低下したときにトリガーされます。",
+      "name": "山火事の脅威レベルが低下"
+    },
+    "evacuation_level_increased": {
+      "description": "1 つ以上の監視対象場所の避難レベルが上昇するとトリガーされます。",
+      "name": "避難レベルが上昇しました"
+    },
+    "evacuation_level_decreased": {
+      "description": "1 つ以上の監視場所の避難レベルが低下するとトリガーされます。",
+      "name": "避難レベルが低下"
+    },
+    "source_stale": {
+      "description": "1 つ以上の監視対象場所の Wildfire データ ソースが古くなるとトリガーされます。",
+      "name": "データソースが古くなった"
+    },
+    "source_recovered": {
+      "description": "以前に古くなった Wildfire データ ソースが回復するとトリガーされます。",
+      "name": "データソースが回復されました"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

@@ -51,6 +51,52 @@
       "source_recovered": "Datenquelle wiederhergestellt"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Wird ausgelöst, wenn einer oder mehrere überwachte Standorte einen Waldbrand in der Nähe entdecken.",
+      "name": "Lauffeuer entdeckt"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Wird ausgelöst, wenn ein zuvor beobachteter Waldbrand nicht mehr in der Nähe ist.",
+      "name": "Lauffeuer nicht mehr in der Nähe"
+    },
+    "fire_entered_perimeter": {
+      "description": "Wird ausgelöst, wenn einer oder mehrere überwachte Standorte in einen gemeldeten Waldbrandbereich eindringen.",
+      "name": "Der Standort befindet sich im Waldbrandgebiet"
+    },
+    "official_alert_started": {
+      "description": "Wird ausgelöst, wenn an einem oder mehreren überwachten Standorten eine neue offizielle Feuerwarnung eingeht.",
+      "name": "Offizieller Alarm gestartet"
+    },
+    "official_alert_ended": {
+      "description": "Wird ausgelöst, wenn eine offizielle Brandwarnung endet.",
+      "name": "Die offizielle Warnung wurde beendet"
+    },
+    "threat_level_increased": {
+      "description": "Wird ausgelöst, wenn die Waldbrandgefahr an einem oder mehreren überwachten Standorten zunimmt.",
+      "name": "Die Bedrohungsstufe durch Waldbrände wurde erhöht"
+    },
+    "threat_level_decreased": {
+      "description": "Wird ausgelöst, wenn die Waldbrandgefahr an einem oder mehreren überwachten Standorten abnimmt.",
+      "name": "Die Bedrohungsstufe durch Waldbrände wurde verringert"
+    },
+    "evacuation_level_increased": {
+      "description": "Wird ausgelöst, wenn die Evakuierungsstufe eines oder mehrerer überwachter Standorte steigt.",
+      "name": "Evakuierungsstufe erhöht"
+    },
+    "evacuation_level_decreased": {
+      "description": "Wird ausgelöst, wenn die Evakuierungsstufe eines oder mehrerer überwachter Standorte sinkt.",
+      "name": "Evakuierungsstufe verringert"
+    },
+    "source_stale": {
+      "description": "Wird ausgelöst, wenn eine Wildfire-Datenquelle für einen oder mehrere überwachte Standorte veraltet ist.",
+      "name": "Die Datenquelle ist veraltet"
+    },
+    "source_recovered": {
+      "description": "Wird ausgelöst, wenn eine zuvor veraltete Wildfire-Datenquelle wiederhergestellt wird.",
+      "name": "Datenquelle wiederhergestellt"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Waldbrand in der Nähe"},

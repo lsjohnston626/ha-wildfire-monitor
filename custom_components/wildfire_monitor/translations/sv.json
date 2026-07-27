@@ -51,6 +51,52 @@
       "source_recovered": "Datakälla återställd"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Utlöses när en eller flera övervakade platser upptäcker en närliggande skogsbrand.",
+      "name": "Skogsbrand upptäckt"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Utlöses när en tidigare observerad skogsbrand inte längre är i närheten.",
+      "name": "Skogsbrand inte längre i närheten"
+    },
+    "fire_entered_perimeter": {
+      "description": "Utlöses när en eller flera övervakade platser går in i en rapporterad löpeld.",
+      "name": "Platsen gick in i skogsbrandens omkrets"
+    },
+    "official_alert_started": {
+      "description": "Utlöses när en eller flera övervakade platser får en ny officiell brandrelaterad varning.",
+      "name": "Officiell larm startade"
+    },
+    "official_alert_ended": {
+      "description": "Utlöses när en officiell brandrelaterad varning upphör.",
+      "name": "Den officiella varningen upphörde"
+    },
+    "threat_level_increased": {
+      "description": "Utlöses när risknivån för löpeld för en eller flera övervakade platser ökar.",
+      "name": "Brandhotnivån ökade"
+    },
+    "threat_level_decreased": {
+      "description": "Utlöses när risknivån för löpeld för en eller flera övervakade platser minskar.",
+      "name": "Brandhotnivån minskade"
+    },
+    "evacuation_level_increased": {
+      "description": "Utlöses när evakueringsnivån på en eller flera övervakade platser ökar.",
+      "name": "Evakueringsnivån ökade"
+    },
+    "evacuation_level_decreased": {
+      "description": "Utlöses när evakueringsnivån på en eller flera övervakade platser minskar.",
+      "name": "Evakueringsnivån minskade"
+    },
+    "source_stale": {
+      "description": "Utlöses när en datakälla för en löpeld för en eller flera övervakade platser blir inaktuell.",
+      "name": "Datakällan blev inaktuell"
+    },
+    "source_recovered": {
+      "description": "Utlöses när en tidigare inaktuell datakälla för skogsbrand återställs.",
+      "name": "Datakälla återställd"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Skogsbrand i närheten"},

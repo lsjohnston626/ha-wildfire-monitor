@@ -51,6 +51,52 @@
       "source_recovered": "資料來源已恢復"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "當一個或多個受監控位置發現附近發生野火時觸發。",
+      "name": "發現野火"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "當先前觀察到的野火不再位於附近時觸發。",
+      "name": "野火不再在附近"
+    },
+    "fire_entered_perimeter": {
+      "description": "當一個或多個受監控位置進入報告的野火邊界時觸發。",
+      "name": "地點已進入野火範圍"
+    },
+    "official_alert_started": {
+      "description": "當一個或多個受監控位置收到新的官方火災相關警報時觸發。",
+      "name": "官方警報已啟動"
+    },
+    "official_alert_ended": {
+      "description": "當官方火災相關警報結束時觸發。",
+      "name": "官方警報結束"
+    },
+    "threat_level_increased": {
+      "description": "當一個或多個受監控位置的野火威脅等級增加時觸發。",
+      "name": "野火威脅等級提高"
+    },
+    "threat_level_decreased": {
+      "description": "當一個或多個受監控位置的野火威脅等級降低時觸發。",
+      "name": "野火威脅等級下降"
+    },
+    "evacuation_level_increased": {
+      "description": "當一個或多個受監控位置的疏散等級增加時觸發。",
+      "name": "疏散等級提高"
+    },
+    "evacuation_level_decreased": {
+      "description": "當一個或多個受監控位置的疏散等級降低時觸發。",
+      "name": "疏散等級降低"
+    },
+    "source_stale": {
+      "description": "當一個或多個受監控位置的野火資料來源變得過時時觸發。",
+      "name": "資料來源已過時"
+    },
+    "source_recovered": {
+      "description": "當先前過時的野火資料來源恢復時觸發。",
+      "name": "資料來源已恢復"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

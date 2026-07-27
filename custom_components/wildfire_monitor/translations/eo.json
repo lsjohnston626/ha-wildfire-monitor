@@ -51,6 +51,52 @@
       "source_recovered": "Datenfonto reakirita"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Ekfunkciigas kiam unu aŭ pluraj monitoritaj lokoj malkovras proksiman fajron.",
+      "name": "Sovaĝa fajro malkovrita"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Ekfunkciigas kiam antaŭe observita arbarofajro ne plu estas proksime.",
+      "name": "Arbarfajro ne plu proksime"
+    },
+    "fire_entered_perimeter": {
+      "description": "Ekfunkciigas kiam unu aŭ pluraj monitoritaj lokoj eniras raportitan sovaĝfajran perimetron.",
+      "name": "Loko eniris sovaĝfajran perimetron"
+    },
+    "official_alert_started": {
+      "description": "Ekfunkciigas kiam unu aŭ pluraj monitoritaj lokoj ricevas novan oficialan fajro-rilatan alarmon.",
+      "name": "Oficiala atentigo komenciĝis"
+    },
+    "official_alert_ended": {
+      "description": "Ekfunkciigas kiam oficiala fajro-rilata alarmo finiĝas.",
+      "name": "Oficiala atentigo finiĝis"
+    },
+    "threat_level_increased": {
+      "description": "Ekfunkciigas kiam la sovaĝfajra minaca nivelo de unu aŭ pluraj monitoritaj lokoj pliiĝas.",
+      "name": "Arbarfajra minaca nivelo pliiĝis"
+    },
+    "threat_level_decreased": {
+      "description": "Ekfunkciigas kiam la nivelo de minaca fajro de unu aŭ pluraj monitoritaj lokoj malpliiĝas.",
+      "name": "Arbarfajra minaca nivelo malpliiĝis"
+    },
+    "evacuation_level_increased": {
+      "description": "Ekfunkciigas kiam la evakuadnivelo de unu aŭ pluraj monitoritaj lokoj pliiĝas.",
+      "name": "Evakuadnivelo pliiĝis"
+    },
+    "evacuation_level_decreased": {
+      "description": "Ekfunkciigas kiam la evakuadnivelo de unu aŭ pluraj monitoritaj lokoj malpliiĝas.",
+      "name": "Evakuadnivelo malpliiĝis"
+    },
+    "source_stale": {
+      "description": "Ekfunkciigas kiam sovaĝfajra datumfonto por unu aŭ pluraj monitoritaj lokoj fariĝas malfreŝa.",
+      "name": "La fonto de datumoj malnoviĝis"
+    },
+    "source_recovered": {
+      "description": "Ekfunkciigas kiam antaŭe malfreŝa sovaĝfajra datumfonto resaniĝas.",
+      "name": "Datenfonto reakirita"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

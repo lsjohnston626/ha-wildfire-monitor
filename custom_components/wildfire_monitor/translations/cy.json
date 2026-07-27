@@ -51,6 +51,52 @@
       "source_recovered": "Ffynhonnell data wedi'i hadennill"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Sbardunau pan fydd un neu fwy o leoliadau sy'n cael eu monitro yn darganfod tân gwyllt gerllaw.",
+      "name": "Darganfod tân gwyllt"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Sbardunau pan nad yw tanau gwyllt a welwyd yn flaenorol gerllaw bellach.",
+      "name": "Nid yw tanau gwyllt gerllaw bellach"
+    },
+    "fire_entered_perimeter": {
+      "description": "Sbardunau pan fydd un neu fwy o leoliadau a fonitrir yn mynd i mewn i berimedr tanau gwyllt yr adroddir amdano.",
+      "name": "Lleoliad mynd i mewn i perimedr tanau gwyllt"
+    },
+    "official_alert_started": {
+      "description": "Sbardunau pan fydd un neu fwy o leoliadau a fonitrir yn derbyn rhybudd swyddogol newydd yn ymwneud â thân.",
+      "name": "Rhybudd swyddogol wedi dechrau"
+    },
+    "official_alert_ended": {
+      "description": "Sbardunau pan ddaw rhybudd swyddogol yn ymwneud â thân i ben.",
+      "name": "Daeth rhybudd swyddogol i ben"
+    },
+    "threat_level_increased": {
+      "description": "Sbardunau pan fydd lefel bygythiad tanau gwyllt mewn un neu fwy o leoliadau a fonitrir yn cynyddu.",
+      "name": "Cynyddodd lefel bygythiad tanau gwyllt"
+    },
+    "threat_level_decreased": {
+      "description": "Sbardunau pan fydd lefel bygythiad tanau gwyllt mewn un neu fwy o leoliadau a fonitrir yn gostwng.",
+      "name": "Gostyngodd lefel bygythiad tanau gwyllt"
+    },
+    "evacuation_level_increased": {
+      "description": "Sbardunau pan fydd lefel gwacáu un neu fwy o leoliadau a fonitrir yn cynyddu.",
+      "name": "Cynyddodd lefel gwacáu"
+    },
+    "evacuation_level_decreased": {
+      "description": "Sbardunau pan fydd lefel gwacáu un neu fwy o leoliadau a fonitrir yn gostwng.",
+      "name": "Gostyngodd lefel gwacáu"
+    },
+    "source_stale": {
+      "description": "Sbardunau pan fydd ffynhonnell ddata tanau gwyllt ar gyfer un neu fwy o leoliadau a fonitrir yn mynd yn hen.",
+      "name": "Daeth ffynhonnell data yn hen"
+    },
+    "source_recovered": {
+      "description": "Sbardunau pan fydd ffynhonnell ddata tanau gwyllt hen ffasiwn yn adfer.",
+      "name": "Ffynhonnell data wedi'i hadennill"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

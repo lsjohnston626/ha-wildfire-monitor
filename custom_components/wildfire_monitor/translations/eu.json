@@ -51,6 +51,52 @@
       "source_recovered": "Datu iturria berreskuratu da"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Kontrolatutako kokapen batek edo gehiagok inguruko sute bat aurkitzen dutenean abiarazten da.",
+      "name": "Baso-sutea aurkitu da"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Aurretik ikusitako sute bat gertu ez dagoenean abiarazten da.",
+      "name": "Dagoeneko ez dago sutea gertu"
+    },
+    "fire_entered_perimeter": {
+      "description": "Kontrolatutako kokapen bat edo gehiago jakinarazitako suteen perimetro batean sartzen direnean abiarazten da.",
+      "name": "Kokalekua suteen perimetroan sartu da"
+    },
+    "official_alert_started": {
+      "description": "Kontrolatutako kokapen batek edo gehiagok sutearekin lotutako alerta ofizial berri bat jasotzen duenean abiarazten du.",
+      "name": "Alerta ofiziala hasi zen"
+    },
+    "official_alert_ended": {
+      "description": "Sutearekin lotutako alerta ofiziala amaitzen denean abiarazten da.",
+      "name": "Alerta ofiziala amaitu da"
+    },
+    "threat_level_increased": {
+      "description": "Kontrolatutako kokapen baten edo gehiagoren suteen mehatxu maila handitzen denean abiarazten da.",
+      "name": "Baso-suteen mehatxu maila handitu egin zen"
+    },
+    "threat_level_decreased": {
+      "description": "Kontrolatutako kokapen baten edo gehiagoren suteen mehatxu maila jaisten denean abiarazten da.",
+      "name": "Baso-suteen mehatxu maila jaitsi egin da"
+    },
+    "evacuation_level_increased": {
+      "description": "Kontrolatutako kokapen baten edo gehiagoren ebakuazio-maila handitzen denean abiarazten da.",
+      "name": "Ebakuazio maila handitu egin zen"
+    },
+    "evacuation_level_decreased": {
+      "description": "Kontrolatutako kokapen baten edo gehiagoren ebakuazio-maila jaisten denean abiarazten da.",
+      "name": "Ebakuazio maila jaitsi egin da"
+    },
+    "source_stale": {
+      "description": "Kontrolatutako kokapen bateko edo gehiagoko suteen datu-iturburua zaharkituta geratzen denean abiarazten da.",
+      "name": "Datu iturria zaharkituta geratu zen"
+    },
+    "source_recovered": {
+      "description": "Aurretik zaharkituta zegoen suteen datu-iturburua berreskuratzen denean abiarazten da.",
+      "name": "Datu iturria berreskuratu da"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

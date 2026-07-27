@@ -51,6 +51,52 @@
       "source_recovered": "Datakilde gjenopprettet"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Utløses når ett eller flere overvåkede steder oppdager en skogbrann i nærheten.",
+      "name": "Wildfire oppdaget"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Utløses når en tidligere observert skogbrann ikke lenger er i nærheten.",
+      "name": "Wildfire ikke lenger i nærheten"
+    },
+    "fire_entered_perimeter": {
+      "description": "Utløses når ett eller flere overvåkede steder kommer inn i en rapportert skogbrannomkrets.",
+      "name": "Plassering gikk inn i skogbrannomkretsen"
+    },
+    "official_alert_started": {
+      "description": "Utløses når ett eller flere overvåkede steder mottar et nytt offisielt brannrelatert varsel.",
+      "name": "Offisielt varsel startet"
+    },
+    "official_alert_ended": {
+      "description": "Utløses når et offisielt brannrelatert varsel avsluttes.",
+      "name": "Offisiell varsling avsluttet"
+    },
+    "threat_level_increased": {
+      "description": "Utløses når skogbranntrusselnivået for ett eller flere overvåkede steder øker.",
+      "name": "Trusselnivået for skogbrann økte"
+    },
+    "threat_level_decreased": {
+      "description": "Utløses når skogbranntrusselnivået for ett eller flere overvåkede steder synker.",
+      "name": "Trusselnivået for skogbrann gikk ned"
+    },
+    "evacuation_level_increased": {
+      "description": "Utløses når evakueringsnivået på ett eller flere overvåkede steder øker.",
+      "name": "Evakueringsnivået økte"
+    },
+    "evacuation_level_decreased": {
+      "description": "Utløses når evakueringsnivået på ett eller flere overvåkede steder synker.",
+      "name": "Evakueringsnivået gikk ned"
+    },
+    "source_stale": {
+      "description": "Utløses når en skogbranndatakilde for ett eller flere overvåkede steder blir foreldet.",
+      "name": "Datakilden ble foreldet"
+    },
+    "source_recovered": {
+      "description": "Utløses når en tidligere foreldet skogbranndatakilde gjenoppretter seg.",
+      "name": "Datakilde gjenopprettet"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

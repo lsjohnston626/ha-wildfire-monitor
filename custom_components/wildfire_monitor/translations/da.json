@@ -51,6 +51,52 @@
       "source_recovered": "Datakilde gendannet"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Udløses, når et eller flere overvågede steder opdager en naturbrand i nærheden.",
+      "name": "Wildbrand opdaget"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Udløses, når en tidligere observeret naturbrand ikke længere er i nærheden.",
+      "name": "Wildfire ikke længere i nærheden"
+    },
+    "fire_entered_perimeter": {
+      "description": "Udløses, når en eller flere overvågede lokationer kommer ind i en rapporteret naturbrand.",
+      "name": "Stedet er kommet ind i en naturbrands omkreds"
+    },
+    "official_alert_started": {
+      "description": "Udløses, når et eller flere overvågede steder modtager en ny officiel brandrelateret alarm.",
+      "name": "Officiel alarm startet"
+    },
+    "official_alert_ended": {
+      "description": "Udløses, når en officiel brandrelateret alarm slutter.",
+      "name": "Officiel alarm afsluttet"
+    },
+    "threat_level_increased": {
+      "description": "Udløses, når trusselsniveauet for naturbrand for en eller flere overvågede steder stiger.",
+      "name": "Trusselsniveauet for skovbrand steg"
+    },
+    "threat_level_decreased": {
+      "description": "Udløses, når trusselsniveauet for naturbrand for en eller flere overvågede steder falder.",
+      "name": "Trusselsniveauet for skovbrand faldt"
+    },
+    "evacuation_level_increased": {
+      "description": "Udløses, når evakueringsniveauet på et eller flere overvågede steder stiger.",
+      "name": "Evakueringsniveauet steg"
+    },
+    "evacuation_level_decreased": {
+      "description": "Udløses, når evakueringsniveauet på et eller flere overvågede steder falder.",
+      "name": "Evakueringsniveauet faldt"
+    },
+    "source_stale": {
+      "description": "Udløses, når en naturbranddatakilde for en eller flere overvågede placeringer bliver forældet.",
+      "name": "Datakilden blev forældet"
+    },
+    "source_recovered": {
+      "description": "Udløses, når en tidligere forældet naturbranddatakilde genoprettes.",
+      "name": "Datakilde gendannet"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

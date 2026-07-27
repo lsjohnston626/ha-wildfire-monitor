@@ -51,6 +51,52 @@
       "source_recovered": "Source de données récupérée"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Se déclenche lorsqu'un ou plusieurs emplacements surveillés découvrent un incendie de forêt à proximité.",
+      "name": "Un feu de forêt découvert"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Se déclenche lorsqu'un incendie de forêt précédemment observé n'est plus à proximité.",
+      "name": "Les incendies de forêt ne sont plus à proximité"
+    },
+    "fire_entered_perimeter": {
+      "description": "Se déclenche lorsqu'un ou plusieurs emplacements surveillés entrent dans un périmètre d'incendie de forêt signalé.",
+      "name": "Emplacement entré dans le périmètre des incendies de forêt"
+    },
+    "official_alert_started": {
+      "description": "Se déclenche lorsqu'un ou plusieurs emplacements surveillés reçoivent une nouvelle alerte officielle liée à un incendie.",
+      "name": "Alerte officielle lancée"
+    },
+    "official_alert_ended": {
+      "description": "Se déclenche à la fin d’une alerte officielle liée à un incendie.",
+      "name": "Alerte officielle terminée"
+    },
+    "threat_level_increased": {
+      "description": "Se déclenche lorsque le niveau de menace d’incendie de forêt dans un ou plusieurs emplacements surveillés augmente.",
+      "name": "Le niveau de menace des incendies de forêt a augmenté"
+    },
+    "threat_level_decreased": {
+      "description": "Se déclenche lorsque le niveau de menace d’incendie de forêt d’un ou plusieurs emplacements surveillés diminue.",
+      "name": "Le niveau de menace des incendies de forêt a diminué"
+    },
+    "evacuation_level_increased": {
+      "description": "Se déclenche lorsque le niveau d'évacuation d'un ou plusieurs emplacements surveillés augmente.",
+      "name": "Le niveau d'évacuation a augmenté"
+    },
+    "evacuation_level_decreased": {
+      "description": "Se déclenche lorsque le niveau d'évacuation d'un ou plusieurs emplacements surveillés diminue.",
+      "name": "Le niveau d'évacuation a diminué"
+    },
+    "source_stale": {
+      "description": "Se déclenche lorsqu'une source de données sur les incendies de forêt pour un ou plusieurs emplacements surveillés devient obsolète.",
+      "name": "La source de données est devenue obsolète"
+    },
+    "source_recovered": {
+      "description": "Se déclenche lors de la récupération d’une source de données Wildfire auparavant obsolète.",
+      "name": "Source de données récupérée"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Feu de forêt à proximité"},

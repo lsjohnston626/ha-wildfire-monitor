@@ -1,0 +1,37 @@
+{
+  "triggers": {
+    "wildfire_discovered": {
+      "trigger": "mdi:fire-alert"
+    },
+    "wildfire_no_longer_nearby": {
+      "trigger": "mdi:fire-off"
+    },
+    "fire_entered_perimeter": {
+      "trigger": "mdi:map-marker-alert"
+    },
+    "official_alert_started": {
+      "trigger": "mdi:alert"
+    },
+    "official_alert_ended": {
+      "trigger": "mdi:alert-off"
+    },
+    "threat_level_increased": {
+      "trigger": "mdi:trending-up"
+    },
+    "threat_level_decreased": {
+      "trigger": "mdi:trending-down"
+    },
+    "evacuation_level_increased": {
+      "trigger": "mdi:account-arrow-right"
+    },
+    "evacuation_level_decreased": {
+      "trigger": "mdi:account-check"
+    },
+    "source_stale": {
+      "trigger": "mdi:cloud-alert"
+    },
+    "source_recovered": {
+      "trigger": "mdi:cloud-check"
+    }
+  }
+}

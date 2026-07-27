@@ -51,6 +51,52 @@
       "source_recovered": "Izvor podataka oporavljen"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Pokreće se kada jedna ili više nadziranih lokacija otkriju obližnji šumski požar.",
+      "name": "Otkriven šumski požar"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Aktivira se kada prethodno uočeni šumski požar više nije u blizini.",
+      "name": "Šumskog požara više nema u blizini"
+    },
+    "fire_entered_perimeter": {
+      "description": "Pokreće se kada jedna ili više nadziranih lokacija uđu u područje prijavljenog požara.",
+      "name": "Lokacija je ušla u područje šumskog požara"
+    },
+    "official_alert_started": {
+      "description": "Pokreće se kada jedna ili više nadziranih lokacija primi novo službeno upozorenje o požaru.",
+      "name": "Počela je službena uzbuna"
+    },
+    "official_alert_ended": {
+      "description": "Aktivira se kada završi službena uzbuna povezana s požarom.",
+      "name": "Službena uzbuna završila"
+    },
+    "threat_level_increased": {
+      "description": "Pokreće se kada se poveća razina prijetnje od požara na jednoj ili više nadziranih lokacija.",
+      "name": "Povećana je razina opasnosti od požara"
+    },
+    "threat_level_decreased": {
+      "description": "Pokreće se kada se razina prijetnje šumskim požarom jedne ili više nadziranih lokacija smanji.",
+      "name": "Razina opasnosti od požara smanjena"
+    },
+    "evacuation_level_increased": {
+      "description": "Pokreće se kada se poveća razina evakuacije jedne ili više nadziranih lokacija.",
+      "name": "Razina evakuacije povećana"
+    },
+    "evacuation_level_decreased": {
+      "description": "Pokreće se kada se razina evakuacije jedne ili više nadziranih lokacija smanji.",
+      "name": "Razina evakuacije smanjena"
+    },
+    "source_stale": {
+      "description": "Pokreće se kada izvor podataka o šumskom požaru za jednu ili više nadziranih lokacija postane zastario.",
+      "name": "Izvor podataka je zastario"
+    },
+    "source_recovered": {
+      "description": "Pokreće se kada se oporavi prethodno ustajali izvor podataka o šumskom požaru.",
+      "name": "Izvor podataka oporavljen"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

@@ -51,6 +51,52 @@
       "source_recovered": "Źródło danych odzyskane"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Uruchamia się, gdy co najmniej jedna monitorowana lokalizacja wykryje pobliski pożar.",
+      "name": "Odkryto pożar"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Uruchamia się, gdy wcześniej zaobserwowany pożar nie jest już w pobliżu.",
+      "name": "Wildfire nie jest już w pobliżu"
+    },
+    "fire_entered_perimeter": {
+      "description": "Występuje, gdy jedna lub więcej monitorowanych lokalizacji znajdzie się w zgłoszonym obszarze objętym pożarem.",
+      "name": "Lokalizacja weszła w obszar objęty pożarem"
+    },
+    "official_alert_started": {
+      "description": "Występuje, gdy jedna lub więcej monitorowanych lokalizacji otrzyma nowy oficjalny alert dotyczący pożaru.",
+      "name": "Rozpoczęło się oficjalne powiadomienie"
+    },
+    "official_alert_ended": {
+      "description": "Uruchamia się, gdy kończy się oficjalny alert dotyczący pożaru.",
+      "name": "Oficjalny alert został zakończony"
+    },
+    "threat_level_increased": {
+      "description": "Wywołuje się, gdy wzrasta poziom zagrożenia pożarowego w jednej lub większej liczbie monitorowanych lokalizacji.",
+      "name": "Zwiększono poziom zagrożenia pożarowego"
+    },
+    "threat_level_decreased": {
+      "description": "Występuje, gdy zmniejsza się poziom zagrożenia pożarowego w jednej lub większej liczbie monitorowanych lokalizacji.",
+      "name": "Zmniejszony poziom zagrożenia pożarowego"
+    },
+    "evacuation_level_increased": {
+      "description": "Wyzwala się, gdy wzrasta poziom ewakuacji jednej lub większej liczby monitorowanych lokalizacji.",
+      "name": "Zwiększono poziom ewakuacji"
+    },
+    "evacuation_level_decreased": {
+      "description": "Wyzwala się, gdy obniży się poziom ewakuacji w jednej lub większej liczbie monitorowanych lokalizacji.",
+      "name": "Zmniejszono poziom ewakuacji"
+    },
+    "source_stale": {
+      "description": "Występuje, gdy źródło danych o pożarze dla jednej lub większej liczby monitorowanych lokalizacji staje się nieaktualne.",
+      "name": "Źródło danych stało się nieaktualne"
+    },
+    "source_recovered": {
+      "description": "Wyzwalane w przypadku odzyskania wcześniej nieaktualnego źródła danych Wildfire.",
+      "name": "Źródło danych odzyskane"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Pożar w pobliżu"},

@@ -51,6 +51,52 @@
       "source_recovered": "Sursa de date a fost recuperată"
     }
   },
+  "triggers": {
+    "wildfire_discovered": {
+      "description": "Se declanșează atunci când una sau mai multe locații monitorizate descoperă un incendiu din apropiere.",
+      "name": "S-a descoperit un incendiu"
+    },
+    "wildfire_no_longer_nearby": {
+      "description": "Se declanșează atunci când un incendiu observat anterior nu mai este în apropiere.",
+      "name": "Incendiul nu mai este în apropiere"
+    },
+    "fire_entered_perimeter": {
+      "description": "Se declanșează atunci când una sau mai multe locații monitorizate intră într-un perimetru de incendiu raportat.",
+      "name": "Locația a intrat în perimetrul incendiului"
+    },
+    "official_alert_started": {
+      "description": "Se declanșează atunci când una sau mai multe locații monitorizate primesc o nouă alertă oficială legată de incendiu.",
+      "name": "A început alerta oficială"
+    },
+    "official_alert_ended": {
+      "description": "Se declanșează când se termină o alertă oficială legată de incendiu.",
+      "name": "Alerta oficială s-a încheiat"
+    },
+    "threat_level_increased": {
+      "description": "Se declanșează atunci când crește nivelul de amenințare cu incendii de vegetație al uneia sau mai multor locații monitorizate.",
+      "name": "Nivelul de amenințare cu incendiile sălbatice a crescut"
+    },
+    "threat_level_decreased": {
+      "description": "Se declanșează atunci când nivelul de amenințare cu incendiu de pădure din una sau mai multe locații monitorizate scade.",
+      "name": "Nivelul de amenințare cu incendiile sălbatice a scăzut"
+    },
+    "evacuation_level_increased": {
+      "description": "Se declanșează atunci când nivelul de evacuare al uneia sau mai multor locații monitorizate crește.",
+      "name": "Nivelul de evacuare a crescut"
+    },
+    "evacuation_level_decreased": {
+      "description": "Se declanșează atunci când nivelul de evacuare al uneia sau mai multor locații monitorizate scade.",
+      "name": "Nivelul de evacuare a scăzut"
+    },
+    "source_stale": {
+      "description": "Se declanșează atunci când o sursă de date de incendiu sălbatic pentru una sau mai multe locații monitorizate devine învechită.",
+      "name": "Sursa de date a devenit învechită"
+    },
+    "source_recovered": {
+      "description": "Se declanșează atunci când se recuperează o sursă de date învechită.",
+      "name": "Sursa de date a fost recuperată"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {
