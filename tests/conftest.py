@@ -6,6 +6,7 @@ import importlib.util
 import sys
 import types
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).parents[1]
 
@@ -22,4 +23,8 @@ else:
     @pytest.fixture(autouse=True)
     def auto_enable_custom_integrations(enable_custom_integrations):
         """Allow Home Assistant to discover this custom integration in tests."""
-        yield
+        with patch(
+            "custom_components.wildfire_monitor.async_setup_entry",
+            return_value=True,
+        ):
+            yield

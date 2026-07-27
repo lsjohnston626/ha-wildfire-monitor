@@ -9,6 +9,7 @@ if importlib.util.find_spec("homeassistant") is None:
 
 from homeassistant import config_entries
 from homeassistant.const import CONF_LATITUDE, CONF_LONGITUDE, CONF_NAME
+from homeassistant.data_entry_flow import FlowResultType
 
 from custom_components.wildfire_monitor.const import CONF_RADIUS, DOMAIN
 
@@ -17,7 +18,7 @@ async def test_user_flow_defaults_and_create(hass) -> None:
     result = await hass.config_entries.flow.async_init(
         DOMAIN, context={"source": config_entries.SOURCE_USER}
     )
-    assert result["type"] is config_entries.FlowResultType.FORM
+    assert result["type"] is FlowResultType.FORM
     result = await hass.config_entries.flow.async_configure(
         result["flow_id"],
         {
@@ -27,7 +28,7 @@ async def test_user_flow_defaults_and_create(hass) -> None:
             CONF_RADIUS: 50,
         },
     )
-    assert result["type"] is config_entries.FlowResultType.CREATE_ENTRY
+    assert result["type"] is FlowResultType.CREATE_ENTRY
     assert result["title"] == "Cabin"
 
 
@@ -41,7 +42,7 @@ async def test_duplicate_location_aborts(hass) -> None:
     first = await hass.config_entries.flow.async_init(
         DOMAIN, context={"source": config_entries.SOURCE_USER}, data=data
     )
-    assert first["type"] is config_entries.FlowResultType.CREATE_ENTRY
+    assert first["type"] is FlowResultType.CREATE_ENTRY
     second = await hass.config_entries.flow.async_init(
         DOMAIN, context={"source": config_entries.SOURCE_USER}, data=data
     )
@@ -60,4 +61,4 @@ async def test_multiple_locations_allowed(hass) -> None:
                 CONF_RADIUS: 50,
             },
         )
-        assert result["type"] is config_entries.FlowResultType.CREATE_ENTRY
+        assert result["type"] is FlowResultType.CREATE_ENTRY
