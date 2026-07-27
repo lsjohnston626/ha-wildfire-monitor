@@ -1,6 +1,10 @@
 """NIFC and NWS parsing behavior."""
 
+import pytest
+
 from custom_components.wildfire_monitor.api import (
+    WildfireApiError,
+    _validate_feature_payload,
     join_perimeters,
     parse_incidents,
     parse_nws_alerts,
@@ -122,3 +126,17 @@ def test_nws_parsing_filters_and_preserves_official_fields() -> None:
     assert alerts[0].sender == "NWS Spokane"
     assert alerts[0].instruction == "Avoid sparks"
     assert alerts[0].source_url == "https://api.weather.gov/alerts/1"
+
+
+@pytest.mark.parametrize(
+    ("payload", "message"),
+    [
+        ([], "non-object"),
+        ({"error": {"message": "bad query"}}, "returned an error"),
+        ({"features": [], "exceededTransferLimit": True}, "transfer limit"),
+        ({}, "feature list"),
+    ],
+)
+def test_feature_payload_validation(payload, message) -> None:
+    with pytest.raises(WildfireApiError, match=message):
+        _validate_feature_payload(payload, "Test source")

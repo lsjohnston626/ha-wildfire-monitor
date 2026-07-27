@@ -13,8 +13,9 @@ from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from .coordinator import WildfireConfigEntry
+from .coordinator import NifcCoordinator, NwsCoordinator, WildfireConfigEntry
 from .entity import WildfireEntity
+from .models import Alert, Fire
 from .rules import is_evacuation_alert
 
 
@@ -25,13 +26,17 @@ class WildfireBinaryDescription(BinarySensorEntityDescription):
     value_fn: Callable[[WildfireBinarySensor], bool | None]
 
 
-def _nifc_value(entity: WildfireBinarySensor, predicate) -> bool | None:
+def _nifc_value(
+    entity: WildfireBinarySensor, predicate: Callable[[Fire], bool]
+) -> bool | None:
     if not entity.nifc.is_fresh:
         return None
     return any(predicate(fire) for fire in entity.fires)
 
 
-def _nws_value(entity: WildfireBinarySensor, predicate) -> bool | None:
+def _nws_value(
+    entity: WildfireBinarySensor, predicate: Callable[[Alert], bool]
+) -> bool | None:
     if any(predicate(alert) for alert in entity.alerts):
         return True
     return False if entity.nws.is_fresh else None
@@ -100,7 +105,13 @@ class WildfireBinarySensor(WildfireEntity, BinarySensorEntity):
 
     entity_description: WildfireBinaryDescription
 
-    def __init__(self, entry, nifc, nws, description) -> None:
+    def __init__(
+        self,
+        entry: WildfireConfigEntry,
+        nifc: NifcCoordinator,
+        nws: NwsCoordinator,
+        description: WildfireBinaryDescription,
+    ) -> None:
         super().__init__(entry, nifc, nws, description.key)
         self.entity_description = description
 

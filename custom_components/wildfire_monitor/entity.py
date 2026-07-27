@@ -8,6 +8,7 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from .const import DOCUMENTATION_URL, DOMAIN
 from .coordinator import NifcCoordinator, NwsCoordinator, WildfireConfigEntry
+from .models import Alert, Fire
 
 
 def wildfire_device_info(entry: WildfireConfigEntry) -> DeviceInfo:
@@ -50,11 +51,11 @@ class WildfireEntity(CoordinatorEntity[NifcCoordinator]):
         self.async_write_ha_state()
 
     @property
-    def fires(self):
+    def fires(self) -> list[Fire]:
         """Return fires only while NIFC data is fresh."""
         return self.nifc.data.records if self.nifc.data and self.nifc.is_fresh else []
 
     @property
-    def alerts(self):
+    def alerts(self) -> list[Alert]:
         """Return unexpired cached official alerts."""
         return self.nws.active_alerts

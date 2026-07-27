@@ -175,6 +175,8 @@ class WildfireEventDetector:
 
         for fire_id, fire in current.items():
             previous = self._fires.get(fire_id)
+            if previous is None and fire_id in self._missing_fires:
+                previous = self._missing_fires[fire_id][0]
             if previous is None and fire_id not in missing_before:
                 events.append(
                     MonitorEvent(
@@ -193,8 +195,9 @@ class WildfireEventDetector:
                 )
             self._missing_fires.pop(fire_id, None)
 
-        for fire_id in self._fires.keys() - current.keys():
-            self._missing_fires.setdefault(fire_id, (self._fires[fire_id], 0))
+        for fire_id, fire in self._fires.items():
+            if fire_id not in current:
+                self._missing_fires.setdefault(fire_id, (fire, 0))
 
         for fire_id, (fire, missing_count) in list(self._missing_fires.items()):
             missing_count += 1
@@ -215,18 +218,17 @@ class WildfireEventDetector:
     def _alert_events(self, alerts: list[Alert]) -> list[MonitorEvent]:
         current = {_alert_id(alert): alert for alert in alerts}
         events = [
-            MonitorEvent(
-                EVENT_OFFICIAL_ALERT_STARTED,
-                _alert_data(alert_id, current[alert_id]),
-            )
-            for alert_id in current.keys() - self._alerts.keys()
+            MonitorEvent(EVENT_OFFICIAL_ALERT_STARTED, _alert_data(alert_id, alert))
+            for alert_id, alert in current.items()
+            if alert_id not in self._alerts
         ]
         events.extend(
             MonitorEvent(
                 EVENT_OFFICIAL_ALERT_ENDED,
-                _alert_data(alert_id, self._alerts[alert_id]),
+                _alert_data(alert_id, alert),
             )
-            for alert_id in self._alerts.keys() - current.keys()
+            for alert_id, alert in self._alerts.items()
+            if alert_id not in current
         )
         self._alerts = current
         return events

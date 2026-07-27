@@ -28,8 +28,9 @@ from .const import (
     MAX_ATTRIBUTE_RECORDS,
     THREAT_LEVELS,
 )
-from .coordinator import WildfireConfigEntry
+from .coordinator import NifcCoordinator, NwsCoordinator, WildfireConfigEntry
 from .entity import WildfireEntity
+from .models import Fire
 from .rules import evacuation_level, evacuation_status, threat_level
 
 
@@ -39,7 +40,7 @@ class WildfireSensorDescription(SensorEntityDescription):
     availability_fn: Callable[[WildfireSensor], bool] = lambda entity: True
 
 
-def _nearest(entity: WildfireSensor):
+def _nearest(entity: WildfireSensor) -> Fire | None:
     return min(entity.fires, key=lambda fire: fire.distance_miles, default=None)
 
 
@@ -186,12 +187,18 @@ DESCRIPTIONS = (
 class WildfireSensor(WildfireEntity, SensorEntity):
     entity_description: WildfireSensorDescription
 
-    def __init__(self, entry, nifc, nws, description) -> None:
+    def __init__(
+        self,
+        entry: WildfireConfigEntry,
+        nifc: NifcCoordinator,
+        nws: NwsCoordinator,
+        description: WildfireSensorDescription,
+    ) -> None:
         super().__init__(entry, nifc, nws, description.key)
         self.entity_description = description
 
     @property
-    def native_value(self):
+    def native_value(self) -> Any:
         return self.entity_description.value_fn(self)
 
     @property

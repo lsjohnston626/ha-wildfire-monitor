@@ -46,6 +46,19 @@ def _identifier(value: Any) -> str | None:
     return str(value).strip().strip("{}").casefold()
 
 
+def _validate_feature_payload(payload: Any, source: str) -> dict[str, Any]:
+    """Reject malformed or truncated feature responses."""
+    if not isinstance(payload, dict):
+        raise WildfireApiError(f"{source} returned a non-object response")
+    if "error" in payload:
+        raise WildfireApiError(f"{source} returned an error: {payload['error']}")
+    if payload.get("exceededTransferLimit"):
+        raise WildfireApiError(f"{source} response exceeded its transfer limit")
+    if not isinstance(payload.get("features"), list):
+        raise WildfireApiError(f"{source} response did not contain a feature list")
+    return payload
+
+
 def parse_incidents(
     payload: dict[str, Any], latitude: float, longitude: float, radius: float
 ) -> list[Fire]:
@@ -170,17 +183,18 @@ def join_perimeters(
         if fire:
             fire.inside_perimeter = inside
             fire.distance_miles = min(fire.distance_miles, distance)
-            fire.acres = fire.acres or _number(
-                _first(
-                    attributes,
-                    "GISAcres",
-                    "CalculatedAcres",
-                    "IncidentSize",
-                    "poly_GISAcres",
-                    "attr_CalculatedAcres",
-                    "attr_IncidentSize",
+            if fire.acres is None:
+                fire.acres = _number(
+                    _first(
+                        attributes,
+                        "GISAcres",
+                        "CalculatedAcres",
+                        "IncidentSize",
+                        "poly_GISAcres",
+                        "attr_CalculatedAcres",
+                        "attr_IncidentSize",
+                    )
                 )
-            )
             continue
         fire = Fire(
             irwin_id=irwin_id,
@@ -282,6 +296,8 @@ class NifcClient:
             self._get(NIFC_INCIDENT_URL, params),
             self._get(NIFC_PERIMETER_URL, params),
         )
+        incidents = _validate_feature_payload(incidents, "NIFC incidents")
+        perimeters = _validate_feature_payload(perimeters, "NIFC perimeters")
         fires = parse_incidents(incidents, latitude, longitude, radius)
         return join_perimeters(fires, perimeters, latitude, longitude, radius)
 
@@ -292,8 +308,6 @@ class NifcClient:
                 payload = await response.json()
         except (ClientError, TimeoutError, ValueError) as err:
             raise WildfireApiError(str(err)) from err
-        if "error" in payload:
-            raise WildfireApiError(str(payload["error"]))
         return payload
 
 
@@ -318,4 +332,4 @@ class NwsClient:
                 payload = await response.json()
         except (ClientError, TimeoutError, ValueError) as err:
             raise WildfireApiError(str(err)) from err
-        return parse_nws_alerts(payload)
+        return parse_nws_alerts(_validate_feature_payload(payload, "NWS alerts"))
