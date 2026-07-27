@@ -36,6 +36,21 @@
       "already_configured": "Ez a hely már konfigurálva van."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Futótüzet fedeztek fel",
+      "wildfire_no_longer_nearby": "Futótűz már nincs a közelben",
+      "fire_entered_perimeter": "A helyszín belépett a futótűz övezetébe",
+      "official_alert_started": "Megkezdődött a hivatalos riasztás",
+      "official_alert_ended": "A hivatalos riasztás véget ért",
+      "threat_level_increased": "Emelkedett az erdőtüzek fenyegetettsége",
+      "threat_level_decreased": "Csökkent az erdőtüzek fenyegetettsége",
+      "evacuation_level_increased": "Az evakuálási szint emelkedett",
+      "evacuation_level_decreased": "Az evakuálási szint csökkent",
+      "source_stale": "Az adatforrás elavulttá vált",
+      "source_recovered": "Az adatforrás helyreállt"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

@@ -36,6 +36,21 @@
       "already_configured": "Ky vend është tashmë i konfiguruar."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Zjarri i zbuluar",
+      "wildfire_no_longer_nearby": "Zjarri nuk është më afër",
+      "fire_entered_perimeter": "Vendndodhja është futur në perimetrin e zjarrit",
+      "official_alert_started": "Filloi alarmi zyrtar",
+      "official_alert_ended": "Alarmi zyrtar përfundoi",
+      "threat_level_increased": "Niveli i kërcënimit nga zjarri është rritur",
+      "threat_level_decreased": "Niveli i kërcënimit nga zjarri është ulur",
+      "evacuation_level_increased": "Niveli i evakuimit është rritur",
+      "evacuation_level_decreased": "Niveli i evakuimit është ulur",
+      "source_stale": "Burimi i të dhënave u bë bajat",
+      "source_recovered": "Burimi i të dhënave u rikuperua"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

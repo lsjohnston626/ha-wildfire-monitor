@@ -36,6 +36,21 @@
       "already_configured": "Šī vieta jau ir konfigurēta."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Savvaļas ugunsgrēks atklāts",
+      "wildfire_no_longer_nearby": "Savvaļas ugunsgrēks vairs nav tuvumā",
+      "fire_entered_perimeter": "Atrašanās vieta iekļuva ugunsgrēka perimetrā",
+      "official_alert_started": "Sākās oficiālais brīdinājums",
+      "official_alert_ended": "Oficiālā trauksme beigusies",
+      "threat_level_increased": "Savvaļas ugunsgrēku draudu līmenis ir palielinājies",
+      "threat_level_decreased": "Savvaļas ugunsgrēku draudu līmenis ir samazinājies",
+      "evacuation_level_increased": "Paaugstināts evakuācijas līmenis",
+      "evacuation_level_decreased": "Evakuācijas līmenis pazeminājās",
+      "source_stale": "Datu avots ir novecojis",
+      "source_recovered": "Datu avots ir atkopts"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

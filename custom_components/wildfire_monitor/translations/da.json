@@ -36,6 +36,21 @@
       "already_configured": "Denne placering er allerede konfigureret."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Wildbrand opdaget",
+      "wildfire_no_longer_nearby": "Wildfire ikke længere i nærheden",
+      "fire_entered_perimeter": "Stedet er kommet ind i en naturbrands omkreds",
+      "official_alert_started": "Officiel alarm startet",
+      "official_alert_ended": "Officiel alarm afsluttet",
+      "threat_level_increased": "Trusselsniveauet for skovbrand steg",
+      "threat_level_decreased": "Trusselsniveauet for skovbrand faldt",
+      "evacuation_level_increased": "Evakueringsniveauet steg",
+      "evacuation_level_decreased": "Evakueringsniveauet faldt",
+      "source_stale": "Datakilden blev forældet",
+      "source_recovered": "Datakilde gendannet"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

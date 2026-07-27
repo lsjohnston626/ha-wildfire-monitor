@@ -36,6 +36,21 @@
       "already_configured": "Lokasi ini sudah dikonfigurasi."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Kebakaran hutan ditemukan",
+      "wildfire_no_longer_nearby": "Kebakaran hutan sudah tidak ada lagi di dekatnya",
+      "fire_entered_perimeter": "Lokasi memasuki perimeter kebakaran",
+      "official_alert_started": "Peringatan resmi dimulai",
+      "official_alert_ended": "Peringatan resmi berakhir",
+      "threat_level_increased": "Tingkat ancaman kebakaran hutan meningkat",
+      "threat_level_decreased": "Tingkat ancaman kebakaran hutan menurun",
+      "evacuation_level_increased": "Tingkat evakuasi meningkat",
+      "evacuation_level_decreased": "Tingkat evakuasi menurun",
+      "source_stale": "Sumber data menjadi basi",
+      "source_recovered": "Sumber data pulih"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

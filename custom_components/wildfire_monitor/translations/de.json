@@ -36,6 +36,21 @@
       "already_configured": "Dieser Standort ist bereits konfiguriert."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Lauffeuer entdeckt",
+      "wildfire_no_longer_nearby": "Lauffeuer nicht mehr in der Nähe",
+      "fire_entered_perimeter": "Der Standort befindet sich im Waldbrandgebiet",
+      "official_alert_started": "Offizieller Alarm gestartet",
+      "official_alert_ended": "Die offizielle Warnung wurde beendet",
+      "threat_level_increased": "Die Bedrohungsstufe durch Waldbrände wurde erhöht",
+      "threat_level_decreased": "Die Bedrohungsstufe durch Waldbrände wurde verringert",
+      "evacuation_level_increased": "Evakuierungsstufe erhöht",
+      "evacuation_level_decreased": "Evakuierungsstufe verringert",
+      "source_stale": "Die Datenquelle ist veraltet",
+      "source_recovered": "Datenquelle wiederhergestellt"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Waldbrand in der Nähe"},

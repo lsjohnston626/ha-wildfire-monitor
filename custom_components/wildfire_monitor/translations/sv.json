@@ -36,6 +36,21 @@
       "already_configured": "Platsen är redan konfigurerad."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Skogsbrand upptäckt",
+      "wildfire_no_longer_nearby": "Skogsbrand inte längre i närheten",
+      "fire_entered_perimeter": "Platsen gick in i skogsbrandens omkrets",
+      "official_alert_started": "Officiell larm startade",
+      "official_alert_ended": "Den officiella varningen upphörde",
+      "threat_level_increased": "Brandhotnivån ökade",
+      "threat_level_decreased": "Brandhotnivån minskade",
+      "evacuation_level_increased": "Evakueringsnivån ökade",
+      "evacuation_level_decreased": "Evakueringsnivån minskade",
+      "source_stale": "Datakällan blev inaktuell",
+      "source_recovered": "Datakälla återställd"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Skogsbrand i närheten"},

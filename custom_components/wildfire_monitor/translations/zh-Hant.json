@@ -36,6 +36,21 @@
       "already_configured": "該位置已配置。"
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "發現野火",
+      "wildfire_no_longer_nearby": "野火不再在附近",
+      "fire_entered_perimeter": "地點已進入野火範圍",
+      "official_alert_started": "官方警報已啟動",
+      "official_alert_ended": "官方警報結束",
+      "threat_level_increased": "野火威脅等級提高",
+      "threat_level_decreased": "野火威脅等級下降",
+      "evacuation_level_increased": "疏散等級提高",
+      "evacuation_level_decreased": "疏散等級降低",
+      "source_stale": "資料來源已過時",
+      "source_recovered": "資料來源已恢復"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

@@ -36,6 +36,21 @@
       "already_configured": "ఈ స్థానం ఇప్పటికే కాన్ఫిగర్ చేయబడింది."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "అడవి మంటలను కనుగొన్నారు",
+      "wildfire_no_longer_nearby": "అడవి మంటలు సమీపంలో లేవు",
+      "fire_entered_perimeter": "లొకేషన్ అడవి మంటల చుట్టుకొలతలోకి ప్రవేశించింది",
+      "official_alert_started": "అధికారిక హెచ్చరిక ప్రారంభమైంది",
+      "official_alert_ended": "అధికారిక హెచ్చరిక ముగిసింది",
+      "threat_level_increased": "అడవి మంటల ముప్పు పెరిగింది",
+      "threat_level_decreased": "అడవి మంటల ముప్పు తగ్గింది",
+      "evacuation_level_increased": "తరలింపు స్థాయి పెరిగింది",
+      "evacuation_level_decreased": "తరలింపు స్థాయి తగ్గింది",
+      "source_stale": "డేటా మూలం పాతబడిపోయింది",
+      "source_recovered": "డేటా మూలం పునరుద్ధరించబడింది"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

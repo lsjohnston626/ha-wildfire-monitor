@@ -8,7 +8,7 @@ from homeassistant.components.event import EventEntity
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from .const import EVENT_TYPES
+from .const import EVENT_TYPES, EVENT_WILDFIRE_MONITOR
 from .coordinator import WildfireConfigEntry
 from .entity import wildfire_device_info
 from .event_processor import MonitorEvent, WildfireEventDetector
@@ -80,11 +80,18 @@ class WildfireMonitorEventEntity(EventEntity):
     @callback
     def _emit(self, events: list[MonitorEvent]) -> None:
         for event in events:
+            event_data = {
+                "entry_id": self.entry.entry_id,
+                "type": event.event_type,
+                "location_name": self.entry.title,
+                **event.data,
+            }
             self._trigger_event(
                 event.event_type,
-                {"location_name": self.entry.title, **event.data},
+                event_data,
             )
             self.async_write_ha_state()
+            self.hass.bus.async_fire(EVENT_WILDFIRE_MONITOR, event_data)
 
 
 async def async_setup_entry(

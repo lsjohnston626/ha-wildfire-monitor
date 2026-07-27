@@ -36,6 +36,21 @@
       "already_configured": "Mae'r lleoliad hwn eisoes wedi'i ffurfweddu."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Darganfod tân gwyllt",
+      "wildfire_no_longer_nearby": "Nid yw tanau gwyllt gerllaw bellach",
+      "fire_entered_perimeter": "Lleoliad mynd i mewn i perimedr tanau gwyllt",
+      "official_alert_started": "Rhybudd swyddogol wedi dechrau",
+      "official_alert_ended": "Daeth rhybudd swyddogol i ben",
+      "threat_level_increased": "Cynyddodd lefel bygythiad tanau gwyllt",
+      "threat_level_decreased": "Gostyngodd lefel bygythiad tanau gwyllt",
+      "evacuation_level_increased": "Cynyddodd lefel gwacáu",
+      "evacuation_level_decreased": "Gostyngodd lefel gwacáu",
+      "source_stale": "Daeth ffynhonnell data yn hen",
+      "source_recovered": "Ffynhonnell data wedi'i hadennill"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

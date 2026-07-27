@@ -36,6 +36,21 @@
       "already_configured": "Tá an suíomh seo cumraithe cheana féin."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Tinte fiáin aimsithe",
+      "wildfire_no_longer_nearby": "Wildfire a thuilleadh in aice láimhe",
+      "fire_entered_perimeter": "Chuaigh an suíomh isteach i imlíne tinte fiáine",
+      "official_alert_started": "Cuireadh tús le foláireamh oifigiúil",
+      "official_alert_ended": "Tháinig deireadh leis an bhfoláireamh oifigiúil",
+      "threat_level_increased": "Tháinig méadú ar an leibhéal bagairt tinte fiáine",
+      "threat_level_decreased": "Tháinig laghdú ar leibhéal bagairt tinte fiáine",
+      "evacuation_level_increased": "Tháinig méadú ar an leibhéal aslonnaithe",
+      "evacuation_level_decreased": "Tháinig laghdú ar an leibhéal aslonnaithe",
+      "source_stale": "D'éirigh foinse sonraí sean",
+      "source_recovered": "Aisghabhadh foinse sonraí"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

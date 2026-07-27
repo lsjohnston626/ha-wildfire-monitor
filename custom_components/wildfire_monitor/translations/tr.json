@@ -36,6 +36,21 @@
       "already_configured": "Bu konum zaten yapılandırılmış."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Orman yangını keşfedildi",
+      "wildfire_no_longer_nearby": "Orman yangını artık yakınlarda değil",
+      "fire_entered_perimeter": "Konum orman yangını çevresine girdi",
+      "official_alert_started": "Resmi uyarı başladı",
+      "official_alert_ended": "Resmi uyarı sona erdi",
+      "threat_level_increased": "Orman yangını tehdit seviyesi artırıldı",
+      "threat_level_decreased": "Orman yangını tehdit seviyesi azaldı",
+      "evacuation_level_increased": "Tahliye seviyesi artırıldı",
+      "evacuation_level_decreased": "Tahliye seviyesi azaldı",
+      "source_stale": "Veri kaynağı bayatladı",
+      "source_recovered": "Veri kaynağı kurtarıldı"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

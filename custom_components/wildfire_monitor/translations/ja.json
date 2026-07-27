@@ -36,6 +36,21 @@
       "already_configured": "この場所はすでに構成されています。"
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "山火事が発見されました",
+      "wildfire_no_longer_nearby": "山火事はもう近くにない",
+      "fire_entered_perimeter": "山火事の境界に入った場所",
+      "official_alert_started": "公式警報開始",
+      "official_alert_ended": "公式警報は終了しました",
+      "threat_level_increased": "山火事の脅威レベルが増加しました",
+      "threat_level_decreased": "山火事の脅威レベルが低下",
+      "evacuation_level_increased": "避難レベルが上昇しました",
+      "evacuation_level_decreased": "避難レベルが低下",
+      "source_stale": "データソースが古くなった",
+      "source_recovered": "データソースが回復されました"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

@@ -36,6 +36,21 @@
       "already_configured": "ഈ ലൊക്കേഷൻ ഇതിനകം കോൺഫിഗർ ചെയ്തിട്ടുണ്ട്."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "കാട്ടുതീ കണ്ടെത്തി",
+      "wildfire_no_longer_nearby": "കാട്ടുതീ അടുത്തില്ല",
+      "fire_entered_perimeter": "സ്ഥലം കാട്ടുതീയുടെ പരിധിയിൽ പ്രവേശിച്ചു",
+      "official_alert_started": "ഔദ്യോഗിക മുന്നറിയിപ്പ് ആരംഭിച്ചു",
+      "official_alert_ended": "ഔദ്യോഗിക മുന്നറിയിപ്പ് അവസാനിച്ചു",
+      "threat_level_increased": "കാട്ടുതീ ഭീഷണിയുടെ തോത് ഉയർന്നു",
+      "threat_level_decreased": "കാട്ടുതീ ഭീഷണിയുടെ തോത് കുറഞ്ഞു",
+      "evacuation_level_increased": "ഒഴിപ്പിക്കൽ നില വർദ്ധിച്ചു",
+      "evacuation_level_decreased": "ഒഴിപ്പിക്കൽ നില കുറഞ്ഞു",
+      "source_stale": "ഡാറ്റ ഉറവിടം പഴകിയതായി മാറി",
+      "source_recovered": "ഡാറ്റ ഉറവിടം വീണ്ടെടുത്തു"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

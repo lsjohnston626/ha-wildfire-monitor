@@ -36,6 +36,21 @@
       "already_configured": "এই অবস্থানটি ইতিমধ্যেই কনফিগার করা আছে৷"
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "দাবানল আবিষ্কৃত হয়েছে",
+      "wildfire_no_longer_nearby": "দাবানল আর কাছাকাছি নেই",
+      "fire_entered_perimeter": "অবস্থান দাবানল পরিধি প্রবেশ",
+      "official_alert_started": "অফিসিয়াল সতর্কতা শুরু হয়",
+      "official_alert_ended": "অফিসিয়াল সতর্কতা শেষ",
+      "threat_level_increased": "দাবানলের হুমকির মাত্রা বেড়েছে",
+      "threat_level_decreased": "দাবানলের হুমকির মাত্রা কমেছে",
+      "evacuation_level_increased": "উচ্ছেদের মাত্রা বেড়েছে",
+      "evacuation_level_decreased": "উচ্ছেদের মাত্রা কমেছে",
+      "source_stale": "তথ্য উৎস বাসি হয়ে গেছে",
+      "source_recovered": "ডেটা উৎস উদ্ধার করা হয়েছে"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

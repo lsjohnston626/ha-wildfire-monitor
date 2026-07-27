@@ -36,6 +36,21 @@
       "already_configured": "Այս տեղադրությունն արդեն կազմաձևված է:"
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Հայտնաբերվել է անտառային հրդեհ",
+      "wildfire_no_longer_nearby": "Վայրի հրդեհն այլևս մոտ չէ",
+      "fire_entered_perimeter": "Տեղադրությունը մուտքագրվել է անտառային հրդեհի պարագծում",
+      "official_alert_started": "Պաշտոնական ահազանգը սկսվել է",
+      "official_alert_ended": "Պաշտոնական ահազանգն ավարտվեց",
+      "threat_level_increased": "Անտառային հրդեհների սպառնալիքի մակարդակը բարձրացել է",
+      "threat_level_decreased": "Անտառային հրդեհների սպառնալիքի մակարդակը նվազել է",
+      "evacuation_level_increased": "Բարձրացել է տարհանման մակարդակը",
+      "evacuation_level_decreased": "Տարհանման մակարդակը նվազել է",
+      "source_stale": "Տվյալների աղբյուրը հնացել է",
+      "source_recovered": "Տվյալների աղբյուրը վերականգնվել է"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

@@ -36,6 +36,21 @@
       "already_configured": "Această locație este deja configurată."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "S-a descoperit un incendiu",
+      "wildfire_no_longer_nearby": "Incendiul nu mai este în apropiere",
+      "fire_entered_perimeter": "Locația a intrat în perimetrul incendiului",
+      "official_alert_started": "A început alerta oficială",
+      "official_alert_ended": "Alerta oficială s-a încheiat",
+      "threat_level_increased": "Nivelul de amenințare cu incendiile sălbatice a crescut",
+      "threat_level_decreased": "Nivelul de amenințare cu incendiile sălbatice a scăzut",
+      "evacuation_level_increased": "Nivelul de evacuare a crescut",
+      "evacuation_level_decreased": "Nivelul de evacuare a scăzut",
+      "source_stale": "Sursa de date a devenit învechită",
+      "source_recovered": "Sursa de date a fost recuperată"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

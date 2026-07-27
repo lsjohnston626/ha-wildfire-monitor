@@ -36,6 +36,21 @@
       "already_configured": "ეს მდებარეობა უკვე კონფიგურირებულია."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "აღმოაჩინეს ტყის ხანძარი",
+      "wildfire_no_longer_nearby": "ტყის ხანძარი ახლოს აღარ არის",
+      "fire_entered_perimeter": "მდებარეობა შევიდა ტყის ხანძრის პერიმეტრზე",
+      "official_alert_started": "ოფიციალური გაფრთხილება დაიწყო",
+      "official_alert_ended": "ოფიციალური გაფრთხილება დასრულდა",
+      "threat_level_increased": "ტყის ხანძრის საფრთხის დონე გაიზარდა",
+      "threat_level_decreased": "ტყის ხანძრის საფრთხის დონე შემცირდა",
+      "evacuation_level_increased": "გაიზარდა ევაკუაციის დონე",
+      "evacuation_level_decreased": "ევაკუაციის დონე შემცირდა",
+      "source_stale": "მონაცემთა წყარო მოძველდა",
+      "source_recovered": "მონაცემთა წყარო აღდგენილია"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

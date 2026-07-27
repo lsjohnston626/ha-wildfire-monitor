@@ -36,6 +36,21 @@
       "already_configured": "Aquesta ubicació ja està configurada."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Incendi forestal descobert",
+      "wildfire_no_longer_nearby": "L'incendi forestal ja no és a prop",
+      "fire_entered_perimeter": "La ubicació va entrar al perímetre d'incendi forestal",
+      "official_alert_started": "Va començar l'alerta oficial",
+      "official_alert_ended": "S'ha acabat l'alerta oficial",
+      "threat_level_increased": "El nivell d'amenaça d'incendi forestal ha augmentat",
+      "threat_level_decreased": "El nivell d'amenaça d'incendi forestal ha disminuït",
+      "evacuation_level_increased": "El nivell d'evacuació va augmentar",
+      "evacuation_level_decreased": "El nivell d'evacuació ha disminuït",
+      "source_stale": "La font de dades es va tornar obsoleta",
+      "source_recovered": "Font de dades recuperada"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

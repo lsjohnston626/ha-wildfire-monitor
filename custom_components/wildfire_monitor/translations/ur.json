@@ -36,6 +36,21 @@
       "already_configured": "یہ مقام پہلے سے ترتیب شدہ ہے۔"
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "جنگل کی آگ دریافت",
+      "wildfire_no_longer_nearby": "جنگل کی آگ اب قریب نہیں ہے۔",
+      "fire_entered_perimeter": "مقام جنگل کی آگ کے دائرے میں داخل ہوا۔",
+      "official_alert_started": "آفیشل الرٹ شروع کر دیا گیا۔",
+      "official_alert_ended": "سرکاری الرٹ ختم ہو گیا۔",
+      "threat_level_increased": "جنگل کی آگ کے خطرے کی سطح بڑھ گئی۔",
+      "threat_level_decreased": "جنگل کی آگ کے خطرے کی سطح کم ہوگئی",
+      "evacuation_level_increased": "انخلاء کی سطح بڑھ گئی۔",
+      "evacuation_level_decreased": "انخلاء کی سطح کم ہوگئی",
+      "source_stale": "ڈیٹا سورس باسی ہو گیا۔",
+      "source_recovered": "ڈیٹا ماخذ بازیافت ہوا۔"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

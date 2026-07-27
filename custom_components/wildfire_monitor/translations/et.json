@@ -36,6 +36,21 @@
       "already_configured": "See asukoht on juba konfigureeritud."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Metsatulekahju avastati",
+      "wildfire_no_longer_nearby": "Metsatulekahju pole enam läheduses",
+      "fire_entered_perimeter": "Asukoht sisenes metsatulekahju perimeetrisse",
+      "official_alert_started": "Ametlik hoiatus algas",
+      "official_alert_ended": "Ametlik hoiatus lõppes",
+      "threat_level_increased": "Metsatulekahju ohu tase tõusis",
+      "threat_level_decreased": "Metsatulekahju ohu tase langes",
+      "evacuation_level_increased": "Evakuatsiooni tase tõusis",
+      "evacuation_level_decreased": "Evakuatsioonitase langes",
+      "source_stale": "Andmeallikas on aegunud",
+      "source_recovered": "Andmeallikas taastatud"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

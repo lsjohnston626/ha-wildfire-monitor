@@ -36,6 +36,21 @@
       "already_configured": "இந்த இடம் ஏற்கனவே உள்ளமைக்கப்பட்டுள்ளது."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "காட்டுத் தீ கண்டுபிடிக்கப்பட்டது",
+      "wildfire_no_longer_nearby": "காட்டுத் தீ அருகில் இல்லை",
+      "fire_entered_perimeter": "இடம் காட்டுத்தீ எல்லைக்குள் நுழைந்தது",
+      "official_alert_started": "அதிகாரப்பூர்வ எச்சரிக்கை தொடங்கியது",
+      "official_alert_ended": "அதிகாரப்பூர்வ எச்சரிக்கை முடிந்தது",
+      "threat_level_increased": "காட்டுத்தீ அச்சுறுத்தல் அளவு அதிகரித்துள்ளது",
+      "threat_level_decreased": "காட்டுத்தீ அச்சுறுத்தல் அளவு குறைந்தது",
+      "evacuation_level_increased": "வெளியேற்றம் அளவு அதிகரித்தது",
+      "evacuation_level_decreased": "வெளியேற்றும் நிலை குறைந்தது",
+      "source_stale": "தரவு ஆதாரம் பழையதாகிவிட்டது",
+      "source_recovered": "தரவு ஆதாரம் மீட்கப்பட்டது"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

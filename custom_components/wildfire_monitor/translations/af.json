@@ -36,6 +36,21 @@
       "already_configured": "Hierdie ligging is reeds opgestel."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Veldbrand ontdek",
+      "wildfire_no_longer_nearby": "Veldbrand nie meer naby nie",
+      "fire_entered_perimeter": "Plek het veldbrandomtrek binnegegaan",
+      "official_alert_started": "Amptelike waarskuwing het begin",
+      "official_alert_ended": "Amptelike waarskuwing het geëindig",
+      "threat_level_increased": "Veldbrandbedreigingsvlak het toegeneem",
+      "threat_level_decreased": "Die vlak van veldbrandbedreiging het afgeneem",
+      "evacuation_level_increased": "Ontruimingsvlak het toegeneem",
+      "evacuation_level_decreased": "Ontruimingsvlak het afgeneem",
+      "source_stale": "Databron het verouderd geraak",
+      "source_recovered": "Databron herwin"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

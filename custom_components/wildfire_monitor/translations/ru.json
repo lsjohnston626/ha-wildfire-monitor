@@ -36,6 +36,21 @@
       "already_configured": "Это местоположение уже настроено."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Обнаружен лесной пожар",
+      "wildfire_no_longer_nearby": "Лесного пожара больше нет поблизости",
+      "fire_entered_perimeter": "Место входа в периметр лесного пожара",
+      "official_alert_started": "Началось официальное оповещение",
+      "official_alert_ended": "Официальное предупреждение прекращено",
+      "threat_level_increased": "Уровень угрозы лесных пожаров повышен",
+      "threat_level_decreased": "Уровень угрозы лесных пожаров снизился",
+      "evacuation_level_increased": "Уровень эвакуации повышен",
+      "evacuation_level_decreased": "Уровень эвакуации снижен",
+      "source_stale": "Источник данных устарел",
+      "source_recovered": "Источник данных восстановлен."
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Лесной пожар поблизости"},

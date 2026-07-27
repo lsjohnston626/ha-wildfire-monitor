@@ -36,6 +36,21 @@
       "already_configured": "Tämä sijainti on jo määritetty."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Maastopalo löydetty",
+      "wildfire_no_longer_nearby": "Maastopalo ei ole enää lähellä",
+      "fire_entered_perimeter": "Paikka tuli metsäpalon rajalle",
+      "official_alert_started": "Virallinen hälytys alkoi",
+      "official_alert_ended": "Virallinen hälytys päättyi",
+      "threat_level_increased": "Maastopalojen uhan taso nousi",
+      "threat_level_decreased": "Maastopalojen uhan taso laski",
+      "evacuation_level_increased": "Evakuointitaso nousi",
+      "evacuation_level_decreased": "Evakuointitaso laski",
+      "source_stale": "Tietolähde on vanhentunut",
+      "source_recovered": "Tietolähde palautettu"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {
