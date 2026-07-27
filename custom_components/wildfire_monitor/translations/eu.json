@@ -36,6 +36,21 @@
       "already_configured": "Kokapen hau dagoeneko konfiguratuta dago."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Baso-sutea aurkitu da",
+      "wildfire_no_longer_nearby": "Dagoeneko ez dago sutea gertu",
+      "fire_entered_perimeter": "Kokalekua suteen perimetroan sartu da",
+      "official_alert_started": "Alerta ofiziala hasi zen",
+      "official_alert_ended": "Alerta ofiziala amaitu da",
+      "threat_level_increased": "Baso-suteen mehatxu maila handitu egin zen",
+      "threat_level_decreased": "Baso-suteen mehatxu maila jaitsi egin da",
+      "evacuation_level_increased": "Ebakuazio maila handitu egin zen",
+      "evacuation_level_decreased": "Ebakuazio maila jaitsi egin da",
+      "source_stale": "Datu iturria zaharkituta geratu zen",
+      "source_recovered": "Datu iturria berreskuratu da"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

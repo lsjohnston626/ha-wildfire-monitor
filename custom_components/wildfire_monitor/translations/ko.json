@@ -36,6 +36,21 @@
       "already_configured": "이 위치는 이미 구성되어 있습니다."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "산불 발견",
+      "wildfire_no_longer_nearby": "더 이상 근처에 산불이 없습니다",
+      "fire_entered_perimeter": "위치가 산불 경계에 진입했습니다.",
+      "official_alert_started": "공식 경보가 시작되었습니다",
+      "official_alert_ended": "공식 알림이 종료되었습니다",
+      "threat_level_increased": "산불 위협 수준이 증가했습니다.",
+      "threat_level_decreased": "산불 위협 수준 감소",
+      "evacuation_level_increased": "대피 레벨이 증가했습니다.",
+      "evacuation_level_decreased": "대피 수준 감소",
+      "source_stale": "데이터 소스가 오래되었습니다.",
+      "source_recovered": "데이터 소스가 복구되었습니다."
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

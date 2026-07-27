@@ -36,6 +36,21 @@
       "already_configured": "Deze locatie is al geconfigureerd."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Wildvuur ontdekt",
+      "wildfire_no_longer_nearby": "Natuurbrand niet meer in de buurt",
+      "fire_entered_perimeter": "Locatie ging de natuurbrandperiferie binnen",
+      "official_alert_started": "Officieel alarm gestart",
+      "official_alert_ended": "Officieel alarm beëindigd",
+      "threat_level_increased": "Het dreigingsniveau voor natuurbranden is toegenomen",
+      "threat_level_decreased": "Het dreigingsniveau voor natuurbranden is afgenomen",
+      "evacuation_level_increased": "Het evacuatieniveau is toegenomen",
+      "evacuation_level_decreased": "Het evacuatieniveau is gedaald",
+      "source_stale": "De gegevensbron is verouderd",
+      "source_recovered": "Gegevensbron hersteld"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Natuurbrand in de buurt"},

@@ -75,6 +75,19 @@ EXPECTED_LOCALES = {
     "zh-Hans",
     "zh-Hant",
 }
+EXPECTED_TRIGGER_TYPES = {
+    "wildfire_discovered",
+    "wildfire_no_longer_nearby",
+    "fire_entered_perimeter",
+    "official_alert_started",
+    "official_alert_ended",
+    "threat_level_increased",
+    "threat_level_decreased",
+    "evacuation_level_increased",
+    "evacuation_level_decreased",
+    "source_stale",
+    "source_recovered",
+}
 
 
 def _leaf_paths(value: Any, prefix: tuple[str, ...] = ()) -> set[tuple[str, ...]]:
@@ -107,6 +120,10 @@ def test_translation_files_match_english_schema() -> None:
         assert "NWS" in text, locale
         assert "\ufffd" not in text, locale
         assert not re.search(r"\[\[\w*\d{3}\]\]", text), locale
+        assert (
+            set(translation["device_automation"]["trigger_type"])
+            == EXPECTED_TRIGGER_TYPES
+        ), locale
 
 
 def test_custom_integration_does_not_ship_core_strings_file() -> None:

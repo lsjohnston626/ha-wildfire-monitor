@@ -36,6 +36,21 @@
       "already_configured": "This location is already configured."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Wildfire discovered",
+      "wildfire_no_longer_nearby": "Wildfire no longer nearby",
+      "fire_entered_perimeter": "Location entered wildfire perimeter",
+      "official_alert_started": "Official alert started",
+      "official_alert_ended": "Official alert ended",
+      "threat_level_increased": "Wildfire threat level increased",
+      "threat_level_decreased": "Wildfire threat level decreased",
+      "evacuation_level_increased": "Evacuation level increased",
+      "evacuation_level_decreased": "Evacuation level decreased",
+      "source_stale": "Data source became stale",
+      "source_recovered": "Data source recovered"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Wildfire nearby"},

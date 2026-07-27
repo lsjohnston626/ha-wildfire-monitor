@@ -36,6 +36,21 @@
       "already_configured": "ตำแหน่งนี้ได้รับการกำหนดค่าแล้ว"
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "พบไฟป่า",
+      "wildfire_no_longer_nearby": "ไฟป่าไม่อยู่ใกล้อีกต่อไป",
+      "fire_entered_perimeter": "สถานที่เข้าเขตไฟป่าแล้ว",
+      "official_alert_started": "เริ่มการแจ้งเตือนอย่างเป็นทางการ",
+      "official_alert_ended": "การแจ้งเตือนอย่างเป็นทางการสิ้นสุดลง",
+      "threat_level_increased": "ระดับภัยคุกคามไฟป่าเพิ่มขึ้น",
+      "threat_level_decreased": "ระดับภัยคุกคามไฟป่าลดลง",
+      "evacuation_level_increased": "ระดับการอพยพเพิ่มขึ้น",
+      "evacuation_level_decreased": "ระดับการอพยพลดลง",
+      "source_stale": "แหล่งข้อมูลเริ่มเก่า",
+      "source_recovered": "กู้คืนแหล่งข้อมูลแล้ว"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

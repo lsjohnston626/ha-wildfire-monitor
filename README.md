@@ -142,6 +142,11 @@ Each monitored location provides an `event.wildfire_events` entity. Use the
 **Event received** trigger in the automation editor and select one or more of
 these event types:
 
+These transitions are also exposed as native device triggers. In the
+automation editor, choose **Device**, select the Wildfire Monitor location,
+and then select the transition you want. The Event entity remains available
+for YAML automations and advanced filtering.
+
 | Event type | Emitted when |
 |---|---|
 | `wildfire_discovered` | A wildfire is newly observed within the configured radius |
@@ -182,7 +187,7 @@ actions:
     data:
       message: >-
         Evacuation level changed from
-            {{ trigger.to_state.attributes.previous_level }}
+        {{ trigger.to_state.attributes.previous_level }}
         to {{ trigger.to_state.attributes.level }}.
 ```
 

@@ -36,6 +36,21 @@
       "already_configured": "Dizze lokaasje is al ynsteld."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Wildfire ûntdutsen",
+      "wildfire_no_longer_nearby": "Wildfire net mear tichtby",
+      "fire_entered_perimeter": "Lokaasje ynfierd wildfire perimeter",
+      "official_alert_started": "Offisjele warskôging begûn",
+      "official_alert_ended": "Offisjele warskôging einige",
+      "threat_level_increased": "Wildfire bedriging nivo ferhege",
+      "threat_level_decreased": "It nivo fan de bedriging foar wildfire fermindere",
+      "evacuation_level_increased": "Evakuaasje nivo ferhege",
+      "evacuation_level_decreased": "Evakuaasje nivo fermindere",
+      "source_stale": "Gegevensboarne waard ferâldere",
+      "source_recovered": "Gegevensboarne weromfûn"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

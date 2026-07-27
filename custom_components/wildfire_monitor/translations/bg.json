@@ -36,6 +36,21 @@
       "already_configured": "Това местоположение вече е конфигурирано."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Горски пожар е открит",
+      "wildfire_no_longer_nearby": "Горски пожар вече не е наблизо",
+      "fire_entered_perimeter": "Местоположението влезе в периметъра на горски пожар",
+      "official_alert_started": "Започна официалното предупреждение",
+      "official_alert_ended": "Официалният сигнал приключи",
+      "threat_level_increased": "Нивото на заплаха от горски пожар е повишено",
+      "threat_level_decreased": "Нивото на заплаха от горски пожар намаля",
+      "evacuation_level_increased": "Повишено ниво на евакуация",
+      "evacuation_level_decreased": "Нивото на евакуация намаля",
+      "source_stale": "Източникът на данни е остарял",
+      "source_recovered": "Източникът на данни е възстановен"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

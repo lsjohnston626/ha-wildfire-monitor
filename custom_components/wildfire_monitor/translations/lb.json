@@ -36,6 +36,21 @@
       "already_configured": "Dës Plaz ass scho konfiguréiert."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Wildfire entdeckt",
+      "wildfire_no_longer_nearby": "Wildfire net méi an der Géigend",
+      "fire_entered_perimeter": "Location koum Wildfire Perimeter",
+      "official_alert_started": "Offiziell Alarm ugefaang",
+      "official_alert_ended": "Offiziell Alarm eriwwer",
+      "threat_level_increased": "Wildfire Bedrohungsniveau ass eropgaang",
+      "threat_level_decreased": "D'Drohungsniveau vum Bëschbrand ass erofgaang",
+      "evacuation_level_increased": "Evakuatiounsniveau erhéicht",
+      "evacuation_level_decreased": "Evakuéierungsniveau ass erofgaang",
+      "source_stale": "D'Donnéeënquell gouf schief",
+      "source_recovered": "Datenquell erëmfonnt"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

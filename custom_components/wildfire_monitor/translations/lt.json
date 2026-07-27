@@ -36,6 +36,21 @@
       "already_configured": "Ši vieta jau sukonfigūruota."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Aptiktas laukinis gaisras",
+      "wildfire_no_longer_nearby": "Laukinių gaisrų nebėra šalia",
+      "fire_entered_perimeter": "Vieta pateko į gaisro perimetrą",
+      "official_alert_started": "Prasidėjo oficialus įspėjimas",
+      "official_alert_ended": "Baigėsi oficialus įspėjimas",
+      "threat_level_increased": "Laukinių gaisrų grėsmės lygis padidėjo",
+      "threat_level_decreased": "Laukinių gaisrų grėsmės lygis sumažėjo",
+      "evacuation_level_increased": "Padidėjo evakuacijos lygis",
+      "evacuation_level_decreased": "Evakuacijos lygis sumažėjo",
+      "source_stale": "Duomenų šaltinis paseno",
+      "source_recovered": "Duomenų šaltinis atkurtas"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

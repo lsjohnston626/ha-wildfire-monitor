@@ -36,6 +36,21 @@
       "already_configured": "Ĉi tiu loko jam estas agordita."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Sovaĝa fajro malkovrita",
+      "wildfire_no_longer_nearby": "Arbarfajro ne plu proksime",
+      "fire_entered_perimeter": "Loko eniris sovaĝfajran perimetron",
+      "official_alert_started": "Oficiala atentigo komenciĝis",
+      "official_alert_ended": "Oficiala atentigo finiĝis",
+      "threat_level_increased": "Arbarfajra minaca nivelo pliiĝis",
+      "threat_level_decreased": "Arbarfajra minaca nivelo malpliiĝis",
+      "evacuation_level_increased": "Evakuadnivelo pliiĝis",
+      "evacuation_level_decreased": "Evakuadnivelo malpliiĝis",
+      "source_stale": "La fonto de datumoj malnoviĝis",
+      "source_recovered": "Datenfonto reakirita"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

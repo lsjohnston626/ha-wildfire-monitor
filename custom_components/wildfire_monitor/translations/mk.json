@@ -36,6 +36,21 @@
       "already_configured": "Оваа локација е веќе конфигурирана."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Откриен шумски пожар",
+      "wildfire_no_longer_nearby": "Шумски пожар веќе не е во близина",
+      "fire_entered_perimeter": "Локацијата влезе во периметарот на шумскиот пожар",
+      "official_alert_started": "Официјалното предупредување започна",
+      "official_alert_ended": "Официјалното предупредување заврши",
+      "threat_level_increased": "Се зголеми нивото на закана од шумски пожари",
+      "threat_level_decreased": "Нивото на закана од шумски пожари се намали",
+      "evacuation_level_increased": "Се зголеми нивото на евакуација",
+      "evacuation_level_decreased": "Нивото на евакуација се намали",
+      "source_stale": "Изворот на податоци стана застарен",
+      "source_recovered": "Изворот на податоци е обновен"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

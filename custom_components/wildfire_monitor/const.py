@@ -28,7 +28,8 @@ NIFC_PERIMETER_URL: Final = (
     "WFIGS_Interagency_Perimeters_Current/FeatureServer/0/query"
 )
 NWS_ALERTS_URL: Final = "https://api.weather.gov/alerts/active"
-USER_AGENT: Final = "WildfireMonitor/0.2.0 (Home Assistant custom integration)"
+USER_AGENT: Final = "WildfireMonitor/0.2.1 (Home Assistant custom integration)"
+EVENT_WILDFIRE_MONITOR: Final = f"{DOMAIN}_event"
 
 EVENT_WILDFIRE_DISCOVERED: Final = "wildfire_discovered"
 EVENT_WILDFIRE_NO_LONGER_NEARBY: Final = "wildfire_no_longer_nearby"

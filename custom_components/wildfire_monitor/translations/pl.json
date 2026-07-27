@@ -36,6 +36,21 @@
       "already_configured": "Ta lokalizacja jest już skonfigurowana."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Odkryto pożar",
+      "wildfire_no_longer_nearby": "Wildfire nie jest już w pobliżu",
+      "fire_entered_perimeter": "Lokalizacja weszła w obszar objęty pożarem",
+      "official_alert_started": "Rozpoczęło się oficjalne powiadomienie",
+      "official_alert_ended": "Oficjalny alert został zakończony",
+      "threat_level_increased": "Zwiększono poziom zagrożenia pożarowego",
+      "threat_level_decreased": "Zmniejszony poziom zagrożenia pożarowego",
+      "evacuation_level_increased": "Zwiększono poziom ewakuacji",
+      "evacuation_level_decreased": "Zmniejszono poziom ewakuacji",
+      "source_stale": "Źródło danych stało się nieaktualne",
+      "source_recovered": "Źródło danych odzyskane"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Pożar w pobliżu"},

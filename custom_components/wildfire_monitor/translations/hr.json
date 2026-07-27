@@ -36,6 +36,21 @@
       "already_configured": "Ova lokacija je već konfigurirana."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Otkriven šumski požar",
+      "wildfire_no_longer_nearby": "Šumskog požara više nema u blizini",
+      "fire_entered_perimeter": "Lokacija je ušla u područje šumskog požara",
+      "official_alert_started": "Počela je službena uzbuna",
+      "official_alert_ended": "Službena uzbuna završila",
+      "threat_level_increased": "Povećana je razina opasnosti od požara",
+      "threat_level_decreased": "Razina opasnosti od požara smanjena",
+      "evacuation_level_increased": "Razina evakuacije povećana",
+      "evacuation_level_decreased": "Razina evakuacije smanjena",
+      "source_stale": "Izvor podataka je zastario",
+      "source_recovered": "Izvor podataka oporavljen"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

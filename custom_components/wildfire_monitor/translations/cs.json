@@ -36,6 +36,21 @@
       "already_configured": "Toto umístění je již nakonfigurováno."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Objeven divoký požár",
+      "wildfire_no_longer_nearby": "Požár už není poblíž",
+      "fire_entered_perimeter": "Místo vstoupilo do oblasti požáru",
+      "official_alert_started": "Začalo oficiální upozornění",
+      "official_alert_ended": "Oficiální výstraha skončila",
+      "threat_level_increased": "Úroveň ohrožení lesním požárem se zvýšila",
+      "threat_level_decreased": "Úroveň ohrožení lesním požárem se snížila",
+      "evacuation_level_increased": "Úroveň evakuace se zvýšila",
+      "evacuation_level_decreased": "Úroveň evakuace se snížila",
+      "source_stale": "Zdroj dat se stal zastaralým",
+      "source_recovered": "Zdroj dat obnoven"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

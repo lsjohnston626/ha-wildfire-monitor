@@ -36,6 +36,21 @@
       "already_configured": "המיקום הזה כבר מוגדר."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "התגלתה שריפה",
+      "wildfire_no_longer_nearby": "שריפה כבר לא בקרבת מקום",
+      "fire_entered_perimeter": "המיקום נכנס להיקף שריפות",
+      "official_alert_started": "החלה התראה רשמית",
+      "official_alert_ended": "ההתראה הרשמית הסתיימה",
+      "threat_level_increased": "רמת איום השריפות עלתה",
+      "threat_level_decreased": "רמת איום השריפות ירדה",
+      "evacuation_level_increased": "רמת הפינוי עלתה",
+      "evacuation_level_decreased": "רמת הפינוי ירדה",
+      "source_stale": "מקור הנתונים הפך מיושן",
+      "source_recovered": "מקור הנתונים שוחזר"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

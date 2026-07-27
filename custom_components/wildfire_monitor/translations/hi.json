@@ -36,6 +36,21 @@
       "already_configured": "यह स्थान पहले से ही कॉन्फ़िगर किया गया है।"
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "जंगल की आग का पता चला",
+      "wildfire_no_longer_nearby": "जंगल की आग अब पास नहीं है",
+      "fire_entered_perimeter": "स्थान जंगल की आग की परिधि में प्रवेश कर गया",
+      "official_alert_started": "आधिकारिक अलर्ट शुरू हुआ",
+      "official_alert_ended": "आधिकारिक अलर्ट समाप्त हो गया",
+      "threat_level_increased": "जंगल की आग के ख़तरे का स्तर बढ़ा",
+      "threat_level_decreased": "जंगल की आग के खतरे का स्तर कम हुआ",
+      "evacuation_level_increased": "निकासी का स्तर बढ़ा",
+      "evacuation_level_decreased": "निकासी का स्तर कम हो गया",
+      "source_stale": "डेटा स्रोत पुराना हो गया",
+      "source_recovered": "डेटा स्रोत पुनर्प्राप्त किया गया"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

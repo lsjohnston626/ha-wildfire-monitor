@@ -36,6 +36,21 @@
       "already_configured": "این مکان قبلاً پیکربندی شده است."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "آتش سوزی کشف شد",
+      "wildfire_no_longer_nearby": "آتش سوزی دیگر در این نزدیکی نیست",
+      "fire_entered_perimeter": "مکان وارد محیط آتش سوزی شد",
+      "official_alert_started": "هشدار رسمی شروع شد",
+      "official_alert_ended": "هشدار رسمی پایان یافت",
+      "threat_level_increased": "سطح تهدید آتش سوزی افزایش یافت",
+      "threat_level_decreased": "سطح تهدید آتش سوزی کاهش یافت",
+      "evacuation_level_increased": "سطح تخلیه افزایش یافت",
+      "evacuation_level_decreased": "سطح تخلیه کاهش یافت",
+      "source_stale": "منبع داده کهنه شد",
+      "source_recovered": "منبع داده بازیابی شد"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

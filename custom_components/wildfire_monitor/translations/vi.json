@@ -36,6 +36,21 @@
       "already_configured": "Vị trí này đã được định cấu hình."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Cháy rừng được phát hiện",
+      "wildfire_no_longer_nearby": "Cháy rừng không còn ở gần nữa",
+      "fire_entered_perimeter": "Vị trí đã vào chu vi cháy rừng",
+      "official_alert_started": "Cảnh báo chính thức đã bắt đầu",
+      "official_alert_ended": "Cảnh báo chính thức đã kết thúc",
+      "threat_level_increased": "Mức độ đe dọa cháy rừng tăng lên",
+      "threat_level_decreased": "Mức độ đe dọa cháy rừng giảm",
+      "evacuation_level_increased": "Mức độ sơ tán tăng lên",
+      "evacuation_level_decreased": "Mức độ sơ tán giảm",
+      "source_stale": "Nguồn dữ liệu đã cũ",
+      "source_recovered": "Đã khôi phục được nguồn dữ liệu"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

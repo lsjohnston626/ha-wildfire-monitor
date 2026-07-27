@@ -36,6 +36,21 @@
       "already_configured": "تم تكوين هذا الموقع بالفعل."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "تم اكتشاف حرائق الغابات",
+      "wildfire_no_longer_nearby": "لم تعد حرائق الغابات في مكان قريب",
+      "fire_entered_perimeter": "دخل الموقع إلى محيط حرائق الغابات",
+      "official_alert_started": "بدأ التنبيه الرسمي",
+      "official_alert_ended": "انتهى التنبيه الرسمي",
+      "threat_level_increased": "ارتفع مستوى التهديد بالحرائق الهائلة",
+      "threat_level_decreased": "انخفض مستوى التهديد بالحرائق الهائلة",
+      "evacuation_level_increased": "ارتفع مستوى الإخلاء",
+      "evacuation_level_decreased": "انخفض مستوى الإخلاء",
+      "source_stale": "أصبح مصدر البيانات قديمًا",
+      "source_recovered": "تم استرداد مصدر البيانات"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

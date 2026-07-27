@@ -36,6 +36,21 @@
       "already_configured": "Esta localização já está configurada."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Incêndio florestal descoberto",
+      "wildfire_no_longer_nearby": "Incêndio florestal não está mais próximo",
+      "fire_entered_perimeter": "Local entrou no perímetro do incêndio florestal",
+      "official_alert_started": "Alerta oficial iniciado",
+      "official_alert_ended": "Alerta oficial encerrado",
+      "threat_level_increased": "Nível de ameaça de incêndio florestal aumentado",
+      "threat_level_decreased": "Nível de ameaça de incêndio florestal reduzido",
+      "evacuation_level_increased": "Nível de evacuação aumentado",
+      "evacuation_level_decreased": "Nível de evacuação diminuiu",
+      "source_stale": "A fonte de dados ficou obsoleta",
+      "source_recovered": "Fonte de dados recuperada"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Incêndio florestal próximo"},

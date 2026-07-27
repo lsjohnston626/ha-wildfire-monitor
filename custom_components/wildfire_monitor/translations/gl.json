@@ -36,6 +36,21 @@
       "already_configured": "Esta localización xa está configurada."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Incendio forestal descuberto",
+      "wildfire_no_longer_nearby": "O lume forestal xa non está preto",
+      "fire_entered_perimeter": "A localización entrou no perímetro do incendio forestal",
+      "official_alert_started": "Comezou a alerta oficial",
+      "official_alert_ended": "Rematou a alerta oficial",
+      "threat_level_increased": "O nivel de ameaza de incendio forestal aumentou",
+      "threat_level_decreased": "O nivel de ameaza de incendio forestal diminuíu",
+      "evacuation_level_increased": "Aumentou o nivel de evacuación",
+      "evacuation_level_decreased": "O nivel de evacuación diminuíu",
+      "source_stale": "A fonte de datos quedou obsoleta",
+      "source_recovered": "Recuperouse a fonte de datos"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

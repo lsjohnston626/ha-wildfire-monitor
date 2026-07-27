@@ -36,6 +36,21 @@
       "already_configured": "Αυτή η τοποθεσία έχει ήδη διαμορφωθεί."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Ανακαλύφθηκε πυρκαγιά",
+      "wildfire_no_longer_nearby": "Η πυρκαγιά δεν είναι πλέον κοντά",
+      "fire_entered_perimeter": "Η τοποθεσία εισήχθη στην περίμετρο της πυρκαγιάς",
+      "official_alert_started": "Ξεκίνησε η επίσημη ειδοποίηση",
+      "official_alert_ended": "Ο επίσημος συναγερμός έληξε",
+      "threat_level_increased": "Το επίπεδο απειλής πυρκαγιάς αυξήθηκε",
+      "threat_level_decreased": "Το επίπεδο απειλής πυρκαγιάς μειώθηκε",
+      "evacuation_level_increased": "Το επίπεδο εκκένωσης αυξήθηκε",
+      "evacuation_level_decreased": "Το επίπεδο εκκένωσης μειώθηκε",
+      "source_stale": "Η πηγή δεδομένων έγινε μπαγιάτικη",
+      "source_recovered": "Η πηγή δεδομένων ανακτήθηκε"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {

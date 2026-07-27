@@ -36,6 +36,21 @@
       "already_configured": "Cet emplacement est déjà configuré."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Un feu de forêt découvert",
+      "wildfire_no_longer_nearby": "Les incendies de forêt ne sont plus à proximité",
+      "fire_entered_perimeter": "Emplacement entré dans le périmètre des incendies de forêt",
+      "official_alert_started": "Alerte officielle lancée",
+      "official_alert_ended": "Alerte officielle terminée",
+      "threat_level_increased": "Le niveau de menace des incendies de forêt a augmenté",
+      "threat_level_decreased": "Le niveau de menace des incendies de forêt a diminué",
+      "evacuation_level_increased": "Le niveau d'évacuation a augmenté",
+      "evacuation_level_decreased": "Le niveau d'évacuation a diminué",
+      "source_stale": "La source de données est devenue obsolète",
+      "source_recovered": "Source de données récupérée"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {"name": "Feu de forêt à proximité"},

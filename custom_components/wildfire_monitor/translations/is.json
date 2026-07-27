@@ -36,6 +36,21 @@
       "already_configured": "Þessi staðsetning er þegar stillt."
     }
   },
+  "device_automation": {
+    "trigger_type": {
+      "wildfire_discovered": "Skógareldur uppgötvaður",
+      "wildfire_no_longer_nearby": "Skógareldur ekki lengur nálægt",
+      "fire_entered_perimeter": "Staðsetning fór inn í jaðar skógarelda",
+      "official_alert_started": "Opinber viðvörun hófst",
+      "official_alert_ended": "Opinberri viðvörun lauk",
+      "threat_level_increased": "Skógareldahættustig jókst",
+      "threat_level_decreased": "Eldaógn minnkaði",
+      "evacuation_level_increased": "Rýmingarstig hækkaði",
+      "evacuation_level_decreased": "Rýmingarstigið lækkaði",
+      "source_stale": "Uppruni gagna varð gömul",
+      "source_recovered": "Gagnagjafi endurheimtur"
+    }
+  },
   "entity": {
     "binary_sensor": {
       "wildfire_nearby": {
